@@ -1,0 +1,33 @@
+{
+  "common": {
+    "title": "Daytl.",
+    "info": "Vaše užitečné nástroje jednoduše a na jednom místě.",
+    "info2": "Chybí vám zde oblíbený online nástroj? Dejte nám vědět nebo nám ho pomůžte <a href='https://github.com/losik2/daytl' target='_blank'>vytvořit</a>.<br /><strong>Daytl.com</strong> je open source postaven na <a href='https://www.gatsbyjs.com/' target='_blank'>Gatsby.js</a>",
+    "toolPage": "Vlastní stránka nástroje",
+    "titleSuffix": "Váš každodení tool",
+    "contribute": "Contribute",
+    "feedback": "Feedback"
+  },
+  "tools": {
+    "birthNumber": {
+      "title": "Rodné číslo",
+      "info": "Generátor českých rodných čísel",
+      "button.women.adult": "Žena 18+",
+      "button.men.adult": "Muž 18+",
+      "button.women.child": "Žena 0-18",
+      "button.men.child": "Muž 0-18",
+      "birthDate": "Datum narození",
+      "copied": "zkopírováno"
+    },
+    "remover": {
+      "title": "Remover",
+      "info": "Odstraňovač mezer a čistič html",
+      "source": "Zdroj",
+      "result": "Výsledek",
+      "html": "Odstranit HTML",
+      "breaks": "Odstranit odřádkování",
+      "clear": "Vymazat",
+      "copied": "zkopírováno"
+    }
+  }
+}

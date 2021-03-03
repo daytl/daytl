@@ -1,0 +1,35 @@
+{
+  "common": {
+    "title": "Daytl.",
+    "info": "Simple and useful online tools in one place.",
+    "info2": "Missing your favorite online tool? Let us know or help us <a href='https://github.com/losik2/daytl' target='_blank'>create it</a>.<br /><strong>Daytl.com</strong> is an open source built on <a href='https://www.gatsbyjs.com/' target='_blank'>Gatsby.js</a>",
+    "toolPage": "Tool static page",
+    "titleSuffix": "Online tools",
+    "contribute": "Contribute",
+    "feedback": "Feedback"
+  },
+  "tools": {
+    "birthNumber": {
+      "title": "Czech Birth number",
+      "info": "Generate czech birth number",
+      "button.women.adult": "Female 18+",
+      "button.men.adult": "Male 18+",
+      "button.women.child": "Female 0-18",
+      "button.men.child": "Male 0-18",
+      "birthDate": "Birthdate",
+      "copied": "copied",
+      "detail": "dependencies, changelog and etc.."
+    },
+    "remover": {
+      "title": "Remover",
+      "info": "Remover breaklines, html tags and even more.",
+      "source": "Source",
+      "result": "Result",
+      "html": "Remove html",
+      "breaks": "Remove breaklines",
+      "clear": "Clear",
+      "copied": "copied",
+      "detail": "dependencies, changelog and etc.."
+    }
+  }
+}
