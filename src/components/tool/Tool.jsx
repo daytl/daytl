@@ -26,6 +26,11 @@ const useStyles = makeStyles(theme => {
         background: theme.palette.primary.main,
       },
     },
+    close: {
+      position: 'absolute',
+      right: 0,
+      top: 0,
+    },
   }
 })
 
@@ -33,6 +38,8 @@ export const Tool = ({ config }) => {
   const { name, version, github, componentName } = config
   const ToolComponent = components[componentName]
   const [open, setOpen] = useState(false)
+
+  const classes = useStyles();
 
   const handleClose = useCallback(() => {
     setOpen(false)
@@ -66,7 +73,7 @@ export const Tool = ({ config }) => {
         <DialogTitle id="alert-dialog-slide-title">
           <FormattedMessage id={`tools.${name}.title`} tagName="strong" /><br />
           <FormattedMessage id={`tools.${name}.info`} />
-          <IconButton onClick={handleClose} style={{ float: "right" }}>
+          <IconButton onClick={handleClose} className={classes.close}>
             <CloseIcon />
           </IconButton>
         </DialogTitle>
