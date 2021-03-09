@@ -2,7 +2,7 @@ Your useful online tools simply at one place.
 
 # Daytl
 
-[Daytl.com](https://www.daytl.com) je open source postaven na [Gatsby.js]()
+[Daytl.com](https://www.daytl.com) is an open source project built on [Gatsby.js]().
 
 ## Tools
 * Czech BirthNumber tool
@@ -10,7 +10,8 @@ Your useful online tools simply at one place.
 
 ### Upcoming tools
 
-* Encode/decode - utf, url encode, base64
+* Encode/decode - utf, url encode, base64, html
+  
 * JWT parsing
 * formatter
 * minification
@@ -21,6 +22,9 @@ Pokud vám nějaký oblíbený nástroj chybí, budeme rádi, když nám ho pom�
 
 ## TODO
 
+* Fix close icon in button
+* Fix remover coppied design
+* Add link to toll repo  
 * Add search tools by keywords
 
 

@@ -2,7 +2,7 @@
   "common": {
     "title": "Daytl.",
     "info": "Vaše užitečné nástroje jednoduše a na jednom místě.",
-    "info2": "Chybí vám zde oblíbený online nástroj? Dejte nám vědět nebo nám ho pomůžte <a href='https://github.com/losik2/daytl' target='_blank'>vytvořit</a>.<br /><strong>Daytl.com</strong> je open source postaven na <a href='https://www.gatsbyjs.com/' target='_blank'>Gatsby.js</a>",
+    "info2": "Chybí vám zde oblíbený online nástroj? Dejte nám vědět nebo nám ho pomůžte <a href='https://github.com/daytl/daytl' target='_blank'>vytvořit</a>.<br /><strong>Daytl.com</strong> je open source postaven na <a href='https://www.gatsbyjs.com/' target='_blank'>Gatsby.js</a>",
     "toolPage": "Vlastní stránka nástroje",
     "titleSuffix": "Váš každodení tool",
     "contribute": "Contribute",
