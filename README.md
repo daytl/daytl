@@ -18,13 +18,12 @@ Your useful online tools simply at one place.
 
 ## Contribute
 
-Pokud vám nějaký oblíbený nástroj chybí, budeme rádi, když nám ho pomůžete vytvořit.
+Missing your favorite online tool? Let us know or become a collaborator and create it.
 
 ## TODO
 
-* Fix close icon in button
-* Fix remover coppied design
-* Add link to toll repo  
+* Fix remover design
+* Add link to tool repo  
 * Add search tools by keywords
 
 
