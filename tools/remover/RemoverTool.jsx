@@ -5,6 +5,8 @@ import Button from '@material-ui/core/Button';
 import Chip from '@material-ui/core/Chip';
 import striptags from 'striptags';
 import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
+import makeStyles from "@material-ui/core/styles/makeStyles";
+import { useMediaQuery } from "@material-ui/core";
 
 const useTransaltion = () => {
     const intl = useIntl();
@@ -12,6 +14,18 @@ const useTransaltion = () => {
         intl.formatMessage({id})
     }
 }
+
+const useStyles = makeStyles(() => {
+    return {
+        button: (mobile) => (mobile ? {
+            marginBottom: 5,
+            width: '100%'
+        } : {
+            marginRight: 5,
+        }),
+    }
+})
+
 
 export const RemoverTool = () => {
     //const classes = useStyles();
@@ -55,6 +69,9 @@ export const RemoverTool = () => {
 
     const t = useTransaltion();
 
+    const matchesMobile = !useMediaQuery('(min-width:600px)')
+    const classes = useStyles(matchesMobile)
+
     return (<>
         <Grid container>
             <Grid item xs={6}>
@@ -87,12 +104,15 @@ export const RemoverTool = () => {
             </Grid>
             <Grid item xs={12}>
                 <br />
-                <Button variant="contained" color="primary" onClick={handleRemoveBreaks}><FormattedMessage
-                    id="tools.remover.breaks" /></Button>{' '}
-                <Button variant="contained" color="primary" onClick={handleRemoveHtml}><FormattedMessage
-                    id="tools.remover.html" /></Button>{' '}
-                <Button variant="contained" color="secondary" onClick={handleClear}><FormattedMessage
-                    id="tools.remover.clear" /></Button>
+                <Button variant="contained" color="primary" onClick={handleRemoveBreaks} className={classes.button}>
+                    <FormattedMessage
+                        id="tools.remover.breaks" /></Button>{' '}
+                <Button variant="contained" color="primary" onClick={handleRemoveHtml} className={classes.button}>
+                    <FormattedMessage
+                        id="tools.remover.html" /></Button>{' '}
+                <Button variant="contained" color="secondary" onClick={handleClear} className={classes.button}>
+                    <FormattedMessage
+                        id="tools.remover.clear" /></Button>
             </Grid>
         </Grid>
     </>);

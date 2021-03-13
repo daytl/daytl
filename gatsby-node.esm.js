@@ -10,7 +10,7 @@ exports.createPages = async ({graphql, actions}) => {
             path: tool.name,
             component: pageTemplate,
             context: {
-                ...tool
+                tool
                 // Add optional context data to be inserted
                 // as props into the page component..
                 //

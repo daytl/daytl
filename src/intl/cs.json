@@ -1,33 +1,39 @@
 {
   "common": {
     "title": "Daytl.",
-    "info": "Vaše užitečné nástroje jednoduše a na jednom místě.",
+    "info": "Vaše užitečné online nástroje jednoduše a na jednom místě.",
     "info2": "Chybí vám zde oblíbený online nástroj? Dejte nám vědět nebo nám ho pomůžte <a href='https://github.com/daytl/daytl' target='_blank'>vytvořit</a>.<br /><strong>Daytl.com</strong> je open source postaven na <a href='https://www.gatsbyjs.com/' target='_blank'>Gatsby.js</a>",
     "toolPage": "Vlastní stránka nástroje",
-    "titleSuffix": "Váš každodení tool",
+    "titleSuffix": "Online nástroje",
     "contribute": "Contribute",
-    "feedback": "Feedback"
+    "feedback": "Feedback",
+    "keywords": "online nástroje",
+    "description": "Vaše užitečné online nástroje jednoduše a na jednom místě."
   },
   "tools": {
-    "birthNumber": {
-      "title": "Rodné číslo",
-      "info": "Generátor českých rodných čísel",
+    "birthnumber": {
+      "title": "Generátor Rodných čísel",
+      "info": "Online generátor rodných čísel",
       "button.women.adult": "Žena 18+",
       "button.men.adult": "Muž 18+",
       "button.women.child": "Žena 0-18",
       "button.men.child": "Muž 0-18",
       "birthDate": "Datum narození",
-      "copied": "zkopírováno"
+      "copied": "zkopírováno",
+      "keywords": "rodné číslo, kontrola rodného čísla",
+      "description": "Online generátor rodného čísla"
     },
     "remover": {
-      "title": "Remover",
+      "title": "Čistič html a zalomení",
       "info": "Odstraňovač mezer a čistič html",
       "source": "Zdroj",
       "result": "Výsledek",
       "html": "Odstranit HTML",
       "breaks": "Odstranit odřádkování",
       "clear": "Vymazat",
-      "copied": "zkopírováno"
+      "copied": "zkopírováno",
+      "keywords": "odstranit mezery",
+      "description": "Odstraňovač mezer a čistič html"
     }
   }
 }

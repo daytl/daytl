@@ -3,8 +3,9 @@ import components from "../../tools/components"
 import Typography from "@material-ui/core/Typography"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import Grid from "@material-ui/core/Grid"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,11 +26,18 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function ToolPage({ pageContext }) {
-  const { name, componentName } = pageContext
+  const { tool: { name, componentName } } = pageContext
   const ToolComponent = components[componentName]
+  const intl = useIntl();
   const classes = useStyles()
   return (
     <Layout>
+      <Seo
+          lang={intl.locale}
+          title={intl.formatMessage({id: `tools.${name}.title`})}
+          keywords={intl.formatMessage({id: `tools.${name}.keywords`})}
+          description={intl.formatMessage({id: `tools.${name}.description`})}
+      />
       <main>
         <Grid container>
           <Grid item xs={12} className={classes.tool}>
@@ -40,6 +48,11 @@ export default function ToolPage({ pageContext }) {
               <FormattedMessage id={`tools.${name}.info`} />
             </Typography>
             {ToolComponent ? <ToolComponent /> : "No tool component available."}
+          </Grid>
+          <Grid item xs={12} className={classes.tool}>
+            <Typography variant="subtitle1">
+            <FormattedMessage id={`tools.${name}.content`} />
+            </Typography>
           </Grid>
         </Grid>
       </main>

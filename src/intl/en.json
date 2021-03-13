@@ -6,11 +6,13 @@
     "toolPage": "Tool static page",
     "titleSuffix": "Online tools",
     "contribute": "Contribute",
-    "feedback": "Feedback"
+    "feedback": "Feedback",
+    "keywords": "online tools",
+    "description": "Simple and useful online tools in one place."
   },
   "tools": {
-    "birthNumber": {
-      "title": "Czech Birth number",
+    "birthnumber": {
+      "title": "Czech Birth number generator",
       "info": "Generate czech birth number",
       "button.women.adult": "Female 18+",
       "button.men.adult": "Male 18+",
@@ -18,10 +20,12 @@
       "button.men.child": "Male 0-18",
       "birthDate": "Birthdate",
       "copied": "copied",
-      "detail": "dependencies, changelog and etc.."
+      "detail": "dependencies, changelog and etc..",
+      "keywords": "czech birth number",
+      "description": "Generate czech birth number"
     },
     "remover": {
-      "title": "Remover",
+      "title": "Html and breaks Remover",
       "info": "Remover breaklines, html tags and even more.",
       "source": "Source",
       "result": "Result",
@@ -29,7 +33,9 @@
       "breaks": "Remove breaklines",
       "clear": "Clear",
       "copied": "copied",
-      "detail": "dependencies, changelog and etc.."
+      "detail": "dependencies, changelog and etc..",
+      "keywords": "online breaks remover, online html remover",
+      "description": "Remover breaklines, html tags and even more."
     }
   }
 }

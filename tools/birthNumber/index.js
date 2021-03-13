@@ -1,5 +1,5 @@
 export default {
-    name: 'birthNumber',
+    name: 'birthnumber',
     github: '',
     version: '1.0.0',
     componentName: 'BirthNumberTool',

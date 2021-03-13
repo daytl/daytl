@@ -35,7 +35,8 @@ const IndexPage = () => {
             <Seo
                 lang={intl.locale}
                 title={intl.formatMessage({id: "common.title"})}
-                keywords={[`gatsby`, `application`, `react`]}
+                keywords={intl.formatMessage({id: "common.keywords"})}
+                description={intl.formatMessage({id: "common.description"})}
             />
             <Grid container className={classes.root}>
                 <Grid item xs={12} className={classes.home}>
@@ -54,7 +55,7 @@ const IndexPage = () => {
                     <br />
                 </Grid>
                 {tools.map(config => (
-                    <Grid item xs={6} sm={4} lg={3} xl={2} className={classes.tool}>
+                    <Grid item xs={12} sm={4} lg={3} xl={2} className={classes.tool}>
                         <Tool config={config} />
                     </Grid>
                 ))}
