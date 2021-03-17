@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Daytl`,
+    siteUrl: 'https://www.daytl.com',
     description: `Online tools`,
     author: `Daytl`
   },
@@ -14,6 +15,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
