@@ -51,7 +51,7 @@ export default function ToolPage({ pageContext }) {
           </Grid>
           <Grid item xs={12} className={classes.tool}>
             <Typography variant="subtitle1">
-            <FormattedMessage id={`tools.${name}.content`} />
+              <FormattedMessage id={`tools.${name}.content`} />
             </Typography>
           </Grid>
         </Grid>

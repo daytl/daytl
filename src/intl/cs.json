@@ -21,10 +21,11 @@
       "birthDate": "Datum narození",
       "copied": "zkopírováno",
       "keywords": "rodné číslo, kontrola rodného čísla",
-      "description": "Online generátor rodného čísla"
+      "description": "Online generátor rodného čísla",
+      "content": ""
     },
     "remover": {
-      "title": "Čistič html a zalomení",
+      "title": "Čistič html a zalomení řádků a mezer",
       "info": "Odstraňovač mezer a čistič html",
       "source": "Zdroj",
       "result": "Výsledek",
@@ -33,7 +34,22 @@
       "clear": "Vymazat",
       "copied": "zkopírováno",
       "keywords": "odstranit mezery",
-      "description": "Odstraňovač mezer a čistič html"
+      "description": "Odstraňovač mezer a čistič html",
+      "content": ""
+    },
+    "base64-encode-decode": {
+      "title": "Base64 Encode/Decode",
+      "info": "Base64",
+      "source": "Zdroj",
+      "result": "Výsledek",
+      "base64": "Base64",
+      "clear": "Vymazat",
+      "decode": "Dekódovat",
+      "encode": "Enkodovat",
+      "copied": "zkopírováno",
+      "keywords": "base64",
+      "description": "Base64 encode decode",
+      "content": ""
     }
   }
 }

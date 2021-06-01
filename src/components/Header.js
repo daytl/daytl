@@ -6,7 +6,6 @@ import { AppBar, Grid } from "@material-ui/core"
 import Toolbar from "@material-ui/core/Toolbar"
 import Button from "@material-ui/core/Button"
 import makeStyles from "@material-ui/core/styles/makeStyles"
-import OpenInNewIcon from "@material-ui/icons/OpenInNew";
 
 const useStyles = makeStyles(theme => ({
     root: {

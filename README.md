@@ -8,10 +8,14 @@ Your useful online tools simply at one place.
 * Czech BirthNumber tool
 * Remover
 
-### Upcoming tools
+### Dev in progress
 
 * Encode/decode - utf, url encode, base64, html
-  
+
+
+### Upcoming tools
+
+* case convertor
 * JWT parsing
 * formatter
 * minification
@@ -22,8 +26,14 @@ Missing your favorite online tool? Let us know or become a collaborator and crea
 
 ## TODO
 
-* Fix remover design
-* Add link to tool repo  
+* Tool detil  - content and help
+* better seo
+
+* Remover 
+  design
+  remove empty chars as tabs etc...
+  
+  
 * Add search tools by keywords
 
 

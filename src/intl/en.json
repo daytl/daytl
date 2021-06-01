@@ -36,6 +36,19 @@
       "detail": "dependencies, changelog and etc..",
       "keywords": "online breaks remover, online html remover",
       "description": "Remover breaklines, html tags and even more."
+    },
+    "base64-encode-decode": {
+      "title": "Base64 Encode/Decode",
+      "info": "Base64",
+      "source": "Source",
+      "result": "Result",
+      "base64": "Base64",
+      "clear": "Clear",
+      "decode": "Encode",
+      "encode": "Decode",
+      "copied": "copied",
+      "keywords": "base64",
+      "description": "Base64 encode decode"
     }
   }
 }

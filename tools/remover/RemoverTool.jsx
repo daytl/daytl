@@ -4,16 +4,10 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Chip from '@material-ui/core/Chip';
 import striptags from 'striptags';
-import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { useMediaQuery } from "@material-ui/core";
-
-const useTransaltion = () => {
-    const intl = useIntl();
-    return (id) => {
-        intl.formatMessage({id})
-    }
-}
+import useTranslation from "../../src/utils/useTranslation";
 
 const useStyles = makeStyles(() => {
     return {
@@ -28,7 +22,6 @@ const useStyles = makeStyles(() => {
 
 
 export const RemoverTool = () => {
-    //const classes = useStyles();
     const [source, setSource] = useState('');
     const [result, setResult] = useState('');
     const [copied, setCopied] = useState(false);
@@ -52,7 +45,7 @@ export const RemoverTool = () => {
     }, [])
 
     const handleRemoveBreaks = useCallback(() => {
-        setResult(source.replace(/(\r\n|\n|\r)/gm, ""))
+        setResult(source.replace(/(\r\n|\n|\r|\t)/gm, ""))
         setCopied(false);
     }, [source])
 
@@ -67,7 +60,7 @@ export const RemoverTool = () => {
         setCopied(false);
     }, [])
 
-    const t = useTransaltion();
+    const t = useTranslation();
 
     const matchesMobile = !useMediaQuery('(min-width:600px)')
     const classes = useStyles(matchesMobile)

@@ -18,90 +18,91 @@ import DialogActions from "@material-ui/core/DialogActions"
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 const useStyles = makeStyles(theme => {
-  return {
-    card: {
-      cursor: "pointer",
-      "&:hover": {
-        color: theme.palette.primary.contrastText,
-        background: theme.palette.primary.main,
-      },
-    },
-    close: {
-      position: 'absolute',
-      right: 0,
-      top: 0,
-    },
-  }
+    return {
+        card: {
+            cursor: "pointer",
+            "&:hover": {
+                color: theme.palette.primary.contrastText,
+                background: theme.palette.primary.main,
+            },
+        },
+        close: {
+            position: 'absolute',
+            right: 0,
+            top: 0,
+        },
+    }
 })
 
-export const Tool = ({ config }) => {
-  const { name, version, github, componentName } = config
-  const ToolComponent = components[componentName]
-  const [open, setOpen] = useState(false)
+export const Tool = ({config}) => {
+    const {name, version, github, componentName} = config
+    const ToolComponent = components[componentName]
+    const [open, setOpen] = useState(false)
 
-  const classes = useStyles();
+    const classes = useStyles();
 
-  const handleClose = useCallback(() => {
-    setOpen(false)
-  }, [setOpen])
-  const handleOpen = useCallback(() => {
-    setOpen(true)
-  }, [setOpen])
-  const styles = useStyles()
-  return (
-    <>
-      <Card onClick={handleOpen} className={styles.card}>
-        <CardContent>
-          <Typography variant="h5" component="h2">
-            <FormattedMessage id={`tools.${name}.title`} />
-          </Typography>
-          <Typography variant="body2" component="p">
-            <FormattedMessage id={`tools.${name}.info`} />
-          </Typography>
-        </CardContent>
-      </Card>
-      <Dialog
-        open={open}
-        TransitionComponent={Zoom}
-        keepMounted
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-slide-title"
-        aria-describedby="alert-dialog-slide-description"
-        fullWidth
-        maxWidth="lg"
-      >
-        <DialogTitle id="alert-dialog-slide-title">
-          <FormattedMessage id={`tools.${name}.title`} tagName="strong" /><br />
-          <FormattedMessage id={`tools.${name}.info`} />
-          <IconButton onClick={handleClose} className={classes.close}>
-            <CloseIcon />
-          </IconButton>
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-slide-description">
-            {ToolComponent ? <ToolComponent /> : "No tool component available."}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Typography variant="overline" display="block" gutterBottom>
-            <Button
-              to={`/${name}`}
-              component={Link}
-              target="_blank"
-              variant="text"
-              endIcon={<OpenInNewIcon />}
+    const handleClose = useCallback(() => {
+        setOpen(false)
+    }, [setOpen])
+    const handleOpen = useCallback(() => {
+        setOpen(true)
+    }, [setOpen])
+    const styles = useStyles()
+    return (
+        <>
+            <Card onClick={handleOpen} className={styles.card}>
+                <CardContent>
+                    <Typography variant="h5" component="h2">
+                        <FormattedMessage id={`tools.${name}.title`} />
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                        <FormattedMessage id={`tools.${name}.info`} />
+                    </Typography>
+                </CardContent>
+            </Card>
+            <Dialog
+                open={open}
+                TransitionComponent={Zoom}
+                keepMounted
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-slide-title"
+                aria-describedby="alert-dialog-slide-description"
+                fullWidth
+                maxWidth="lg"
             >
-              <FormattedMessage id="common.toolPage" />
-            </Button>
-          </Typography>
-        </DialogActions>
-      </Dialog>
-    </>
-  )
+                <DialogTitle id="alert-dialog-slide-title">
+                    <FormattedMessage id={`tools.${name}.title`} tagName="strong" /><br />
+                    <FormattedMessage id={`tools.${name}.info`} />
+                    <IconButton onClick={handleClose} className={classes.close}>
+                        <CloseIcon />
+                    </IconButton>
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-slide-description">
+                        {ToolComponent ? <ToolComponent /> : "No tool component available."}
+                    </DialogContentText>
+                    <DialogContentText id="alert-dialog-slide-description">
+                        <FormattedMessage id={`tools.${name}.content`} />
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button
+                        to={`/${name}`}
+                        component={Link}
+                        target="_blank"
+                        variant="text"
+                        endIcon={<OpenInNewIcon />}
+                    >
+                        <FormattedMessage id="common.toolPage" />
+                    </Button>
+                </DialogActions>
+            </Dialog>
+        </>
+    )
 }
 
 Tool.displayName = "Tool"
 
 Tool.propTypes = {
-  config: object,
+    config: object,
 }
