@@ -75,12 +75,12 @@ export const BirthNumberTool = () => {
                     className={classes.button}
                     onClick={handleGenerateBirthNumber}
                     data-minage="0"
-                    data-maxage="18"
+                    data-maxage="17"
             >
                 <FormattedMessage id="tools.birthnumber.button.men.child" />
             </Button>
             <Button color="primary" variant="contained" className={classes.button} onClick={handleGenerateBirthNumber}
-                    data-minage="19"
+                    data-minage="18"
                     data-maxage="60"
             >
                 <FormattedMessage id="tools.birthnumber.button.men.adult" />
@@ -88,12 +88,12 @@ export const BirthNumberTool = () => {
             <Button color="primary" variant="contained" className={classes.button} data-isfemale="true"
                     onClick={handleGenerateBirthNumber}
                     data-minage="0"
-                    data-maxage="18"
+                    data-maxage="17"
             >
                 <FormattedMessage id="tools.birthnumber.button.women.child" />
             </Button>
             <Button color="primary" variant="contained" className={classes.button} data-isfemale="true"
-                    data-minage="19"
+                    data-minage="18"
                     data-maxage="60"
                     onClick={handleGenerateBirthNumber}>
                 <FormattedMessage id="tools.birthnumber.button.women.adult" />

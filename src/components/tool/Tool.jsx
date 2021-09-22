@@ -25,6 +25,7 @@ const useStyles = makeStyles(theme => {
                 color: theme.palette.primary.contrastText,
                 background: theme.palette.primary.main,
             },
+            minHeight: '8rem',
         },
         close: {
             position: 'absolute',

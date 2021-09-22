@@ -5,10 +5,10 @@ import Button from '@material-ui/core/Button';
 import Chip from '@material-ui/core/Chip';
 import { FormattedMessage } from "gatsby-plugin-intl"
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import { TextareaAutosize, useMediaQuery } from "@material-ui/core";
-import { fromByteArray } from 'base64-js';
-import { encode, decode } from 'js-base64';
+import { useMediaQuery } from "@material-ui/core";
+import { decode, encode, atob, btoa } from 'js-base64';
 import useTranslation from "../../src/utils/useTranslation";
+import { useDropzone } from 'react-dropzone';
 
 const useStyles = makeStyles(() => {
     return {
@@ -18,6 +18,27 @@ const useStyles = makeStyles(() => {
         } : {
             marginRight: 5,
         }),
+        dropzone: (mobile, isDragActive,
+                   isDragReject,
+                   isDragAccept) => ({
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: '20px',
+            borderWidth: 2,
+            borderRadius: 2,
+            borderColor: '#eeeeee',
+            borderStyle: 'dashed',
+            backgroundColor: '#fafafa',
+            color: '#bdbdbd',
+            outline: 'none',
+            transition: 'border .24s ease-in-out',
+        }),
+        copy: {
+            color: 'green',
+            borderColor: 'green',
+        }
     }
 })
 
@@ -35,14 +56,37 @@ const toByteArray = (str) => {
 }
 
 export const Base64EncodeDecode = () => {
-    const [source, setSource] = useState('čřščřčš');
+    const [source, setSource] = useState('');
     const [result, setResult] = useState('');
     const [copied, setCopied] = useState(false);
+
+    const onDrop = useCallback(acceptedFiles => {
+        let reader = new FileReader();
+        let file = acceptedFiles[0];
+        reader.onload= () => {
+            setResult(reader.result)
+        }
+        reader.readAsDataURL(file)
+    }, []);
+
+    const {
+        getRootProps, getInputProps,
+        isDragActive,
+        isDragReject,
+        isDragAccept
+    } = useDropzone({
+        multiple: false,
+        onDrop
+    })
+
+
     const inputRef = useRef();
 
     const t = useTranslation();
     const matchesMobile = !useMediaQuery('(min-width:600px)')
-    const classes = useStyles(matchesMobile)
+    const classes = useStyles(matchesMobile, isDragActive,
+        isDragReject,
+        isDragAccept)
 
     // TODO get result size in useMemo
     const resultSize = (result.length * 2 / 1024).toFixed(2)
@@ -97,7 +141,14 @@ export const Base64EncodeDecode = () => {
                 />
             </Grid>
             <Grid item xs={5}>
-                Or drop image here
+                <div {...getRootProps({className: classes.dropzone})}>
+                    <input {...getInputProps()} />
+                    {
+                        isDragActive ?
+                            <p>Drop the files here ...</p> :
+                            <p>Drag 'n' drop some files here, or click to select files</p>
+                    }
+                </div>
             </Grid>
 
             <Grid item xs={12}>
@@ -126,8 +177,8 @@ export const Base64EncodeDecode = () => {
                     value={result}
                     inputRef={inputRef}
                 />
-                <span>{result.length} / {resultSize}kB</span>
-                {copied && <Chip size="small" label={<FormattedMessage id="tools.base64-encode-decode.copied" />} />}
+                <span>{result.length} / {resultSize}kB</span>{' '}
+                {copied && <Chip size="small" variant="outlined" className={classes.copy} label={<FormattedMessage id="tools.base64-encode-decode.copied" />} />}
             </Grid>
 
         </Grid>
@@ -136,5 +187,4 @@ export const Base64EncodeDecode = () => {
 
 // TODO
 // image encoding
-// length info, kb info
 // error hadling
