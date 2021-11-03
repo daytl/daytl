@@ -15,7 +15,7 @@ import DialogTitle from "@material-ui/core/DialogTitle"
 import DialogContent from "@material-ui/core/DialogContent"
 import DialogContentText from "@material-ui/core/DialogContentText"
 import DialogActions from "@material-ui/core/DialogActions"
-import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { FormattedHTMLMessage, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 const useStyles = makeStyles(theme => {
     return {
@@ -82,8 +82,10 @@ export const Tool = ({config}) => {
                     <DialogContentText id="alert-dialog-slide-description">
                         {ToolComponent ? <ToolComponent /> : "No tool component available."}
                     </DialogContentText>
+                </DialogContent>
+                <DialogContent>
                     <DialogContentText id="alert-dialog-slide-description">
-                        <FormattedMessage id={`tools.${name}.content`} />
+                        <FormattedHTMLMessage id={`tools.${name}.content`} />
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>

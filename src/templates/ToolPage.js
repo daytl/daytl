@@ -3,7 +3,7 @@ import components from "../../tools/components"
 import Typography from "@material-ui/core/Typography"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import Grid from "@material-ui/core/Grid"
-import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
+import { FormattedHTMLMessage, FormattedMessage, useIntl } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo";
 
@@ -51,7 +51,7 @@ export default function ToolPage({ pageContext }) {
           </Grid>
           <Grid item xs={12} className={classes.tool}>
             <Typography variant="subtitle1">
-              <FormattedMessage id={`tools.${name}.content`} />
+              <FormattedHTMLMessage id={`tools.${name}.content`} />
             </Typography>
           </Grid>
         </Grid>
