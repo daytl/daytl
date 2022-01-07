@@ -1,18 +1,13 @@
 import { createMuiTheme } from "@material-ui/core/styles"
 
 const theme = createMuiTheme({
-  palette: {
-
-  },
+  palette: {},
   overrides: {
     MuiTypography: {
-      root: {
-
-      },
+      root: {},
       h5: {
-        fontWeight: '600 !important',
-
-      }
+        fontWeight: "600 !important",
+      },
     },
     MuiAppBar: {
       colorPrimary: {

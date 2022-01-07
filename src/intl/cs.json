@@ -6,7 +6,13 @@
     "toolPage": "Vlastní stránka nástroje",
     "titleSuffix": "Online nástroje",
     "contribute": "Contribute",
-    "feedback": "Feedback",
+    "feedback": {
+      "title": "Zpětná vazba",
+      "submit": "Odeslat",
+      "success": "Děkujeme za zprávu.",
+      "email": "Email",
+      "message": "Zpráva"
+    },
     "keywords": "online nástroje",
     "description": "Vaše užitečné online nástroje jednoduše a na jednom místě."
   },

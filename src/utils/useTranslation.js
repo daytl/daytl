@@ -1,10 +1,10 @@
-import { useIntl } from "gatsby-plugin-intl";
+import { useIntl } from "gatsby-plugin-intl"
 
 const useTranslation = () => {
-    const intl = useIntl();
-    return (id) => {
-        return intl.formatMessage({id})
-    }
+  const intl = useIntl()
+  return (id) => {
+    return intl.formatMessage({ id })
+  }
 }
 
-export default useTranslation;
+export default useTranslation

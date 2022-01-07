@@ -26,14 +26,12 @@ Missing your favorite online tool? Let us know or become a collaborator and crea
 
 ## TODO
 
-* Tool detil  - content and help
 * better seo
-
+* add lint
 * Remover 
   design
   remove empty chars as tabs etc...
-  
-  
+   
 * Add search tools by keywords
 
 

@@ -11,7 +11,7 @@ const Language = () => {
   return (
     <IntlContextConsumer>
       {({ languages, language: currentLocale }) =>
-        languages.map(language => (
+        languages.map((language) => (
           <Typography variant="caption">
             <a
               key={language}

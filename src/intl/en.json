@@ -6,7 +6,13 @@
     "toolPage": "Tool static page",
     "titleSuffix": "Online tools",
     "contribute": "Contribute",
-    "feedback": "Feedback",
+    "feedback": {
+      "title": "Feedback",
+      "submit": "Submit",
+      "success": "Thanks for your feedback.",
+      "email": "Email",
+      "message": "Message"
+    },
     "keywords": "online tools",
     "description": "Simple and useful online tools in one place."
   },

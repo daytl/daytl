@@ -3,11 +3,15 @@ import components from "../../tools/components"
 import Typography from "@material-ui/core/Typography"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import Grid from "@material-ui/core/Grid"
-import { FormattedHTMLMessage, FormattedMessage, useIntl } from "gatsby-plugin-intl"
+import {
+  FormattedHTMLMessage,
+  FormattedMessage,
+  useIntl,
+} from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
-import Seo from "../components/Seo";
+import Seo from "../components/Seo"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: "#fff",
@@ -26,17 +30,19 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function ToolPage({ pageContext }) {
-  const { tool: { name, componentName } } = pageContext
+  const {
+    tool: { name, componentName },
+  } = pageContext
   const ToolComponent = components[componentName]
-  const intl = useIntl();
+  const intl = useIntl()
   const classes = useStyles()
   return (
     <Layout>
       <Seo
-          lang={intl.locale}
-          title={intl.formatMessage({id: `tools.${name}.title`})}
-          keywords={intl.formatMessage({id: `tools.${name}.keywords`})}
-          description={intl.formatMessage({id: `tools.${name}.description`})}
+        lang={intl.locale}
+        title={intl.formatMessage({ id: `tools.${name}.title` })}
+        keywords={intl.formatMessage({ id: `tools.${name}.keywords` })}
+        description={intl.formatMessage({ id: `tools.${name}.description` })}
       />
       <main>
         <Grid container>

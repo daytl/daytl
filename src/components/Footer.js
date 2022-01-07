@@ -8,10 +8,9 @@ import Button from "@material-ui/core/Button"
 import Grid from "@material-ui/core/Grid"
 import Feedback from "./Feedback"
 
-const useStyles = makeStyles(theme => {
+const useStyles = makeStyles((theme) => {
   return {
-    root: {
-    },
+    root: {},
     divider: {
       marginTop: 10,
       marginBottom: 10,
