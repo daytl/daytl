@@ -74,6 +74,12 @@ const Feedback = () => {
   }
   return (
     <>
+      <div
+          dangerouslySetInnerHTML={{
+            __html:
+                '<form name="contact" netlify netlify-honeypot="bot-field" hidden><input type="text" name="email" /><textarea name="message"></textarea></form>',
+          }}
+      />
       <Button size="small" onClick={handleOpen} endIcon={<FeedbackIcon />}>
         <FormattedMessage id="common.feedback.title" />
       </Button>
@@ -91,12 +97,6 @@ const Feedback = () => {
           </DialogContent>
         ) : (
           <>
-            <div
-              dangerouslySetInnerHTML={{
-                __html:
-                  '<form name="contact" netlify netlify-honeypot="bot-field" hidden><input type="text" name="email" /><textarea name="message"></textarea></form>',
-              }}
-            />
             <form onSubmit={handleSubmit(onSubmit)} name="contact">
               <DialogContent className={classes.content}>
                 <Controller
