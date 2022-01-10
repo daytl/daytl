@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react"
-import FeedbackIcon from "@material-ui/icons/Feedback"
+import SendIcon from "@material-ui/icons/Send"
 import Button from "@material-ui/core/Button"
 import Dialog from "@material-ui/core/Dialog"
 import DialogTitle from "@material-ui/core/DialogTitle"
@@ -14,16 +14,23 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import { Alert } from "@material-ui/lab"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import Grid from "@material-ui/core/Grid"
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     minWidth: 400,
   },
-  content: {},
+  alertButton: {
+    width: "100%",
+    textAlign: "right",
+  },
   close: {
     position: "absolute",
     right: 0,
     top: 0,
+  },
+  message: {
+    width: "100%",
   },
 }))
 
@@ -75,14 +82,30 @@ const Feedback = () => {
   return (
     <>
       <div
-          dangerouslySetInnerHTML={{
-            __html:
-                '<form name="contact" netlify netlify-honeypot="bot-field" hidden><input type="text" name="email" /><textarea name="message"></textarea></form>',
-          }}
+        dangerouslySetInnerHTML={{
+          __html:
+            '<form name="contact" netlify netlify-honeypot="bot-field" hidden><input type="text" name="email" /><textarea name="message"></textarea></form>',
+        }}
       />
-      <Button size="small" onClick={handleOpen} endIcon={<FeedbackIcon />}>
-        <FormattedMessage id="common.feedback.title" />
-      </Button>
+
+      <Alert color="info" classes={classes}>
+        <Grid container spacing={3} className={classes.alertInner}>
+          <Grid item xs={6}>
+            <FormattedMessage id="common.feedback.text" />
+          </Grid>
+          <Grid item xs={6} className={classes.alertButton}>
+            <Button
+              size="small"
+              color="primary"
+              onClick={handleOpen}
+              variant="outlined"
+              endIcon={<SendIcon />}
+            >
+              <FormattedMessage id="common.feedback.button" />
+            </Button>
+          </Grid>
+        </Grid>
+      </Alert>
       <Dialog open={open} onClose={handleClose} classes={classes}>
         <DialogTitle>
           <IconButton onClick={handleClose} className={classes.close}>
@@ -90,7 +113,7 @@ const Feedback = () => {
           </IconButton>
         </DialogTitle>
         {success ? (
-          <DialogContent className={classes.content}>
+          <DialogContent>
             <Alert color="success">
               <FormattedMessage id="common.feedback.success" />
             </Alert>

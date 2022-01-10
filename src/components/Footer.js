@@ -16,8 +16,7 @@ const useStyles = makeStyles((theme) => {
       marginBottom: 10,
     },
     links: {
-      marginTop: 10,
-      textAlign: "center",
+      padding: 10,
     },
   }
 })
@@ -29,12 +28,10 @@ const Footer = ({ children }) => {
       <footer className={classes.root}>
         <br />
         <Divider className={classes.divider} />
-        <Grid container className={classes.links}>
-          <Button href={packageJson.repository.url} size="small">
-            <GitHubIcon />
-          </Button>
-          <Divider orientation="vertical" flexItem />
-          <Feedback />
+        <Grid container>
+          <Grid item xs={12} className={classes.links}>
+            <Feedback />
+          </Grid>
         </Grid>
       </footer>
     </>

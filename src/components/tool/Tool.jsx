@@ -94,8 +94,10 @@ export const Tool = ({ config }) => {
             <FormattedHTMLMessage id={`tools.${name}.content`} />
           </DialogContentText>
         </DialogContent>
-        <DialogActions>
+        <DialogContent>
           <Feedback />
+        </DialogContent>
+        <DialogActions>
           <Button
             to={`/${name}`}
             component={Link}

@@ -7,7 +7,8 @@
     "titleSuffix": "Online tools",
     "contribute": "Contribute",
     "feedback": {
-      "title": "Feedback",
+      "button": "Let us know",
+      "text": "Are you missing some feature?",
       "submit": "Submit",
       "success": "Thanks for your feedback.",
       "email": "Email",
@@ -44,7 +45,7 @@
       "description": "Remover breaklines, html tags and even more."
     },
     "base64-encode-decode": {
-      "title": "Base64 Encode/Decode",
+      "title": "Base64 Encode and Decode",
       "info": "Encode and decode text or images to base64 format.",
       "source": "Source",
       "result": "Result",

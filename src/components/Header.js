@@ -6,6 +6,8 @@ import { AppBar, Grid } from "@material-ui/core"
 import Toolbar from "@material-ui/core/Toolbar"
 import Button from "@material-ui/core/Button"
 import makeStyles from "@material-ui/core/styles/makeStyles"
+import packageJson from "../../package.json"
+import GitHubIcon from "@material-ui/icons/GitHub"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,6 +67,9 @@ const Header = ({ siteTitle, showLogo }) => {
           {/*/>*/}
         </Grid>
         <Language />
+        <Button href={packageJson.repository.url} size="small">
+          <GitHubIcon />
+        </Button>
       </Toolbar>
     </AppBar>
   )
