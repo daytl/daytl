@@ -45,6 +45,9 @@ module.exports = {
         trackingIds: [
           "G-N4R8B345EZ", // Google Analytics / GA
         ],
+        gtagConfig: {
+          'storage': 'none'
+        }
       },
     },
   ],
