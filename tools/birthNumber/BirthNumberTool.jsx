@@ -19,6 +19,9 @@ const useStyles = makeStyles(() => {
         } : {
             marginRight: 5,
         }),
+        helperText: {
+            marginLeft: 0,
+        }
     }
 })
 
@@ -60,6 +63,9 @@ export const BirthNumberTool = () => {
             variant="outlined"
             className={classes.input}
             fullWidth
+            FormHelperTextProps={{
+                className: classes.helperText
+            }}
             helperText={
                 <>
                     <FormattedMessage id="tools.birthnumber.birthDate" />:

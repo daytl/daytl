@@ -69,7 +69,7 @@ export const RemoverTool = () => {
         <Grid container>
             <Grid item xs={6}>
                 <TextField
-                    placeholder={t("remover.source")}
+                    placeholder={t("tools.remover.source")}
                     multiline
                     rows={4}
                     rowsMax={4}
@@ -81,7 +81,7 @@ export const RemoverTool = () => {
             </Grid>
             <Grid item xs={6}>
                 <TextField
-                    placeholder={t("remover.result")}
+                    placeholder={t("tools.remover.result")}
                     multiline
                     rows={4}
                     rowsMax={4}
