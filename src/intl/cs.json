@@ -14,6 +14,9 @@
       "message": "Zpráva",
       "text": "Chybí vám nějaký nástroj nebo funkce?"
     },
+    "404": {
+      "info": "Ooops, stránka nenalezena."
+    },
     "keywords": "online nástroje",
     "description": "Vaše užitečné online nástroje jednoduše a na jednom místě."
   },
@@ -56,6 +59,26 @@
       "copied": "zkopírováno",
       "keywords": "base64",
       "description": "Base64 encode decode",
+      "content": ""
+    },
+    "passwordGenerator": {
+      "title": "Generátor hesel",
+      "info": "Generátor bezpečných hesel s možností vygenerovat více hesel najednou a stáhnout jako soubor.",
+      "strength": {
+        "1": "Slabé",
+        "2": "Dobré",
+        "3": "Silné",
+        "4": "Velmi silné"
+      },
+      "crackTime": "Odhadovaný čas prolomení: <strong>{time}</strong>",
+      "letters": "písmena",
+      "symbols": "symboly",
+      "numbers": "čísla",
+      "copy": "Zkopírovat",
+      "download": "Stáhnout hesla jako .txt",
+      "refresh": "Nové heslo",
+      "length": "Délka",
+      "count": "Počet hesel",
       "content": ""
     }
   }

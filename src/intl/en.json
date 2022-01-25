@@ -14,6 +14,9 @@
       "email": "Email",
       "message": "Message"
     },
+    "404": {
+      "info": "Ooops, page not found."
+    },
     "keywords": "online tools",
     "description": "Simple and useful online tools in one place."
   },
@@ -56,6 +59,26 @@
       "copied": "copied",
       "keywords": "base64",
       "description": "Base64 encode decode"
+    },
+    "passwordGenerator": {
+      "title": "Password generator",
+      "info": "Secure password generator with the ability to generate multiple passwords at once and download as a file.",
+      "strength": {
+        "1": "Weak",
+        "2": "Good",
+        "3": "Strong",
+        "4": "Very strong"
+      },
+      "crackTime": "Estimated cracking time: <strong>{time}</strong>",
+      "letters": "letters",
+      "symbols": "symbols",
+      "numbers": "numbers",
+      "copy": "Copy",
+      "download": "Download as .txt",
+      "refresh": "New password",
+      "length": "Length",
+      "count": "Number of passwords",
+      "content": ""
     }
   }
 }

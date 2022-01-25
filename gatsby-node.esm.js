@@ -23,3 +23,13 @@ exports.createPages = async ({graphql, actions}) => {
         })
     })
 }
+
+exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
+    const config = getConfig();
+    console.log(config.resolve.fallback)
+    config.resolve.fallback = {
+        "crypto": require.resolve("crypto-browserify"),
+        "stream": require.resolve("stream-browserify")
+    };
+    actions.replaceWebpackConfig(config);
+};
