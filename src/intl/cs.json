@@ -17,6 +17,8 @@
     "404": {
       "info": "Ooops, stránka nenalezena."
     },
+    "copied": "Zkopírováno!",
+    "copy": "Zkopírovat do schránky",
     "keywords": "online nástroje",
     "description": "Vaše užitečné online nástroje jednoduše a na jednom místě."
   },
@@ -29,10 +31,12 @@
       "button.women.child": "Žena 0-17",
       "button.men.child": "Muž 0-17",
       "birthDate": "Datum narození",
-      "copied": "zkopírováno",
       "keywords": "rodné číslo, kontrola rodného čísla",
       "description": "Online generátor rodného čísla",
-      "content": "<p>Rodné číslo je jednoznačný číselný identifikátor přidělovaný obyvatelům Česka.</p><p>Rodné číslo je upraveno v zákoně č. 133/2000 Sb., o evidenci obyvatel. Z rodného čísla lze odvodit datum narození a pohlaví příslušné osoby. V Česku patří rodné číslo mezi osobní údaje. V mnoha dalších státech se používají obdobné číselné identifikátory, shodný formát jako v Česku mají rodná čísla na Slovensku.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku „Rodné číslo na Wikipedii</a></p>"
+      "content": "<p>Rodné číslo je jednoznačný číselný identifikátor přidělovaný obyvatelům Česka.</p><p>Rodné číslo je upraveno v zákoně č. 133/2000 Sb., o evidenci obyvatel. Z rodného čísla lze odvodit datum narození a pohlaví příslušné osoby. V Česku patří rodné číslo mezi osobní údaje. V mnoha dalších státech se používají obdobné číselné identifikátory, shodný formát jako v Česku mají rodná čísla na Slovensku.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku „Rodné číslo na Wikipedii</a></p>",
+      "setupBirthDate": "Nastavit datum narození",
+      "male": "Muž",
+      "female": "Žena"
     },
     "remover": {
       "title": "Odstranění html, zalomení řádků a mezer",
@@ -42,7 +46,6 @@
       "html": "Odstranit HTML",
       "breaks": "Odstranit odřádkování",
       "clear": "Vymazat",
-      "copied": "zkopírováno",
       "keywords": "odstranit mezery",
       "description": "Odstraňovač mezer a čistič html",
       "content": ""
@@ -56,7 +59,6 @@
       "clear": "Vymazat",
       "decode": "Dekódovat",
       "encode": "Enkodovat",
-      "copied": "zkopírováno",
       "keywords": "base64",
       "description": "Base64 encode decode",
       "content": ""

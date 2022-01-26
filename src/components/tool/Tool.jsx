@@ -21,6 +21,7 @@ import {
   Link,
 } from "gatsby-plugin-intl"
 import Feedback from "../Feedback"
+import Divider from "@material-ui/core/Divider"
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => {
 })
 
 export const Tool = ({ config }) => {
-  const { name, version, github, componentName } = config
+  const { name, componentName } = config
   const ToolComponent = components[componentName]
   const [open, setOpen] = useState(false)
 
@@ -90,6 +91,7 @@ export const Tool = ({ config }) => {
           </DialogContentText>
         </DialogContent>
         <DialogContent>
+          <Divider />
           <DialogContentText id="alert-dialog-slide-description">
             <FormattedHTMLMessage id={`tools.${name}.content`} />
           </DialogContentText>

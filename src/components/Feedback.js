@@ -16,7 +16,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import Grid from "@material-ui/core/Grid"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   paper: {
     minWidth: 400,
   },
@@ -44,7 +44,6 @@ const schema = yup
 const Feedback = () => {
   const [open, setOpen] = useState(false)
   const {
-    register,
     handleSubmit,
     control,
     reset,
@@ -89,7 +88,7 @@ const Feedback = () => {
       />
 
       <Alert color="info" classes={classes}>
-        <Grid container spacing={3} className={classes.alertInner}>
+        <Grid container spacing={3}>
           <Grid item xs={6}>
             <FormattedMessage id="common.feedback.text" />
           </Grid>
@@ -121,7 +120,7 @@ const Feedback = () => {
         ) : (
           <>
             <form onSubmit={handleSubmit(onSubmit)} name="contact">
-              <DialogContent className={classes.content}>
+              <DialogContent>
                 <Controller
                   name="email"
                   control={control}

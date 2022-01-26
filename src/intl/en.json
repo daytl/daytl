@@ -17,6 +17,8 @@
     "404": {
       "info": "Ooops, page not found."
     },
+    "copied": "Copied!",
+    "copy": "Copy to clipboard",
     "keywords": "online tools",
     "description": "Simple and useful online tools in one place."
   },
@@ -29,10 +31,12 @@
       "button.women.child": "Female 0-17",
       "button.men.child": "Male 0-17",
       "birthDate": "Birthdate",
-      "copied": "copied",
       "detail": "dependencies, changelog and etc..",
       "keywords": "czech birth number",
-      "description": "Generate czech birth number"
+      "description": "Generate czech birth number",
+      "setupBirthDate": "Setup birth date",
+      "male": "Male",
+      "female": "Female"
     },
     "remover": {
       "title": "Html and breaks Remover",
@@ -42,7 +46,6 @@
       "html": "Remove html",
       "breaks": "Remove breaklines",
       "clear": "Clear",
-      "copied": "copied",
       "detail": "dependencies, changelog and etc..",
       "keywords": "online breaks remover, online html remover",
       "description": "Remover breaklines, html tags and even more."
@@ -56,7 +59,7 @@
       "clear": "Clear",
       "decode": "Encode",
       "encode": "Decode",
-      "copied": "copied",
+
       "keywords": "base64",
       "description": "Base64 encode decode"
     },

@@ -19,24 +19,27 @@ function testRc(strRc) {
     return result === 0 || result % 11 === 0;
 }
 
-const generateBirthNumber = (isFemale = false,  minAge = 19, maxAge = 50) => {
-    const birthDate = randomDate(new Date(2020-maxAge, 0, 1), new Date(2020-minAge, 0, 1));
+const generateBirthNumber = (
+    {
+        isFemale = false, minAge = 19, maxAge = 50,
+        birthDate = randomDate(new Date(2020 - maxAge, 0, 1), new Date(2020 - minAge, 0, 1))
+    } = {}
+) => {
 
     let birthNumberString = format(birthDate, 'yyMMdd') + `${randomIntFromInterval(1000, 9999)}`;
     if (isFemale) {
         const month = parseInt(birthNumberString.substr(2, 2));
-        birthNumberString = birthNumberString.substr(0,2) + (month+50).toString() + birthNumberString.substr(4);
+        birthNumberString = birthNumberString.substr(0, 2) + (month + 50).toString() + birthNumberString.substr(4);
     }
 
-    const firstPart = birthNumberString.substr(0,6);
-    let lastPart = birthNumberString.substr(6,4);
+    const firstPart = birthNumberString.substr(0, 6);
+    let lastPart = birthNumberString.substr(6, 4);
 
     while (!testRc(`${firstPart}${lastPart}`)) {
         lastPart++;
     }
-    return {birthNumber: `${firstPart}${lastPart}`, birthDate};
+    return {birthNumber: `${firstPart}${lastPart}`, birthDate, isFemale};
 }
-
 
 
 export default generateBirthNumber;

@@ -1,17 +1,16 @@
 import Button from "@material-ui/core/Button"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import TextField from "@material-ui/core/TextField"
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import React, { useCallback, useEffect, useMemo } from "react"
 import { FormattedHTMLMessage, FormattedMessage } from "gatsby-plugin-intl"
 import { Checkbox, FormControlLabel, InputAdornment, Slider, useMediaQuery } from "@material-ui/core";
 import { generateMultiple } from 'generate-password';
 import { Controller, useForm } from 'react-hook-form';
 import zxcvbn from 'zxcvbn';
 import filesaver from 'file-saver';
-import { FileCopy, Refresh, Save } from '@material-ui/icons';
-import IconButton from '@material-ui/core/IconButton';
+import { Refresh, Save } from '@material-ui/icons';
 import Grid from '@material-ui/core/Grid';
-import copy from 'copy-to-clipboard';
+import { CopyButton } from '../../src/components/tool/CopyButton';
 
 const useStyles = makeStyles(() => {
     return {
@@ -25,10 +24,11 @@ const useStyles = makeStyles(() => {
             marginRight: 5,
         }),
         slider: {
-            marginTop: 15,
+            marginTop: 7,
         },
         helperText: {
             marginLeft: 0,
+            marginBottom: 10,
         }
     }
 })
@@ -64,12 +64,8 @@ const generatePass = (
 export const PasswordGenerator = () => {
 
     const {
-        register,
-        handleSubmit,
         control,
         setValue,
-        reset,
-        clearErrors,
         getValues,
         watch,
         formState: {errors},
@@ -88,13 +84,8 @@ export const PasswordGenerator = () => {
     const passwords = getValues('passwords');
     const passwordStats = useMemo(() => zxcvbn(watchPasswords.split('\n')[0]), [watchPasswords])
 
-
-    const [copied, setCopied] = useState(false)
-
-
     const handleGeneratePassword = useCallback((event) => {
         setValue('passwords', generatePass(getValues()));
-        setCopied(false)
     }, [setValue, getValues])
 
     const handleDownload = useCallback((event) => {
@@ -110,12 +101,6 @@ export const PasswordGenerator = () => {
         return () => subscription.unsubscribe();
     }, [watch]);
 
-
-    const handleCopyToClipBoard = useCallback((event) => {
-        copy(passwords);
-        // TODO copy to clipboard to separate component
-        setCopied(true)
-    }, [passwords])
 
     const classes = useStyles(!useMediaQuery('(min-width:600px)'))
 
@@ -149,16 +134,10 @@ export const PasswordGenerator = () => {
                                 InputProps={{
                                     endAdornment:
                                         <InputAdornment position="end">
-                                            <IconButton
-                                                onClick={handleCopyToClipBoard}
-                                                edge="end"
-                                            >
-                                                <FileCopy />
-                                            </IconButton>
+                                            <CopyButton text={passwords} />
                                         </InputAdornment>
 
                                 }}
-
                             />
                         )}
                     />
@@ -175,6 +154,8 @@ export const PasswordGenerator = () => {
                                 render={({field}) => (
                                     <TextField
                                         fullWidth
+                                        variant="outlined"
+                                        size="small"
                                         {...field}
                                         label={<FormattedMessage id="tools.passwordGenerator.length" />}
                                     />
@@ -258,7 +239,8 @@ export const PasswordGenerator = () => {
                         render={({field}) => (
                             <TextField
                                 {...field}
-                                //variant="outlined"
+                                variant="outlined"
+                                size="small"
                                 label={<FormattedMessage id="tools.passwordGenerator.count" />}
                             />
                         )}

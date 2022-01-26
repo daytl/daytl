@@ -10,6 +10,7 @@ import {
 } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
+import Divider from "@material-ui/core/Divider"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,7 +42,7 @@ export default function ToolPage({ pageContext }) {
       <Seo
         lang={intl.locale}
         title={intl.formatMessage({ id: `tools.${name}.title` })}
-        keywords={intl.formatMessage({ id: `tools.${name}.keywords` })}
+        keywords={[intl.formatMessage({ id: `tools.${name}.keywords` })]}
         description={intl.formatMessage({ id: `tools.${name}.description` })}
       />
       <main>
@@ -56,6 +57,7 @@ export default function ToolPage({ pageContext }) {
             {ToolComponent ? <ToolComponent /> : "No tool component available."}
           </Grid>
           <Grid item xs={12} className={classes.tool}>
+            <Divider />
             <Typography variant="subtitle1">
               <FormattedHTMLMessage id={`tools.${name}.content`} />
             </Typography>

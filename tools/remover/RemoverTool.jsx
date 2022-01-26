@@ -1,13 +1,13 @@
 import TextField from '@material-ui/core/TextField';
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import Chip from '@material-ui/core/Chip';
 import striptags from 'striptags';
 import { FormattedMessage } from "gatsby-plugin-intl"
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import { useMediaQuery } from "@material-ui/core";
+import { InputAdornment, useMediaQuery } from "@material-ui/core";
 import useTranslation from "../../src/utils/useTranslation";
+import { CopyButton } from '../../src/components/tool/CopyButton';
 
 const useStyles = makeStyles(() => {
     return {
@@ -20,44 +20,25 @@ const useStyles = makeStyles(() => {
     }
 })
 
-
 export const RemoverTool = () => {
     const [source, setSource] = useState('');
     const [result, setResult] = useState('');
-    const [copied, setCopied] = useState(false);
-    const inputRef = useRef();
-
-    const handleCopyToClipBoard = useCallback((event) => {
-        // coppy
-        event.preventDefault();
-        const {target} = event;
-        const extensionStarts = target.value.lastIndexOf('.');
-        target.focus();
-        target.setSelectionRange(0, extensionStarts);
-        document.execCommand('copy');
-        setCopied(true);
-    }, []);
-
 
     const handleSource = useCallback((e) => {
         setSource(e.currentTarget.value);
-        setCopied(false);
     }, [])
 
     const handleRemoveBreaks = useCallback(() => {
         setResult(source.replace(/(\r\n|\n|\r|\t)/gm, ""))
-        setCopied(false);
     }, [source])
 
     const handleRemoveHtml = useCallback(() => {
         setResult(striptags(source))
-        setCopied(false);
     }, [source])
 
     const handleClear = useCallback((e) => {
         setSource('');
         setResult('');
-        setCopied(false);
     }, [])
 
     const t = useTranslation();
@@ -88,12 +69,13 @@ export const RemoverTool = () => {
                     fullWidth
                     variant="outlined"
                     InputProps={{
-                        onFocus: handleCopyToClipBoard,
+                        endAdornment:
+                            <InputAdornment position="end">
+                                <CopyButton text={result} />
+                            </InputAdornment>,
                     }}
                     value={result}
-                    inputRef={inputRef}
                 />
-                {copied && <Chip size="small" label={<FormattedMessage id="tools.remover.copied" />} />}
             </Grid>
             <Grid item xs={12}>
                 <br />

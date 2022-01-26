@@ -1,9 +1,10 @@
 import React from "react"
-import { injectIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import Seo from "./Seo"
 
-const Redirect = ({ intl }) => {
-  return <Seo title={`${intl.formatMessage({ id: "title" })}`} />
+const Redirect = () => {
+  const intl = useIntl()
+  return <Seo title={`${intl.formatMessage({ id: "common.title" })}`} />
 }
 
-export default injectIntl(Redirect)
+export default Redirect

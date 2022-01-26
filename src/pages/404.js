@@ -1,5 +1,5 @@
 import React from "react"
-import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
+import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
@@ -7,14 +7,15 @@ import Typography from "@material-ui/core/Typography"
 import Grid from "@material-ui/core/Grid"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     textAlign: "center",
     padding: "2rem 0 2rem 0",
   },
 }))
 
-const NotFoundPage = ({ intl }) => {
+const NotFoundPage = () => {
+  const intl = useIntl()
   const classes = useStyles()
   return (
     <Layout>
@@ -36,4 +37,4 @@ const NotFoundPage = ({ intl }) => {
   )
 }
 
-export default injectIntl(NotFoundPage)
+export default NotFoundPage

@@ -1,14 +1,14 @@
 import TextField from '@material-ui/core/TextField';
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import Chip from '@material-ui/core/Chip';
 import { FormattedMessage } from "gatsby-plugin-intl"
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import { useMediaQuery } from "@material-ui/core";
-import { decode, encode, atob, btoa } from 'js-base64';
+import { InputAdornment, useMediaQuery } from "@material-ui/core";
+import { decode, encode } from 'js-base64';
 import useTranslation from "../../src/utils/useTranslation";
 import { useDropzone } from 'react-dropzone';
+import { CopyButton } from '../../src/components/tool/CopyButton';
 
 const useStyles = makeStyles(() => {
     return {
@@ -35,10 +35,6 @@ const useStyles = makeStyles(() => {
             outline: 'none',
             transition: 'border .24s ease-in-out',
         }),
-        copy: {
-            color: 'green',
-            borderColor: 'green',
-        }
     }
 })
 
@@ -58,7 +54,6 @@ const toByteArray = (str) => {
 export const Base64EncodeDecode = () => {
     const [source, setSource] = useState('');
     const [result, setResult] = useState('');
-    const [copied, setCopied] = useState(false);
 
     const onDrop = useCallback(acceptedFiles => {
         let reader = new FileReader();
@@ -80,8 +75,6 @@ export const Base64EncodeDecode = () => {
     })
 
 
-    const inputRef = useRef();
-
     const t = useTranslation();
     const matchesMobile = !useMediaQuery('(min-width:600px)')
     const classes = useStyles(matchesMobile, isDragActive,
@@ -91,39 +84,21 @@ export const Base64EncodeDecode = () => {
     // TODO get result size in useMemo
     const resultSize = (result.length * 2 / 1024).toFixed(2)
 
-    // TODO move to utils
-    const handleCopyToClipBoard = useCallback((event) => {
-        // coppy
-        event.preventDefault();
-        const {target} = event;
-        const extensionStarts = target.value.lastIndexOf('.');
-        target.focus();
-        target.setSelectionRange(0, extensionStarts);
-        document.execCommand('copy');
-        setCopied(true);
-    }, []);
-
-
     const handleSource = useCallback((e) => {
         setSource(e.currentTarget.value);
-        setCopied(false);
     }, [])
 
     const handleEncode = useCallback(() => {
-        // type handler
         setResult(encode(source))
-        setCopied(false);
     }, [source])
 
     const handleDecode = useCallback(() => {
         setResult(decode(source))
-        setCopied(false);
     }, [source])
 
     const handleClear = useCallback((e) => {
         setSource('');
         setResult('');
-        setCopied(false);
     }, [])
 
     return (<>
@@ -172,13 +147,14 @@ export const Base64EncodeDecode = () => {
                     fullWidth
                     variant="outlined"
                     InputProps={{
-                        onFocus: handleCopyToClipBoard,
+                        endAdornment:
+                            <InputAdornment position="end">
+                                <CopyButton text={result} />
+                            </InputAdornment>,
                     }}
                     value={result}
-                    inputRef={inputRef}
                 />
                 <span>{result.length} / {resultSize}kB</span>{' '}
-                {copied && <Chip size="small" variant="outlined" className={classes.copy} label={<FormattedMessage id="tools.base64-encode-decode.copied" />} />}
             </Grid>
 
         </Grid>

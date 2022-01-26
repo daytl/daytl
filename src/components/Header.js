@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Header = ({ siteTitle, showLogo }) => {
+const Header = () => {
   const classes = useStyles()
 
   return (
