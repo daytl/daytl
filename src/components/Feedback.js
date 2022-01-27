@@ -8,12 +8,10 @@ import CloseIcon from "@material-ui/icons/Close"
 import DialogContent from "@material-ui/core/DialogContent"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import encode from "../utils/encode"
-import { useForm, Controller } from "react-hook-form"
+import { Controller, useForm } from "react-hook-form"
 import { DialogActions, TextField } from "@material-ui/core"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import { Alert } from "@material-ui/lab"
-import { yupResolver } from "@hookform/resolvers/yup"
-import * as yup from "yup"
 import Grid from "@material-ui/core/Grid"
 
 const useStyles = makeStyles(() => ({
@@ -34,13 +32,6 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const schema = yup
-  .object({
-    email: yup.string().email(),
-    message: yup.string().max(500).required(),
-  })
-  .required()
-
 const Feedback = () => {
   const [open, setOpen] = useState(false)
   const {
@@ -48,9 +39,7 @@ const Feedback = () => {
     control,
     reset,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  })
+  } = useForm({});
   const [success, setSuccess] = useState(true)
 
   const handleClose = useCallback(() => {
@@ -124,6 +113,13 @@ const Feedback = () => {
                 <Controller
                   name="email"
                   control={control}
+                  rules={{
+                    required: true,
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                      message: <FormattedMessage id="common.feedback.emailError" />,
+                    },
+                  }}
                   render={({ field }) => (
                     <TextField
                       fullWidth
@@ -139,6 +135,10 @@ const Feedback = () => {
                 <Controller
                   name="message"
                   control={control}
+                  rules={{
+                    required: true,
+                    maxLength: 500,
+                  }}
                   render={({ field }) => (
                     <TextField
                       fullWidth

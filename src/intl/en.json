@@ -12,7 +12,8 @@
       "submit": "Submit",
       "success": "Thanks for your feedback.",
       "email": "Email",
-      "message": "Message"
+      "message": "Message",
+      "emailError": "Email is not valid"
     },
     "404": {
       "info": "Ooops, page not found."

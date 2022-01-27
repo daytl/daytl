@@ -12,7 +12,8 @@
       "success": "Děkujeme za zprávu.",
       "email": "Email",
       "message": "Zpráva",
-      "text": "Chybí vám nějaký nástroj nebo funkce?"
+      "text": "Chybí vám nějaký nástroj nebo funkce?",
+      "emailError": "Zadejte platný email"
     },
     "404": {
       "info": "Ooops, stránka nenalezena."
