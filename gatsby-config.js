@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    // `gatsby-plugin-webpack-bundle-analyser-v2`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -36,18 +37,6 @@ module.exports = {
         defaultLanguage: `cs`,
         redirect: true,
         redirectComponent: require.resolve(`./src/components/Redirect.js`),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "G-N4R8B345EZ", // Google Analytics / GA
-        ],
-        gtagConfig: {
-          'storage': 'none'
-        }
       },
     },
   ],
