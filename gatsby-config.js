@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: `Daytl`,
@@ -14,9 +16,19 @@ module.exports = {
       },
     },
     `gatsby-plugin-material-ui`,
+    // `gatsby-plugin-perf-budgets`,
+    // `gatsby-plugin-webpack-bundle-analyser-v2`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    // `gatsby-plugin-webpack-bundle-analyser-v2`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          'bn.js': path.resolve(__dirname, 'node_modules/bn.js/lib/bn.js'),
+        },
+        extensions: []
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
