@@ -60,14 +60,15 @@
       "clear": "Vymazat",
       "decode": "Dekódovat",
       "encode": "Enkodovat",
-      "keywords": "base64",
-      "description": "Base64 encode decode",
+      "keywords": "base64 encoder, base64 decoder",
+      "description": "Enkodování a dekódování textu nebo obrázků do base64.",
       "content": ""
     },
     "passwordGenerator": {
       "title": "Generátor hesel",
       "info": "Generátor bezpečných hesel s možností vygenerovat více hesel najednou a stáhnout jako soubor.",
       "strength": {
+        "-": "-",
         "1": "Slabé",
         "2": "Dobré",
         "3": "Silné",
@@ -82,7 +83,9 @@
       "refresh": "Nové heslo",
       "length": "Délka",
       "count": "Počet hesel",
-      "content": ""
+      "keywords": "generátor bezpečných hesel",
+      "description": "Generátor bezpečných hesel s možností vygenerovat více hesel najednou a stáhnout jako soubor.",
+      "content": "<p>Náhodné heslo se generuje přímo ve vašem prohlížeči a není nikam odesláno. Použitím náhodného dostatečně silného hesla zvýšíte bezpečnost vašich online přístupů.</p><p>Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků. Ideální je také použít pro každou online službu jiné heslo.</p><p>K správě vygenerovaných hesel je dobré použít takzvaný manažer hesel, jako je třeba <a href='https://keepass.info/' target='_blank'>KeePass</a>, který ukládá hesla v zašifrovaném souboru ve vašem počítači. Vám pak stačí si pamatovat jedno hlavní heslo, kterým tento soubor odemknete.</p>"
     }
   }
 }

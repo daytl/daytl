@@ -62,12 +62,13 @@
       "encode": "Decode",
 
       "keywords": "base64",
-      "description": "Base64 encode decode"
+      "description": "Encode and decode text or images to base64 format."
     },
     "passwordGenerator": {
       "title": "Password generator",
       "info": "Secure password generator with the ability to generate multiple passwords at once and download as a file.",
       "strength": {
+        "0": "-",
         "1": "Weak",
         "2": "Good",
         "3": "Strong",
@@ -82,7 +83,9 @@
       "refresh": "New password",
       "length": "Length",
       "count": "Number of passwords",
-      "content": ""
+      "keywords": "secure password generator",
+      "content": "<p>A random password is generated directly in your browser and is not sent anywhere. Using a random password that is strong enough will increase the security of your online access.</p><p>A secure password should be long enough and consist of upper and lower case letters, numbers and special characters. Ideální je také použít pro každou online službu jiné heslo.</p><p>To manage the passwords you generate, it's a good idea to use a so-called password manager, such as <a href='https://keepass.info/' target='_blank'>KeePass</a>, which stores passwords in an encrypted file on your computer. You then just need to remember one master password to unlock that file.</p>",
+      "description": "Secure password generator with the ability to generate multiple passwords at once and download as a file."
     }
   }
 }
