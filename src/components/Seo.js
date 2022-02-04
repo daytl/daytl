@@ -79,6 +79,8 @@ function Seo({ description, lang, meta, keywords, title }) {
         )
         .concat(meta)}
     >
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-N4R8B345EZ" />
       <script>
         {`
   window.dataLayer = window.dataLayer || [];
