@@ -10,8 +10,12 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
+import useLocalStorageState from 'use-local-storage-state';
+import { v4 as uuidv4 } from 'uuid';
 
 function Seo({ description, lang, meta, keywords, title }) {
+  const [gaId] = useLocalStorageState('gaId', uuidv4());
+
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -89,7 +93,7 @@ function Seo({ description, lang, meta, keywords, title }) {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-N4R8B345EZ',{client_storage: 'none'});
+  gtag('config', 'G-N4R8B345EZ',{client_storage: 'none', client_id: '${gaId}'});
              `}
       </script>
     </Helmet>
