@@ -93,7 +93,11 @@ function Seo({ description, lang, meta, keywords, title }) {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-N4R8B345EZ',{storage: 'none', clientId: '${gaId}'});
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied'
+  });
+  gtag('config', 'G-N4R8B345EZ',{client_storage: 'none', client_id: '${gaId}'});
              `}
       </script>
     </Helmet>
