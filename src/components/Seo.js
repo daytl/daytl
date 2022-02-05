@@ -93,7 +93,7 @@ function Seo({ description, lang, meta, keywords, title }) {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-N4R8B345EZ',{client_storage: 'none'});
+  gtag('config', 'G-N4R8B345EZ',{storage: 'none', clientId: '${gaId}'});
              `}
       </script>
     </Helmet>
