@@ -83,23 +83,7 @@ function Seo({ description, lang, meta, keywords, title }) {
         )
         .concat(meta)}
     >
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-N4R8B345EZ"
-        type="text/javascript"
-      />
-      <script>
-        {`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'analytics_storage': 'denied'
-  });
-  gtag('config', 'G-N4R8B345EZ',{client_storage: 'none', client_id: '${gaId}'});
-             `}
-      </script>
+      <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer />
     </Helmet>
   )
 }
