@@ -1,16 +1,16 @@
 import Button from "@material-ui/core/Button"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import TextField from "@material-ui/core/TextField"
-import React, { useCallback, useState } from "react"
-import generateBirthNumber from "./generateBirthNumber"
-import Divider from "@material-ui/core/Divider"
+import React, { useCallback, useEffect, useState } from "react"
+import { generateBirthNumbers } from "./generateBirthNumber"
 import { FormattedDate, FormattedMessage } from "gatsby-plugin-intl"
 import { FormControl, FormControlLabel, InputAdornment, Radio, RadioGroup, useMediaQuery } from "@material-ui/core";
 import { DatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { CopyButton } from '../../src/components/tool/CopyButton';
-import { useMount } from 'react-use';
+import filesaver from 'file-saver';
 import Grid from '@material-ui/core/Grid';
+import { Save } from '@material-ui/icons';
 
 const useStyles = makeStyles(() => {
     return {
@@ -31,45 +31,48 @@ const useStyles = makeStyles(() => {
         },
         radio: {
             height: 30
+        },
+        save: {
+            marginLeft: 10
         }
-
     }
 })
 
 export const BirthNumberTool = () => {
+    const [count, setCount] = useState(1)
     const [birthNumber, setBirthNumber] = useState()
+    const [settings, setSettings] = useState()
     const [birthDate, setBirthDate] = useState();
     const [isFemale, setIsFemale] = useState(false);
 
-    useMount(() => {
-            const result = generateBirthNumber()
-            setBirthNumber(result.birthNumber);
-            setBirthDate(result.birthDate);
-            setIsFemale(result.isFemale);
-        }
+    useEffect(() => {
+            const result = generateBirthNumbers(count, settings)
+            setBirthNumber(result.birthNumbers.join('\n'));
+            setBirthDate(result.settings.birthDate);
+            setIsFemale(result.settings.isFemale);
+        }, [count, settings]
     )
 
     const handleBirthDateChange = useCallback((date) => {
-        const result = generateBirthNumber({birthDate: date, isFemale});
-        setBirthNumber(result.birthNumber);
-        setBirthDate(result.birthDate);
-        setIsFemale(result.isFemale);
+        setSettings({birthDate: date, isFemale});
     }, [isFemale]);
 
+    const handleCountChange = useCallback((e, x) => {
+        setCount(e.currentTarget.value);
+    }, []);
+
     const handleGenderChange = useCallback((event) => {
-        const result = generateBirthNumber({birthDate, isFemale: event.target.value === 'female'});
-        setBirthNumber(result.birthNumber);
-        setBirthDate(result.birthDate);
-        setIsFemale(result.isFemale);
+        setSettings({birthDate, isFemale: event.target.value === 'female'});
     }, [birthDate]);
 
     const handleGenerateBirthNumber = useCallback((event) => {
         const {isfemale, minage, maxage} = event.currentTarget.dataset
-        const result = generateBirthNumber({isFemale: isfemale, minAge: parseInt(minage), maxAge: parseInt(maxage)})
-        setBirthNumber(result.birthNumber);
-        setBirthDate(result.birthDate);
-        setIsFemale(result.isFemale);
+        setSettings({isFemale: isfemale, minAge: parseInt(minage), maxAge: parseInt(maxage)})
     }, [])
+
+    const handleDownload = useCallback((event) => {
+        filesaver.saveAs(new Blob([birthNumber], {type: "text/plain;charset=utf-8"}), "birthnumbers.txt");
+    }, [birthNumber])
 
     const matchesMobile = !useMediaQuery('(min-width:600px)')
     const classes = useStyles(matchesMobile)
@@ -85,6 +88,8 @@ export const BirthNumberTool = () => {
                 className: classes.input,
             }}
             variant="outlined"
+            multiline
+            maxRows={3}
             className={classes.input}
             fullWidth
             FormHelperTextProps={{
@@ -97,10 +102,10 @@ export const BirthNumberTool = () => {
                 </>
             }
         />
+        <br />
+        <br />
         <Grid container spacing={3}>
             <Grid item xs={12}>
-                <br />
-
                 <Button color="primary" variant="contained"
                         className={classes.button}
                         onClick={handleGenerateBirthNumber}
@@ -129,17 +134,18 @@ export const BirthNumberTool = () => {
                         onClick={handleGenerateBirthNumber}>
                     <FormattedMessage id="tools.birthnumber.button.women.adult" />
                 </Button>
-            </Grid>
-            <Grid item xs={12}>
+                {' '}
                 <DatePicker
                     label={<FormattedMessage id="tools.birthnumber.setupBirthDate" />}
                     value={birthDate}
+                    size="small"
                     format="yyyy/MM/dd"
                     inputVariant="outlined"
                     onChange={handleBirthDateChange}
                 />
                 <FormControl className={classes.radioGroup}>
-                    <RadioGroup aria-label="gender" value={isFemale ? 'female' : 'male'} onChange={handleGenderChange}>
+                    <RadioGroup row aria-label="gender" value={isFemale ? 'female' : 'male'}
+                                onChange={handleGenderChange}>
                         <FormControlLabel value="female" control={<Radio />}
                                           label={<FormattedMessage id="tools.birthnumber.female" />}
                                           className={classes.radio} />
@@ -148,6 +154,23 @@ export const BirthNumberTool = () => {
                                           className={classes.radio} />
                     </RadioGroup>
                 </FormControl>
+            </Grid>
+            <Grid item xs={12}>
+                <TextField
+                    variant="outlined"
+                    label={<FormattedMessage id="tools.birthnumber.count" />}
+                    onChange={handleCountChange}
+                    value={count}
+                    size="small"
+                />
+                <Button
+                    variant="contained"
+                    className={classes.save}
+                    onClick={handleDownload}
+                    startIcon={<Save />}
+                >
+                    <FormattedMessage id="tools.birthnumber.download" />
+                </Button>
             </Grid>
         </Grid>
     </MuiPickersUtilsProvider>)

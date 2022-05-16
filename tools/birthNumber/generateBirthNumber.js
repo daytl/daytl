@@ -19,6 +19,18 @@ function testRc(strRc) {
     return result === 0 || result % 11 === 0;
 }
 
+export const generateBirthNumbers = (count, settings) => {
+    const result = {birthNumbers: [], settings: null};
+    for (let i = 0; i < count; i++) {
+        const birthNumber = generateBirthNumber(settings);
+        result.birthNumbers.push(birthNumber.birthNumber);
+        if (!result.settings) {
+            result.settings = birthNumber;
+        }
+    }
+    return result;
+}
+
 const generateBirthNumber = (
     {
         isFemale = false, minAge = 19, maxAge = 50,
