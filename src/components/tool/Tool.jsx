@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => {
         background: theme.palette.primary.main,
       },
       minHeight: "8rem",
+      height: "100%",
     },
     close: {
       position: "absolute",

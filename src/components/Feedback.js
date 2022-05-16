@@ -39,7 +39,7 @@ const Feedback = () => {
     control,
     reset,
     formState: { errors },
-  } = useForm({});
+  } = useForm({})
   const [success, setSuccess] = useState(true)
 
   const handleClose = useCallback(() => {
@@ -117,7 +117,9 @@ const Feedback = () => {
                     required: true,
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                      message: <FormattedMessage id="common.feedback.emailError" />,
+                      message: (
+                        <FormattedMessage id="common.feedback.emailError" />
+                      ),
                     },
                   }}
                   render={({ field }) => (

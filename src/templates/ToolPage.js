@@ -51,7 +51,7 @@ export default function ToolPage({ pageContext }) {
             <Typography variant="h2" component="h1">
               <FormattedMessage id={`tools.${name}.title`} />
             </Typography>
-            <Typography variant="subtitle1" gutterBottom>
+            <Typography variant="subtitle1" gutterBottom component="h2">
               <FormattedMessage id={`tools.${name}.info`} />
             </Typography>
             {ToolComponent ? <ToolComponent /> : "No tool component available."}

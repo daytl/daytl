@@ -49,19 +49,19 @@
       "clear": "Clear",
       "detail": "dependencies, changelog and etc..",
       "keywords": "online breaks remover, online html remover",
-      "description": "Remover breaklines, html tags and even more."
+      "description": "Remover breaklines, html tags and even more.",
+      "content": "<p>This tool will help you easily remove line breaks or remove html tags to get clean text.</p>"
     },
     "base64-encode-decode": {
       "title": "Base64 Encode and Decode",
-      "info": "Encode and decode text or images to base64 format.",
+      "info": "Base64 Encode and decode text or images to base64 format.",
       "source": "Source",
       "result": "Result",
       "base64": "Base64",
       "clear": "Clear",
       "decode": "Encode",
       "encode": "Decode",
-
-      "keywords": "base64",
+      "keywords": "base64 decoder, base64 encoder",
       "description": "Encode and decode text or images to base64 format."
     },
     "passwordGenerator": {
