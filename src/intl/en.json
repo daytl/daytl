@@ -33,6 +33,7 @@
       "button.men.child": "Male 0-17",
       "birthDate": "Birthdate",
       "detail": "dependencies, changelog and etc..",
+      "content": "<p>The birth number is a unique numerical identifier assigned to residents of the Czech Republic.</p><p>The birth number is regulated in Act No. 133/2000 Coll., on population registration. The date of birth and the sex of the person concerned can be derived from the birth number. In the Czech Republic, the birth number belongs to personal data. In many other countries similar numerical identifiers are used, the format of birth numbers in Slovakia is identical to that in the Czech Republic.</p><p>This article is licensed under the terms of <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share license 3.0</a>. His text was taken and translated from <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>article „Rodné číslo on Wikipedii</a></p>",
       "keywords": "czech birth number",
       "description": "Generate czech birth number",
       "setupBirthDate": "Setup birth date",
@@ -62,9 +63,10 @@
       "decode": "Encode",
       "encode": "Decode",
       "keywords": "base64 decoder, base64 encoder",
-      "description": "Encode and decode text or images to base64 format."
+      "description": "Encode and decode text or images to base64 format.",
+      "content": "<p>In computer programming, Base64 is a group of binary-to-text encoding schemes that represent binary data (more specifically, a sequence of 8-bit bytes) in sequences of 24 bits that can be represented by four 6-bit Base64 digits.</p><p>This article is licensed under the terms of <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share license 3.0</a>. His text was taken and translated from <a href='https://en.wikipedia.org/wiki/Base64'>article „Base64 on Wikipedii</a></p>"
     },
-    "passwordGenerator": {
+    "passwordgenerator": {
       "title": "Password generator",
       "info": "Secure password generator with the ability to generate multiple passwords at once and download as a file.",
       "strength": {
