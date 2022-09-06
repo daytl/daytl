@@ -7,7 +7,7 @@ exports.createPages = async ({graphql, actions}) => {
     tools.map((tool) => {
         createPage({
             // Path for this page — required
-            path: tool.name,
+            path: tool.name.toLocaleLowerCase(),
             component: pageTemplate,
             context: {
                 tool
@@ -20,7 +20,7 @@ exports.createPages = async ({graphql, actions}) => {
                 // The page "path" is always available as a GraphQL
                 // argument.
             },
-        })
+        });
     })
 }
 
