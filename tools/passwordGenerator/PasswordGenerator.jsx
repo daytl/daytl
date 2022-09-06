@@ -125,8 +125,8 @@ export const PasswordGenerator = () => {
                                     <>
                                         <FormattedMessage
                                             tagName="strong"
-                                            id={`tools.passwordGenerator.strength.${passwordStats.score}`} />{' / '}
-                                        <FormattedHTMLMessage id="tools.passwordGenerator.crackTime"
+                                            id={`tools.passwordgenerator.strength.${passwordStats.score}`} />{' / '}
+                                        <FormattedHTMLMessage id="tools.passwordgenerator.crackTime"
                                                               values={{time: passwordStats.crack_times_display.online_no_throttling_10_per_second}} />
                                     </>
 
@@ -157,7 +157,7 @@ export const PasswordGenerator = () => {
                                         variant="outlined"
                                         size="small"
                                         {...field}
-                                        label={<FormattedMessage id="tools.passwordGenerator.length" />}
+                                        label={<FormattedMessage id="tools.passwordgenerator.length" />}
                                     />
                                 )}
                             />
@@ -194,7 +194,7 @@ export const PasswordGenerator = () => {
 
                                                    checked={field.value}
                                 />}
-                                label={<FormattedMessage id="tools.passwordGenerator.letters" />}
+                                label={<FormattedMessage id="tools.passwordgenerator.letters" />}
                             />
                         }
                         }
@@ -210,7 +210,7 @@ export const PasswordGenerator = () => {
                             control={<Checkbox {...field}
                                                checked={field.value}
                             />}
-                            label={<FormattedMessage id="tools.passwordGenerator.numbers" />}
+                            label={<FormattedMessage id="tools.passwordgenerator.numbers" />}
                         />
                         }
                     />
@@ -225,7 +225,7 @@ export const PasswordGenerator = () => {
                             control={<Checkbox {...field}
                                                checked={field.value}
                             />}
-                            label={<FormattedMessage id="tools.passwordGenerator.symbols" />}
+                            label={<FormattedMessage id="tools.passwordgenerator.symbols" />}
                         />
                         }
                     />
@@ -241,7 +241,7 @@ export const PasswordGenerator = () => {
                                 {...field}
                                 variant="outlined"
                                 size="small"
-                                label={<FormattedMessage id="tools.passwordGenerator.count" />}
+                                label={<FormattedMessage id="tools.passwordgenerator.count" />}
                             />
                         )}
                     />
@@ -254,7 +254,7 @@ export const PasswordGenerator = () => {
                             onClick={handleGeneratePassword}
                             startIcon={<Refresh />}
                     >
-                        <FormattedMessage id="tools.passwordGenerator.refresh" />
+                        <FormattedMessage id="tools.passwordgenerator.refresh" />
                     </Button>
                     <Button
                         variant="contained"
@@ -262,7 +262,7 @@ export const PasswordGenerator = () => {
                         onClick={handleDownload}
                         startIcon={<Save />}
                     >
-                        <FormattedMessage id="tools.passwordGenerator.download" />
+                        <FormattedMessage id="tools.passwordgenerator.download" />
                     </Button>
                 </Grid>
             </Grid>
