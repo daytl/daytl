@@ -67,6 +67,7 @@ export const RemoverTool = () => {
                     rows={4}
                     rowsMax={4}
                     fullWidth
+                    onFocus={(event)=> event.target.select()}
                     variant="outlined"
                     InputProps={{
                         endAdornment:

@@ -121,6 +121,7 @@ export const PasswordGenerator = () => {
                                     className: classes.helperText
                                 }}
                                 variant="outlined"
+                                onFocus={(event)=> event.target.select()}
                                 helperText={
                                     <>
                                         <FormattedMessage
