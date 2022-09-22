@@ -1,8 +1,8 @@
 import React from "react"
 import components from "../../tools/components"
-import Typography from "@material-ui/core/Typography"
-import makeStyles from "@material-ui/core/styles/makeStyles"
-import Grid from "@material-ui/core/Grid"
+import Typography from "@mui/material/Typography"
+import makeStyles from '@mui/styles/makeStyles';
+import Grid from "@mui/material/Grid"
 import {
   FormattedHTMLMessage,
   FormattedMessage,
@@ -10,20 +10,20 @@ import {
 } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import Divider from "@material-ui/core/Divider"
+import Divider from "@mui/material/Divider"
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: "#fff",
     color: "#000",
-    marginBottom: theme.spacing(2),
+    marginBottom: 2,
   },
   tool: {
     margin: 10,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: 2,
   },
   title: {
     flexGrow: 1,

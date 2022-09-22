@@ -1,27 +1,27 @@
-import IconButton from "@material-ui/core/IconButton"
-import CardContent from "@material-ui/core/CardContent"
-import Typography from "@material-ui/core/Typography"
-import Card from "@material-ui/core/Card"
+import IconButton from "@mui/material/IconButton"
+import CardContent from "@mui/material/CardContent"
+import Typography from "@mui/material/Typography"
+import Card from "@mui/material/Card"
 import React, { useCallback, useState } from "react"
 import { object } from "prop-types"
-import OpenInNewIcon from "@material-ui/icons/OpenInNew"
-import CloseIcon from "@material-ui/icons/Close"
+import OpenInNewIcon from "@mui/icons-material/OpenInNew"
+import CloseIcon from "@mui/icons-material/Close"
 import components from "../../../tools/components"
-import makeStyles from "@material-ui/core/styles/makeStyles"
-import Button from "@material-ui/core/Button"
-import Dialog from "@material-ui/core/Dialog"
-import Zoom from "@material-ui/core/Zoom"
-import DialogTitle from "@material-ui/core/DialogTitle"
-import DialogContent from "@material-ui/core/DialogContent"
-import DialogContentText from "@material-ui/core/DialogContentText"
-import DialogActions from "@material-ui/core/DialogActions"
+import makeStyles from '@mui/styles/makeStyles';
+import Button from "@mui/material/Button"
+import Dialog from "@mui/material/Dialog"
+import Zoom from "@mui/material/Zoom"
+import DialogTitle from "@mui/material/DialogTitle"
+import DialogContent from "@mui/material/DialogContent"
+import DialogContentText from "@mui/material/DialogContentText"
+import DialogActions from "@mui/material/DialogActions"
 import {
   FormattedHTMLMessage,
   FormattedMessage,
   Link,
 } from "gatsby-plugin-intl"
 import Feedback from "../Feedback"
-import Divider from "@material-ui/core/Divider"
+import Divider from "@mui/material/Divider"
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -56,64 +56,62 @@ export const Tool = ({ config }) => {
     setOpen(true)
   }, [setOpen])
   const styles = useStyles()
-  return (
-    <>
-      <Card onClick={handleOpen} className={styles.card}>
-        <CardContent>
-          <Typography variant="h5" component="h2">
-            <FormattedMessage id={`tools.${name}.title`} />
-          </Typography>
-          <Typography variant="body2" component="p">
-            <FormattedMessage id={`tools.${name}.info`} />
-          </Typography>
-        </CardContent>
-      </Card>
-      <Dialog
-        open={open}
-        TransitionComponent={Zoom}
-        keepMounted
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-slide-title"
-        aria-describedby="alert-dialog-slide-description"
-        fullWidth
-        maxWidth="lg"
-      >
-        <DialogTitle id="alert-dialog-slide-title">
-          <FormattedMessage id={`tools.${name}.title`} tagName="strong" />
-          <br />
+  return <>
+    <Card onClick={handleOpen} className={styles.card}>
+      <CardContent>
+        <Typography variant="h5" component="h2">
+          <FormattedMessage id={`tools.${name}.title`} />
+        </Typography>
+        <Typography variant="body2" component="p">
           <FormattedMessage id={`tools.${name}.info`} />
-          <IconButton onClick={handleClose} className={classes.close}>
-            <CloseIcon />
-          </IconButton>
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-slide-description">
-            {ToolComponent ? <ToolComponent /> : "No tool component available."}
-          </DialogContentText>
-        </DialogContent>
-        <DialogContent>
-          <Divider />
-          <DialogContentText id="alert-dialog-slide-description">
-            <FormattedHTMLMessage id={`tools.${name}.content`} />
-          </DialogContentText>
-        </DialogContent>
-        <DialogContent>
-          <Feedback />
-        </DialogContent>
-        <DialogActions>
-          <Button
-            to={`/${name}`}
-            component={Link}
-            target="_blank"
-            variant="text"
-            endIcon={<OpenInNewIcon />}
-          >
-            <FormattedMessage id="common.toolPage" />
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </>
-  )
+        </Typography>
+      </CardContent>
+    </Card>
+    <Dialog
+      open={open}
+      TransitionComponent={Zoom}
+      keepMounted
+      onClose={handleClose}
+      aria-labelledby="alert-dialog-slide-title"
+      aria-describedby="alert-dialog-slide-description"
+      fullWidth
+      maxWidth="lg"
+    >
+      <DialogTitle id="alert-dialog-slide-title">
+        <FormattedMessage id={`tools.${name}.title`} tagName="strong" />
+        <br />
+        <FormattedMessage id={`tools.${name}.info`} />
+        <IconButton onClick={handleClose} className={classes.close} size="large">
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
+      <DialogContent>
+        <DialogContentText id="alert-dialog-slide-description">
+          {ToolComponent ? <ToolComponent /> : "No tool component available."}
+        </DialogContentText>
+      </DialogContent>
+      <DialogContent>
+        <Divider />
+        <DialogContentText id="alert-dialog-slide-description">
+          <FormattedHTMLMessage id={`tools.${name}.content`} />
+        </DialogContentText>
+      </DialogContent>
+      <DialogContent>
+        <Feedback />
+      </DialogContent>
+      <DialogActions>
+        <Button
+          to={`/${name}`}
+          component={Link}
+          target="_blank"
+          variant="text"
+          endIcon={<OpenInNewIcon />}
+        >
+          <FormattedMessage id="common.toolPage" />
+        </Button>
+      </DialogActions>
+    </Dialog>
+  </>;
 }
 
 Tool.displayName = "Tool"

@@ -2,12 +2,12 @@ import { FormattedMessage, Link } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 import React from "react"
 import Language from "./Language"
-import { AppBar, Grid } from "@material-ui/core"
-import Toolbar from "@material-ui/core/Toolbar"
-import Button from "@material-ui/core/Button"
-import makeStyles from "@material-ui/core/styles/makeStyles"
+import { AppBar, Grid } from "@mui/material"
+import Toolbar from "@mui/material/Toolbar"
+import Button from "@mui/material/Button"
+import makeStyles from '@mui/styles/makeStyles';
 import packageJson from "../../package.json"
-import GitHubIcon from "@material-ui/icons/GitHub"
+import GitHubIcon from "@mui/icons-material/GitHub"
 
 const useStyles = makeStyles((theme) => ({
   root: {

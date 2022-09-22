@@ -1,6 +1,6 @@
 import React from "react"
 import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
-import Typography from "@material-ui/core/Typography"
+import Typography from "@mui/material/Typography"
 
 const languageName = {
   en: "English",
