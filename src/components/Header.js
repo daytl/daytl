@@ -49,26 +49,10 @@ const Header = () => {
         </Button>
         <Grid item className={classes.title}>
           {" "}
-          {/*<Autocomplete*/}
-          {/*    freeSolo*/}
-          {/*    id="free-solo-2-demo"*/}
-          {/*    disableClearable*/}
-          {/*    className={styles.search}*/}
-          {/*    options={top100Films.map((option) => option.title)}*/}
-          {/*    renderInput={(params) => (*/}
-          {/*        <TextField*/}
-          {/*            {...params}*/}
-          {/*            label="Search input"*/}
-          {/*            margin="normal"*/}
-          {/*            variant="outlined"*/}
-          {/*            InputProps={{...params.InputProps, type: 'search'}}*/}
-          {/*        />*/}
-          {/*    )}*/}
-          {/*/>*/}
         </Grid>
         <Language />
         <Button href={packageJson.repository.url} size="small">
-          <GitHubIcon />
+          <GitHubIcon fontSize="small" />
         </Button>
       </Toolbar>
     </AppBar>
