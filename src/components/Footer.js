@@ -35,8 +35,6 @@ const Footer = () => {
   )
 }
 
-Footer.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+Footer.propTypes = {};
 
 export default Footer

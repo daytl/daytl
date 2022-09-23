@@ -34,7 +34,7 @@ const Header = () => {
   const classes = useStyles()
 
   return (
-    <AppBar position="static" elevation={false} className={classes.root}>
+    <AppBar position="static" elevation={0} className={classes.root}>
       <Toolbar disableGutters className={classes.toolbar}>
         <Button
           to={`/`}
@@ -52,7 +52,7 @@ const Header = () => {
         </Grid>
         <Language />
         <Button href={packageJson.repository.url} size="small">
-          <GitHubIcon fontSize="small" />
+          <GitHubIcon fontSize="small" style={{fontSize: '24px'}} />
         </Button>
       </Toolbar>
     </AppBar>
