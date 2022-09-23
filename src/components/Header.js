@@ -7,6 +7,7 @@ import Toolbar from "@mui/material/Toolbar"
 import Button from "@mui/material/Button"
 import makeStyles from '@mui/styles/makeStyles';
 import packageJson from "../../package.json"
+import GitHubIcon from "@mui/icons-material/GitHub"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,9 +50,9 @@ const Header = () => {
         <Grid item className={classes.title}>
           {" "}
         </Grid>
-        <Language /> |
+        <Language />
         <Button href={packageJson.repository.url} size="small">
-          Github
+          <GitHubIcon fontSize="small" style={{fontSize: '24px'}} />
         </Button>
       </Toolbar>
     </AppBar>
