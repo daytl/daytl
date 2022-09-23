@@ -35,6 +35,8 @@
       "detail": "dependencies, changelog and etc..",
       "content": "<p>The birth number is a unique numerical identifier assigned to residents of the Czech Republic.</p><p>The birth number is regulated in Act No. 133/2000 Coll., on population registration. The date of birth and the sex of the person concerned can be derived from the birth number. In the Czech Republic, the birth number belongs to personal data. In many other countries similar numerical identifiers are used, the format of birth numbers in Slovakia is identical to that in the Czech Republic.</p><p>This article is licensed under the terms of <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share license 3.0</a>. His text was taken and translated from <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>article „Rodné číslo on Wikipedii</a></p>",
       "keywords": "czech birth number",
+      "download": "Download as .txt",
+      "count": "Count",
       "description": "Generate czech birth number",
       "setupBirthDate": "Setup birth date",
       "male": "Male",
