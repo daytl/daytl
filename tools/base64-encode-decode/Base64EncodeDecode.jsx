@@ -1,10 +1,10 @@
-import TextField from '@mui/material/TextField';
+import TextField from '@material-ui/core/TextField';
 import React, { useCallback, useState } from 'react';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import { FormattedMessage } from "gatsby-plugin-intl"
-import makeStyles from '@mui/styles/makeStyles';
-import { InputAdornment, useMediaQuery } from "@mui/material";
+import makeStyles from "@material-ui/core/styles/makeStyles";
+import { InputAdornment, useMediaQuery } from "@material-ui/core";
 import { decode, encode } from 'js-base64';
 import useTranslation from "../../src/utils/useTranslation";
 import { useDropzone } from 'react-dropzone';
@@ -101,14 +101,14 @@ export const Base64EncodeDecode = () => {
         setResult('');
     }, [])
 
-    return <>
+    return (<>
         <Grid container spacing={1}>
             <Grid item xs={7}>
                 <TextField
                     placeholder={t("tools.base64-encode-decode.source")}
                     multiline
                     rows={4}
-                    maxRows={4}
+                    rowsMax={4}
                     fullWidth
                     variant="outlined"
                     value={source}
@@ -143,7 +143,7 @@ export const Base64EncodeDecode = () => {
                     placeholder={t("tools.base64-encode-decode.result")}
                     multiline
                     rows={4}
-                    maxRows={4}
+                    rowsMax={4}
                     fullWidth
                     onFocus={(event)=> event.target.select()}
                     variant="outlined"
@@ -159,7 +159,7 @@ export const Base64EncodeDecode = () => {
             </Grid>
 
         </Grid>
-    </>;
+    </>);
 };
 
 // TODO

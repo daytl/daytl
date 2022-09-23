@@ -1,15 +1,15 @@
-import Button from "@mui/material/Button"
-import makeStyles from '@mui/styles/makeStyles';
-import TextField from "@mui/material/TextField"
+import Button from "@material-ui/core/Button"
+import makeStyles from "@material-ui/core/styles/makeStyles"
+import TextField from "@material-ui/core/TextField"
 import React, { useCallback, useEffect, useMemo } from "react"
 import { FormattedHTMLMessage, FormattedMessage } from "gatsby-plugin-intl"
-import { Checkbox, FormControlLabel, InputAdornment, Slider, useMediaQuery } from "@mui/material";
+import { Checkbox, FormControlLabel, InputAdornment, Slider, useMediaQuery } from "@material-ui/core";
 import { generateMultiple } from 'generate-password';
 import { Controller, useForm } from 'react-hook-form';
 import zxcvbn from 'zxcvbn';
 import filesaver from 'file-saver';
-import { Refresh, Save } from '@mui/icons-material';
-import Grid from '@mui/material/Grid';
+import { Refresh, Save } from '@material-ui/icons';
+import Grid from '@material-ui/core/Grid';
 import { CopyButton } from '../../src/components/tool/CopyButton';
 
 const useStyles = makeStyles(() => {

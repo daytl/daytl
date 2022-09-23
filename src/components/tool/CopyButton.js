@@ -1,10 +1,10 @@
 import { string } from "prop-types"
-import { FileCopy } from "@mui/icons-material"
-import IconButton from "@mui/material/IconButton"
+import { FileCopy } from "@material-ui/icons"
+import IconButton from "@material-ui/core/IconButton"
 import React, { useCallback, useState } from "react"
 import copy from "copy-to-clipboard"
-import { Tooltip } from "@mui/material"
-import makeStyles from '@mui/styles/makeStyles';
+import { Tooltip } from "@material-ui/core"
+import makeStyles from "@material-ui/core/styles/makeStyles"
 import useTranslation from "../../utils/useTranslation"
 
 const useStyles = makeStyles((theme) => {
@@ -36,11 +36,11 @@ export const CopyButton = ({ text }) => {
       classes={classes}
       title={t(copied ? "common.copied" : "common.copy")}
     >
-      <IconButton onClick={handleCopyToClipBoard} edge="end" size="large">
+      <IconButton onClick={handleCopyToClipBoard} edge="end">
         <FileCopy />
       </IconButton>
     </Tooltip>
-  );
+  )
 }
 
 CopyButton.propTypes = {

@@ -6,11 +6,10 @@ import {
 } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import { Grid } from "@mui/material";
-import makeStyles from '@mui/styles/makeStyles';
+import { Grid, makeStyles } from "@material-ui/core"
 import tools from "../../tools"
 import { Tool } from "../components/tool/Tool"
-import Typography from "@mui/material/Typography"
+import Typography from "@material-ui/core/Typography"
 
 const useStyles = makeStyles(() => {
   return {

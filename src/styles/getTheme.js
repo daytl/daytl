@@ -1,25 +1,21 @@
-import { createTheme, adaptV4Theme } from "@mui/material/styles";
+import { createTheme } from "@material-ui/core/styles"
 
 const theme = createTheme({
-    palette: {},
-    components: {
-        MuiTypography: {
-            styleOverrides: {
-                root: {},
-                h5: {
-                    fontWeight: "600 !important",
-                },
-            }
-        }
-        , MuiAppBar: {
-            styleOverrides: {
-                colorPrimary: {
-                    backgroundColor: "white",
-                    color: "#000",
-                },
-            },
-        },
+  palette: {},
+  overrides: {
+    MuiTypography: {
+      root: {},
+      h5: {
+        fontWeight: "600 !important",
+      },
     },
+    MuiAppBar: {
+      colorPrimary: {
+        backgroundColor: "white",
+        color: "#000",
+      },
+    },
+  },
 })
 
 export default theme

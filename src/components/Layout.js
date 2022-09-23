@@ -10,23 +10,21 @@ import PropTypes from "prop-types"
 import { injectIntl } from "gatsby-plugin-intl"
 import "../styles/global.css"
 import Header from "./Header"
-import { ThemeProvider, StyledEngineProvider } from "@mui/material";
+import { MuiThemeProvider } from "@material-ui/core"
 import theme from "../styles/getTheme"
 import Footer from "./Footer"
 
 const Layout = ({ children, intl, index }) => {
   return (
-    <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
-        <Header
-          showLogo={!index}
-          siteTitle={intl.formatMessage({ id: "main.title" })}
-        />
-        <main>{children}</main>
-        <Footer />
-      </ThemeProvider>
-    </StyledEngineProvider>
-  );
+    <MuiThemeProvider theme={theme}>
+      <Header
+        showLogo={!index}
+        siteTitle={intl.formatMessage({ id: "main.title" })}
+      />
+      <main>{children}</main>
+      <Footer />
+    </MuiThemeProvider>
+  )
 }
 
 Layout.propTypes = {
