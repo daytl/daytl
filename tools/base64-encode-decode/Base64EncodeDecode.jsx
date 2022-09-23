@@ -58,7 +58,7 @@ export const Base64EncodeDecode = () => {
     const onDrop = useCallback(acceptedFiles => {
         let reader = new FileReader();
         let file = acceptedFiles[0];
-        reader.onload= () => {
+        reader.onload = () => {
             setResult(reader.result)
         }
         reader.readAsDataURL(file)
@@ -76,7 +76,7 @@ export const Base64EncodeDecode = () => {
 
 
     const t = useTranslation();
-    const matchesMobile = !useMediaQuery('(min-width:600px)')
+    const matchesMobile = !useMediaQuery('(min-width:600px)', {defaultMatches: true})
     const classes = useStyles(matchesMobile, isDragActive,
         isDragReject,
         isDragAccept)
@@ -145,7 +145,7 @@ export const Base64EncodeDecode = () => {
                     rows={4}
                     rowsMax={4}
                     fullWidth
-                    onFocus={(event)=> event.target.select()}
+                    onFocus={(event) => event.target.select()}
                     variant="outlined"
                     InputProps={{
                         endAdornment:

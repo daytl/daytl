@@ -87,7 +87,7 @@ export const BirthNumberTool = () => {
 		filesaver.saveAs(new Blob([birthNumber], { type: "text/plain;charset=utf-8" }), "birthnumbers.txt");
 	}, [birthNumber])
 
-	const matchesMobile = !useMediaQuery('(min-width:600px)')
+	const matchesMobile = !useMediaQuery('(min-width:600px)', { defaultMatches: true});
 	const classes = useStyles({ mobile: matchesMobile });
 
 	return (<MuiPickersUtilsProvider utils={DateFnsUtils}>
