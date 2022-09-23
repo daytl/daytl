@@ -58,12 +58,18 @@ const IndexPage = () => {
           <br />
           <br />
         </Grid>
-        {tools.map((config, index) => (
-          <Grid item xs={12} sm={4} lg={3} xl={2} className={classes.tool} key={index}>
+        {tools.map((config) => (
+          <Grid item xs={12} sm={4} lg={3} xl={2} className={classes.tool}>
             <Tool config={config} />
           </Grid>
         ))}
       </Grid>
+      {/*<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>*/}
+      {/*  <Image />*/}
+      {/*</div>*/}
+      {/*<Link to="/page-2/">*/}
+      {/*  <FormattedMessage id="go_page2" />*/}
+      {/*</Link>*/}
     </Layout>
   )
 }

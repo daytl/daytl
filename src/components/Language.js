@@ -12,8 +12,9 @@ const Language = () => {
     <IntlContextConsumer>
       {({ languages, language: currentLocale }) =>
         languages.map((language) => (
-          <Typography variant="caption" key={language}>
+          <Typography variant="caption">
             <a
+              key={language}
               onClick={() => changeLocale(language)}
               style={{
                 fontWeight: currentLocale === language ? `bold` : `normal`,
