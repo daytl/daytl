@@ -1,34 +1,25 @@
 import React from "react"
-import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
-import Typography from "@material-ui/core/Typography"
-
-const languageName = {
-  en: "English",
-  cs: "Česky",
-}
+import { IntlContextConsumer, changeLocale, useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { MenuItem, Select } from '@material-ui/core';
 
 const Language = () => {
-  return (
-    <IntlContextConsumer>
-      {({ languages, language: currentLocale }) =>
-        languages.map((language) => (
-          <Typography variant="caption">
-            <a
-              key={language}
-              onClick={() => changeLocale(language)}
-              style={{
-                fontWeight: currentLocale === language ? `bold` : `normal`,
-                margin: 10,
-                cursor: `pointer`,
-              }}
-            >
-              {languageName[language]}
-            </a>
-          </Typography>
-        ))
-      }
-    </IntlContextConsumer>
-  )
+    const handleChange = (event) => {
+        changeLocale(event.target.value);
+    }
+    return (
+        <IntlContextConsumer>
+            {({languages, language: currentLocale}) =>
+                <Select
+                    value={currentLocale}
+                    onChange={handleChange}
+                >
+                    {languages.map((language) => (
+                        <MenuItem value={language}><FormattedMessage id={`common.languages.${language}`} /></MenuItem>
+                    ))}
+                </Select>
+            }
+        </IntlContextConsumer>
+    )
 }
 
 export default Language

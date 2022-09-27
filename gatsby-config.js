@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  trailingSlash: "always",
   siteMetadata: {
     title: `Daytl`,
     siteUrl: 'https://www.daytl.com',
@@ -45,7 +46,7 @@ module.exports = {
       resolve: `gatsby-plugin-intl`,
       options: {
         path: `${__dirname}/src/intl`,
-        languages: [`cs`, `en`],
+        languages: ['cs', 'en','sk'],
         defaultLanguage: `cs`,
         redirect: true,
         redirectComponent: require.resolve(`./src/components/Redirect.js`),

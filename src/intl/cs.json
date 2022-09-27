@@ -21,7 +21,12 @@
     "copied": "Zkopírováno!",
     "copy": "Zkopírovat do schránky",
     "keywords": "online nástroje",
-    "description": "Vaše užitečné online nástroje jednoduše a na jednom místě."
+    "description": "Vaše užitečné online nástroje jednoduše a na jednom místě.",
+    "languages": {
+      "cs": "Česky",
+      "sk": "Slovensky",
+      "en": "English"
+    }
   },
   "tools": {
     "birthnumber": {

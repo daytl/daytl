@@ -21,7 +21,12 @@
     "copied": "Copied!",
     "copy": "Copy to clipboard",
     "keywords": "online tools",
-    "description": "Simple and useful online tools in one place."
+    "description": "Simple and useful online tools in one place.",
+    "languages": {
+      "cs": "Česky",
+      "sk": "Slovensky",
+      "en": "English"
+    }
   },
   "tools": {
     "birthnumber": {
