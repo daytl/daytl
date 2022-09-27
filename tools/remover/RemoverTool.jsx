@@ -29,7 +29,7 @@ export const RemoverTool = () => {
     }, [])
 
     const handleRemoveBreaks = useCallback(() => {
-        setResult(source.replace(/(\r\n|\n|\r|\t)/gm, ""))
+        setResult(source.replace(/(\r\n|\n|\r|\t)/gm, " "))
     }, [source])
 
     const handleRemoveHtml = useCallback(() => {
@@ -52,8 +52,7 @@ export const RemoverTool = () => {
                 <TextField
                     placeholder={t("tools.remover.source")}
                     multiline
-                    rows={4}
-                    rowsMax={4}
+                    minRows={4}
                     fullWidth
                     variant="outlined"
                     value={source}
@@ -64,8 +63,7 @@ export const RemoverTool = () => {
                 <TextField
                     placeholder={t("tools.remover.result")}
                     multiline
-                    rows={4}
-                    rowsMax={4}
+                    minRows={4}
                     fullWidth
                     onFocus={(event) => event.target.select()}
                     variant="outlined"
