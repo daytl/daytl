@@ -94,7 +94,7 @@ export const Tool = ({ config }) => {
         <DialogContent>
           <Divider />
           <DialogContentText id="alert-dialog-slide-description">
-            <FormattedHTMLMessage id={`tools.${name}.content`} />
+            <FormattedHTMLMessage id={`tools.${name}.content`} tagName="div" />
           </DialogContentText>
         </DialogContent>
         <DialogContent>
