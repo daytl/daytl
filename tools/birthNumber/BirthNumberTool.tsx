@@ -2,7 +2,7 @@ import Button from "@material-ui/core/Button"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import TextField from "@material-ui/core/TextField"
 import * as React from 'react';
-import { ChangeEvent, ChangeEventHandler, useCallback, useEffect, useState } from "react"
+import { ChangeEventHandler, useCallback, useEffect, useState } from 'react';
 import { BirthNumbersData, generateBirthNumbers } from "./generateBirthNumber"
 import { FormattedDate, FormattedMessage } from "gatsby-plugin-intl"
 import {
@@ -59,10 +59,12 @@ export const BirthNumberTool = () => {
 	const [isFemale, setIsFemale] = useState(false);
 
 	useEffect(() => {
-			const result: BirthNumbersData = generateBirthNumbers(count, settings)
-			setBirthNumber(result.birthNumbers.join('\n'));
-			setBirthDate(result.settings.birthDate);
-			setIsFemale(result.settings.isFemale);
+			if (count) {
+				const result: BirthNumbersData = generateBirthNumbers(count, settings)
+				setBirthNumber(result.birthNumbers.join('\n'));
+				setBirthDate(result.settings.birthDate);
+				setIsFemale(result.settings.isFemale);
+			}
 		}, [count, settings]
 	)
 
@@ -71,7 +73,12 @@ export const BirthNumberTool = () => {
 	}, [isFemale]);
 
 	const handleCountChange = useCallback<ChangeEventHandler<HTMLInputElement>>((e: React.FormEvent<HTMLInputElement>) => {
-		setCount(parseInt(e.currentTarget.value));
+		const parsedValue = parseInt(e.currentTarget.value);
+		if (!isNaN(parsedValue)) {
+			setCount(parsedValue);
+		} else {
+			setCount('');
+		}
 	}, []);
 
 	const handleGenderChange = useCallback((event) => {
@@ -87,7 +94,7 @@ export const BirthNumberTool = () => {
 		filesaver.saveAs(new Blob([birthNumber], { type: "text/plain;charset=utf-8" }), "birthnumbers.txt");
 	}, [birthNumber])
 
-	const matchesMobile = !useMediaQuery('(min-width:600px)', { defaultMatches: true});
+	const matchesMobile = !useMediaQuery('(min-width:600px)', { defaultMatches: true });
 	const classes = useStyles({ mobile: matchesMobile });
 
 	return (<MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -103,7 +110,7 @@ export const BirthNumberTool = () => {
 			variant="outlined"
 			multiline
 			maxRows={3}
-			onFocus={(event)=> event.target.select()}
+			onFocus={(event) => event.target.select()}
 			className={classes.input}
 			fullWidth
 			FormHelperTextProps={{
