@@ -55,20 +55,20 @@ const generateBirthNumber = (
 		birthDate = randomDate(new Date(2020 - maxAge, 0, 1), new Date(2020 - minAge, 0, 1))
 	}: Partial<GenerateBirthNumberData> = {}
 ): BirthNumberData => {
-
-	let birthNumberString = format(birthDate, 'yyMMdd') + `${randomIntFromInterval(1000, 9999)}`;
+	let lastPart = randomIntFromInterval(0, 9999).toLocaleString('en-US', {minimumIntegerDigits: 4, useGrouping:false});
+	const firstPart = format(birthDate, 'yyMMdd');
+	
+	let birthNumber = firstPart + lastPart;
 	if (isFemale) {
-		const month = parseInt(birthNumberString.substr(2, 2));
-		birthNumberString = birthNumberString.substr(0, 2) + (month + 50).toString() + birthNumberString.substr(4);
+		const month = parseInt(birthNumber.substr(2, 2));
+		birthNumber = birthNumber.substr(0, 2) + (month + 50).toString() + birthNumber.substr(4);
 	}
 
-	const firstPart = birthNumberString.substr(0, 6);
-	let lastPart: number = parseInt(birthNumberString.substr(6, 4));
-
-	while (!testRc(`${firstPart}${lastPart}`)) {
-		lastPart++;
+	while (!testRc(birthNumber)) {
+		lastPart = randomIntFromInterval(0, 9999).toLocaleString('en-US', {minimumIntegerDigits: 4, useGrouping:false});
+		birthNumber = firstPart + lastPart;
 	}
-	return { birthNumber: `${firstPart}${lastPart}`, birthDate, isFemale };
+	return { birthNumber, birthDate, isFemale };
 }
 
 
