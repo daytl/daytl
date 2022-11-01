@@ -52,7 +52,6 @@ const IndexPage = () => {
           <Typography variant="subtitle1" gutterBottom>
             <FormattedHTMLMessage id="common.info2" />
           </Typography>
-
           <br />
           <br />
           <br />
@@ -63,12 +62,6 @@ const IndexPage = () => {
           </Grid>
         ))}
       </Grid>
-      {/*<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>*/}
-      {/*  <Image />*/}
-      {/*</div>*/}
-      {/*<Link to="/page-2/">*/}
-      {/*  <FormattedMessage id="go_page2" />*/}
-      {/*</Link>*/}
     </Layout>
   )
 }

@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { injectIntl } from "gatsby-plugin-intl"
@@ -13,6 +6,7 @@ import Header from "./Header"
 import { MuiThemeProvider } from "@material-ui/core"
 import theme from "../styles/getTheme"
 import Footer from "./Footer"
+import Grid from "@material-ui/core/Grid"
 
 const Layout = ({ children, intl, index }) => {
   return (
@@ -21,7 +15,11 @@ const Layout = ({ children, intl, index }) => {
         showLogo={!index}
         siteTitle={intl.formatMessage({ id: "main.title" })}
       />
-      <main>{children}</main>
+      <Grid container justifyContent="center">
+        <Grid item xs={12} md={10} component="main">
+          {children}
+        </Grid>
+      </Grid>
       <Footer />
     </MuiThemeProvider>
   )
