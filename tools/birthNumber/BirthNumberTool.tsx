@@ -181,6 +181,10 @@ export const BirthNumberTool = () => {
 					variant="outlined"
 					label={<FormattedMessage id="tools.birthnumber.count" />}
 					onChange={handleCountChange}
+					inputProps={{
+						type: 'number',
+						max: 500,
+					}}
 					value={count}
 					size="small"
 				/>
