@@ -1,25 +1,17 @@
-import Button from "@material-ui/core/Button"
-import makeStyles from "@material-ui/core/styles/makeStyles"
-import TextField from "@material-ui/core/TextField"
+import Button from "@mui/material/Button"
+import makeStyles from '@mui/styles/makeStyles';
+import TextField from "@mui/material/TextField"
 import * as React from 'react';
 import { ChangeEventHandler, useCallback, useEffect, useState } from 'react';
 import { BirthNumbersData, generateBirthNumbers } from "./generateBirthNumber"
 import { FormattedDate, FormattedMessage } from "gatsby-plugin-intl"
-import {
-	FormControl,
-	FormControlLabel,
-	InputAdornment,
-	Radio,
-	RadioGroup,
-	Theme,
-	useMediaQuery
-} from "@material-ui/core";
-import { DatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
+import { FormControl, FormControlLabel, InputAdornment, Radio, RadioGroup, Theme, useMediaQuery } from "@mui/material";
+import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { CopyButton } from '../../src/components/tool/CopyButton';
 import filesaver from 'file-saver';
-import Grid from '@material-ui/core/Grid';
-import { Save } from '@material-ui/icons';
+import Grid from '@mui/material/Grid';
+import { Save } from '@mui/icons-material';
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 
 interface StyleProps {
 	mobile: boolean;
@@ -69,7 +61,9 @@ export const BirthNumberTool = () => {
 	)
 
 	const handleBirthDateChange = useCallback((date) => {
-		setSettings({ birthDate: date, isFemale });
+		if (date instanceof Date && !isNaN(date)) {
+			setSettings({ birthDate: date, isFemale });
+		}
 	}, [isFemale]);
 
 	const handleCountChange = useCallback<ChangeEventHandler<HTMLInputElement>>((e: React.FormEvent<HTMLInputElement>) => {
@@ -97,7 +91,7 @@ export const BirthNumberTool = () => {
 	const matchesMobile = !useMediaQuery('(min-width:600px)', { defaultMatches: true });
 	const classes = useStyles({ mobile: matchesMobile });
 
-	return (<MuiPickersUtilsProvider utils={DateFnsUtils}>
+	return (<LocalizationProvider dateAdapter={AdapterDateFns}>
 		<TextField
 			value={birthNumber}
 			InputProps={{
@@ -159,10 +153,12 @@ export const BirthNumberTool = () => {
 				<DatePicker
 					label={<FormattedMessage id="tools.birthnumber.setupBirthDate" />}
 					value={birthDate}
-					size="small"
-					format="yyyy/MM/dd"
-					inputVariant="outlined"
+					inputFormat="yyyy/MM/dd"
 					onChange={handleBirthDateChange}
+					renderInput={(params) => <TextField {...params}
+														size="small"
+														disabled
+					/>}
 				/>
 				<FormControl className={classes.radioGroup}>
 					<RadioGroup row aria-label="gender" value={isFemale ? 'female' : 'male'}
@@ -198,5 +194,5 @@ export const BirthNumberTool = () => {
 				</Button>
 			</Grid>
 		</Grid>
-	</MuiPickersUtilsProvider>)
+	</LocalizationProvider>)
 }

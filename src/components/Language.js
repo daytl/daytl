@@ -5,7 +5,7 @@ import {
   useIntl,
   FormattedMessage,
 } from "gatsby-plugin-intl"
-import { MenuItem, Select } from "@material-ui/core"
+import { MenuItem, Select } from '@mui/material';
 
 const Language = () => {
   const handleChange = (event) => {
@@ -14,7 +14,9 @@ const Language = () => {
   return (
     <IntlContextConsumer>
       {({ languages, language: currentLocale }) => (
-        <Select value={currentLocale} onChange={handleChange}>
+        <Select
+            size="small"
+            value={currentLocale} onChange={handleChange}>
           {languages.map((language) => (
             <MenuItem value={language}>
               <FormattedMessage id={`common.languages.${language}`} />

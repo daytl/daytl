@@ -6,10 +6,11 @@ import {
 } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import { Grid, makeStyles } from "@material-ui/core"
+import { Grid } from "@mui/material";
+import makeStyles from '@mui/styles/makeStyles';
 import tools from "../../tools"
 import { Tool } from "../components/tool/Tool"
-import Typography from "@material-ui/core/Typography"
+import Typography from "@mui/material/Typography"
 
 const useStyles = makeStyles(() => {
   return {
@@ -56,8 +57,8 @@ const IndexPage = () => {
           <br />
           <br />
         </Grid>
-        {tools.map((config) => (
-          <Grid item xs={12} sm={4} lg={3} xl={2} className={classes.tool}>
+        {tools.map((config, index) => (
+          <Grid item xs={12} sm={4} lg={3} xl={2} className={classes.tool} key={index}>
             <Tool config={config} />
           </Grid>
         ))}

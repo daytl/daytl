@@ -1,11 +1,11 @@
-import TextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 import React, { useCallback, useState } from 'react';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 import striptags from 'striptags';
 import { FormattedMessage } from "gatsby-plugin-intl"
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import { InputAdornment, useMediaQuery } from "@material-ui/core";
+import makeStyles from '@mui/styles/makeStyles';
+import { InputAdornment, useMediaQuery } from "@mui/material";
 import useTranslation from "../../src/utils/useTranslation";
 import { CopyButton } from '../../src/components/tool/CopyButton';
 
@@ -46,13 +46,14 @@ export const RemoverTool = () => {
     const matchesMobile = !useMediaQuery('(min-width:600px)', {defaultMatches: true})
     const classes = useStyles(matchesMobile)
 
-    return (<>
+    return <>
         <Grid container>
             <Grid item xs={6}>
                 <TextField
                     placeholder={t("tools.remover.source")}
                     multiline
-                    minRows={4}
+                    rows={4}
+                    maxRows={4}
                     fullWidth
                     variant="outlined"
                     value={source}
@@ -63,7 +64,8 @@ export const RemoverTool = () => {
                 <TextField
                     placeholder={t("tools.remover.result")}
                     multiline
-                    minRows={4}
+                    rows={4}
+                    maxRows={4}
                     fullWidth
                     onFocus={(event) => event.target.select()}
                     variant="outlined"
@@ -89,5 +91,5 @@ export const RemoverTool = () => {
                         id="tools.remover.clear" /></Button>
             </Grid>
         </Grid>
-    </>);
+    </>;
 };
