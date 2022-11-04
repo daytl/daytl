@@ -9,15 +9,9 @@ function randomIntFromInterval(min, max) { // min and max included
 }
 
 function testRc(strRc: string): boolean {
-	const result =
-		parseInt(strRc[0]) +
-		parseInt(strRc[2]) +
-		parseInt(strRc[4]) +
-		parseInt(strRc[6]) +
-		parseInt(strRc[8]) -
-		(parseInt(strRc[1]) + parseInt(strRc[3]) + parseInt(strRc[5]) + parseInt(strRc[7]) + parseInt(strRc[9]));
-	return result === 0 || result % 11 === 0;
+	return parseInt(strRc) % 11 == 0;
 }
+
 export interface BirthNumbersData {
 	birthNumbers: string[];
 	settings: any;
