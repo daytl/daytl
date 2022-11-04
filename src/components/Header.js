@@ -8,7 +8,7 @@ import Button from "@mui/material/Button"
 import makeStyles from '@mui/styles/makeStyles';
 import packageJson from "../../package.json"
 import IconButton from '@mui/material/IconButton';
-import GithubIcon from '@mui/icons-material/Github';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -55,7 +55,7 @@ const Header = () => {
                         </Grid>
                         <Language />{' '}
                         <IconButton href={packageJson.repository.url} size="small">
-                            <GithubIcon />
+                            <GitHubIcon />
                         </IconButton>
                     </Toolbar>
                 </Grid>
