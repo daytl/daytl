@@ -57,7 +57,7 @@ const generateLastPart = (oldBirthNumber: boolean) => {
 const generateBirthNumber = (
 	{
 		isFemale = false, minAge = 19, maxAge = 90,
-		birthDate = randomDate(new Date(2021 - maxAge, 0, 1), new Date(2021 - minAge, 0, 1))
+		birthDate = randomDate(new Date(new Date().getFullYear() - maxAge, 0, 1), new Date(new Date().getFullYear() - minAge, 0, 1))
 	}: Partial<GenerateBirthNumberData> = {}
 ): BirthNumberData => {
 	const oldBirthNumber = birthDate.getFullYear() < 1954;
