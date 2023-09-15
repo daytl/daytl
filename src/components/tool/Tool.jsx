@@ -27,14 +27,13 @@ export const Tool = ({ config }) => {
   const { name } = config
   const classes = useStyles()
   const intl = useIntl()
-  const styles = useStyles()
   return (
     <Link
       to={`/${name}`}
       className={classes.link}
       title={intl.formatMessage({ id: `tools.${name}.title` })}
     >
-      <Card className={styles.card}>
+      <Card className={classes.card}>
         <CardContent>
           <Typography variant="h5" component="h2">
             <FormattedMessage id={`tools.${name}.title`} />

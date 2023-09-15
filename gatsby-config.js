@@ -9,6 +9,7 @@ module.exports = {
     author: `Daytl`
   },
   plugins: [
+    "gatsby-plugin-netlify",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,7 +17,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-material-ui`,
     // `gatsby-plugin-perf-budgets`,
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
     `gatsby-plugin-react-helmet`,

@@ -1,6 +1,7 @@
 import Button from "@mui/material/Button"
 import makeStyles from '@mui/styles/makeStyles';
 import TextField from "@mui/material/TextField"
+import Box from "@mui/material/Box"
 import * as React from 'react';
 import { ChangeEventHandler, useCallback, useEffect, useState } from 'react';
 import { BirthNumbersData, generateBirthNumbers } from "./generateBirthNumber"
@@ -17,17 +18,24 @@ interface StyleProps {
 	mobile: boolean;
 }
 
+const buttonSx = {
+	marginRight: {
+		xs: 0,
+		sm: '5px'
+	},
+	marginBottom: {
+		xs: '5px',
+		sm: 0
+	},
+	width: {
+		xs: '100%',
+		sm: 'auto',
+	}
+};
+
 const useStyles = makeStyles<Theme, StyleProps>(() => {
 	return {
-		input: {
-			fontSize: "2rem",
-		},
-		button: ({ mobile }) => (mobile ? {
-			marginBottom: 5,
-			width: '100%'
-		} : {
-			marginRight: 5,
-		}),
+		input: {},
 		helperText: {
 			marginLeft: 0,
 		},
@@ -88,8 +96,7 @@ export const BirthNumberTool = () => {
 		filesaver.saveAs(new Blob([birthNumber], { type: "text/plain;charset=utf-8" }), "birthnumbers.txt");
 	}, [birthNumber])
 
-	const matchesMobile = !useMediaQuery('(min-width:600px)', { defaultMatches: true });
-	const classes = useStyles({ mobile: matchesMobile });
+	const classes = useStyles();
 
 	return (<LocalizationProvider dateAdapter={AdapterDateFns}>
 		<TextField
@@ -99,8 +106,15 @@ export const BirthNumberTool = () => {
 					<InputAdornment position="end">
 						<CopyButton text={birthNumber} />
 					</InputAdornment>,
-				className: classes.input,
 			}}
+			sx={
+				{
+					'textarea': {
+						fontSize: '2rem',
+						paddingTop: '10px'
+					}
+				}
+			}
 			variant="outlined"
 			multiline
 			maxRows={3}
@@ -120,36 +134,42 @@ export const BirthNumberTool = () => {
 		<br />
 		<br />
 		<Grid container spacing={3}>
-			<Grid item xs={12}>
+			<Grid item xs={12} sm={6}>
 				<Button color="primary" variant="contained"
-						className={classes.button}
+						sx={buttonSx}
 						onClick={handleGenerateBirthNumber}
 						data-minage="0"
 						data-maxage="17"
 				>
 					<FormattedMessage id="tools.birthnumber.button.men.child" />
 				</Button>
-				<Button color="primary" variant="contained" className={classes.button}
+				<Button color="primary" variant="contained"
+						sx={buttonSx}
 						onClick={handleGenerateBirthNumber}
 						data-minage="18"
 						data-maxage="60"
 				>
 					<FormattedMessage id="tools.birthnumber.button.men.adult" />
 				</Button>
-				<Button color="primary" variant="contained" className={classes.button} data-isfemale="true"
+				<Button color="primary" variant="contained"
+						sx={buttonSx}
+						data-isfemale="true"
 						onClick={handleGenerateBirthNumber}
 						data-minage="0"
 						data-maxage="17"
 				>
 					<FormattedMessage id="tools.birthnumber.button.women.child" />
 				</Button>
-				<Button color="primary" variant="contained" className={classes.button} data-isfemale="true"
+				<Button color="primary" variant="contained"
+						sx={buttonSx}
+						data-isfemale="true"
 						data-minage="18"
 						data-maxage="60"
 						onClick={handleGenerateBirthNumber}>
 					<FormattedMessage id="tools.birthnumber.button.women.adult" />
 				</Button>
-				{' '}
+			</Grid>
+			<Grid item xs={12} sm={6}>
 				<DatePicker
 					label={<FormattedMessage id="tools.birthnumber.setupBirthDate" />}
 					value={birthDate}
@@ -157,9 +177,11 @@ export const BirthNumberTool = () => {
 					onChange={handleBirthDateChange}
 					renderInput={(params) => <TextField {...params}
 														size="small"
+														sx={{ width: '160px' }}
 														disabled
 					/>}
 				/>
+				{' '}
 				<FormControl className={classes.radioGroup}>
 					<RadioGroup row aria-label="gender" value={isFemale ? 'female' : 'male'}
 								onChange={handleGenderChange}>
@@ -186,6 +208,7 @@ export const BirthNumberTool = () => {
 				/>
 				<Button
 					variant="contained"
+					color="secondary"
 					className={classes.save}
 					onClick={handleDownload}
 					startIcon={<Save />}

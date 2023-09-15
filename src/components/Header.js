@@ -10,12 +10,11 @@ import packageJson from "../../package.json"
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         borderBottom: "1px solid #ccc",
     },
     menuButton: {
-        marginRight: theme.spacing(2),
         fontSize: "2rem",
         fontWeight: "bold",
         textTransform: "none",
