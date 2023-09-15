@@ -40,14 +40,14 @@
       "keywords": "rodné číslo, kontrola rodného čísla",
       "download": "Stáhnout čísla jako .txt",
       "count": "Počet čísel",
-      "description": "Online generátor rodného čísla",
+      "description": "Online generátor rodného čísla s možností vygenerovat více rodných čísel najednou a stáhnout je jako textový soubor.",
       "content": "<p>Rodné číslo je jednoznačný číselný identifikátor přidělovaný obyvatelům Česka a Slovenska.</p><p>Rodné číslo je upraveno v zákoně č. 133/2000 Sb., o evidenci obyvatel. Z rodného čísla lze odvodit datum narození a pohlaví příslušné osoby. V Česku patří rodné číslo mezi osobní údaje. V mnoha dalších státech se používají obdobné číselné identifikátory, shodný formát jako v Česku mají rodná čísla na Slovensku.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku „Rodné číslo na Wikipedii</a></p>",
       "setupBirthDate": "Nastavit datum narození",
       "male": "Muž",
       "female": "Žena"
     },
     "remover": {
-      "title": "Odstranění html, zalomení řádků a mezer",
+      "title": "Html cleaner, zalomení řádků a mezer",
       "info": "Odstraňovač mezer a html značek.",
       "source": "Zdroj",
       "result": "Výsledek",
@@ -55,7 +55,7 @@
       "breaks": "Odstranit odřádkování",
       "clear": "Vymazat",
       "keywords": "odstranit mezery",
-      "description": "Odstraňovač mezer a čistič html",
+      "description": "Odstraňovač mezer a html cleaner, který odstraní zalomení řádků a html značky.",
       "content": "<p>Tento nástroj pomůže jednoduše odstranit zalomení řádku nebo odstranit html značky a získat tak čistý text.</p>"
     },
     "base64-encode-decode": {
@@ -67,8 +67,8 @@
       "clear": "Vymazat",
       "decode": "Dekódovat",
       "encode": "Enkodovat",
-      "keywords": "base64 encoder, base64 decoder",
-      "description": "Enkodování a dekódování textu nebo obrázků do base64.",
+      "keywords": "base64 encoder, base64 decoder, base64 encode, base64 decode",
+      "description": "Enkodování a dekódování textu nebo obrázků do base64. Base64 je kódování, které převádí binární data na posloupnosti tisknutelných znaků.",
       "content": "<p>Base64 je kódování, které převádí binární data na posloupnosti tisknutelných znaků. Umožňuje přenos binárních dat kanály, které dovolují pouze přenos textů. Používá se například v rozšíření MIME pro přenos e-mailů původně 7bitovým poštovním systémem v Internetu. Je definováno v RFC 4648.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Base64'>článku „Base64 na Wikipedii</a></p>"
     },
     "passwordgenerator": {
@@ -91,7 +91,7 @@
       "length": "Délka",
       "count": "Počet hesel",
       "keywords": "generátor bezpečných hesel",
-      "description": "Generátor bezpečných hesel s možností vygenerovat více hesel najednou a stáhnout jako soubor.",
+      "description": "Generátor bezpečných hesel s možností vygenerovat více hesel najednou a stáhnout jako soubor. Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků.",
       "content": "<p>Náhodné heslo se generuje přímo ve vašem prohlížeči a není nikam odesláno. Použitím náhodného dostatečně silného hesla zvýšíte bezpečnost vašich online přístupů.</p><p>Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků. Ideální je také použít pro každou online službu jiné heslo.</p><p>K správě vygenerovaných hesel je dobré použít takzvaný manažer hesel, jako je třeba <a href='https://keepass.info/' target='_blank'>KeePass</a>, který ukládá hesla v zašifrovaném souboru ve vašem počítači. Vám pak stačí si pamatovat jedno hlavní heslo, kterým tento soubor odemknete.</p>"
     }
   }
