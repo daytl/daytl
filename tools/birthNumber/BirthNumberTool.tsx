@@ -205,7 +205,7 @@ export const BirthNumberTool = () => {
 					}}
 					value={count}
 					size="small"
-				/>
+				/>{' '}
 				<Button
 					variant="contained"
 					color="secondary"

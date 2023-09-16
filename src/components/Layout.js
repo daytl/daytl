@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { injectIntl } from "gatsby-plugin-intl"
 import Header from "./Header"
-import { ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "../styles/getTheme"
 import Footer from "./Footer"
 import Grid from '@mui/material/Grid';
@@ -10,6 +10,7 @@ import Grid from '@mui/material/Grid';
 const Layout = ({children, intl, index}) => {
     return (
         <ThemeProvider theme={theme}>
+            <CssBaseline />
             <style>{`body {
                 margin: 0;
                 }`}</style>

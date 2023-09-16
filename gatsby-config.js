@@ -10,6 +10,9 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-netlify",
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,8 +22,7 @@ module.exports = {
     },
     // `gatsby-plugin-perf-budgets`,
     // `gatsby-plugin-webpack-bundle-analyser-v2`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
+
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
