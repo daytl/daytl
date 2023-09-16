@@ -1,22 +1,16 @@
 import Button from "@mui/material/Button"
-import makeStyles from '@mui/styles/makeStyles';
 import TextField from "@mui/material/TextField"
-import Box from "@mui/material/Box"
 import * as React from 'react';
 import { ChangeEventHandler, useCallback, useEffect, useState } from 'react';
 import { BirthNumbersData, generateBirthNumbers } from "./generateBirthNumber"
 import { FormattedDate, FormattedMessage } from "gatsby-plugin-intl"
-import { FormControl, FormControlLabel, InputAdornment, Radio, RadioGroup, Theme, useMediaQuery } from "@mui/material";
+import { FormControl, FormControlLabel, InputAdornment, Radio, RadioGroup } from "@mui/material";
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { CopyButton } from '../../src/components/tool/CopyButton';
 import filesaver from 'file-saver';
 import Grid from '@mui/material/Grid';
 import { Save } from '@mui/icons-material';
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-
-interface StyleProps {
-	mobile: boolean;
-}
 
 const buttonSx = {
 	marginRight: {
@@ -32,24 +26,6 @@ const buttonSx = {
 		sm: 'auto',
 	}
 };
-
-const useStyles = makeStyles<Theme, StyleProps>(() => {
-	return {
-		input: {},
-		helperText: {
-			marginLeft: 0,
-		},
-		radioGroup: {
-			marginLeft: 10,
-		},
-		radio: {
-			height: 30
-		},
-		save: {
-			marginLeft: 10
-		}
-	}
-})
 
 export const BirthNumberTool = () => {
 	const [count, setCount] = useState(1)
@@ -96,8 +72,6 @@ export const BirthNumberTool = () => {
 		filesaver.saveAs(new Blob([birthNumber], { type: "text/plain;charset=utf-8" }), "birthnumbers.txt");
 	}, [birthNumber])
 
-	const classes = useStyles();
-
 	return (<LocalizationProvider dateAdapter={AdapterDateFns}>
 		<TextField
 			value={birthNumber}
@@ -119,10 +93,11 @@ export const BirthNumberTool = () => {
 			multiline
 			maxRows={3}
 			onFocus={(event) => event.target.select()}
-			className={classes.input}
 			fullWidth
 			FormHelperTextProps={{
-				className: classes.helperText
+				sx: {
+					marginLeft: 0,
+				}
 			}}
 			helperText={
 				<>
@@ -182,15 +157,21 @@ export const BirthNumberTool = () => {
 					/>}
 				/>
 				{' '}
-				<FormControl className={classes.radioGroup}>
+				<FormControl sx={{
+					marginLeft: 1,
+				}}>
 					<RadioGroup row aria-label="gender" value={isFemale ? 'female' : 'male'}
 								onChange={handleGenderChange}>
 						<FormControlLabel value="female" control={<Radio />}
 										  label={<FormattedMessage id="tools.birthnumber.female" />}
-										  className={classes.radio} />
+										  sx={{
+											  height: '30px'
+										  }} />
 						<FormControlLabel value="male" control={<Radio />}
 										  label={<FormattedMessage id="tools.birthnumber.male" />}
-										  className={classes.radio} />
+										  sx={{
+											  height: '30px'
+										  }} />
 					</RadioGroup>
 				</FormControl>
 			</Grid>
@@ -209,7 +190,9 @@ export const BirthNumberTool = () => {
 				<Button
 					variant="contained"
 					color="secondary"
-					className={classes.save}
+					sx={{
+						marginLeft: 1
+					}}
 					onClick={handleDownload}
 					startIcon={<Save />}
 				>
