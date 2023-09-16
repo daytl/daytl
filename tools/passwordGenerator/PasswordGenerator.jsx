@@ -2,7 +2,7 @@ import Button from "@mui/material/Button"
 import makeStyles from '@mui/styles/makeStyles';
 import TextField from "@mui/material/TextField"
 import React, { useCallback, useEffect, useMemo } from "react"
-import { FormattedHTMLMessage, FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import { Checkbox, FormControlLabel, InputAdornment, Slider, useMediaQuery } from "@mui/material";
 import { generateMultiple } from 'generate-password';
 import { Controller, useForm } from 'react-hook-form';
@@ -11,6 +11,7 @@ import filesaver from 'file-saver';
 import { Refresh, Save } from '@mui/icons-material';
 import Grid from '@mui/material/Grid';
 import { CopyButton } from '../../src/components/tool/CopyButton';
+import FormattedHTMLMessage from '../../src/components/FormattedHTMLMessage';
 
 const useStyles = makeStyles(() => {
     return {
@@ -181,7 +182,6 @@ export const PasswordGenerator = () => {
                     </Grid>
                 </Grid>
                 <Grid item xs={12}>
-
                     <Controller
                         name="letters"
                         control={control}
