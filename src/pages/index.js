@@ -1,7 +1,6 @@
 import React from "react"
 import {
     FormattedMessage,
-    FormattedHTMLMessage,
     useIntl,
 } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
@@ -11,6 +10,7 @@ import makeStyles from '@mui/styles/makeStyles';
 import tools from "../../tools"
 import { Tool } from "../components/tool/Tool"
 import Typography from "@mui/material/Typography"
+import FormattedHTMLMessage from '../components/FormattedHTMLMessage';
 
 const IndexPage = () => {
     const intl = useIntl()
@@ -46,7 +46,7 @@ const IndexPage = () => {
                     <br />
                 </Grid>
                 {tools.map((config, index) => (
-                    <Grid item xs={12} sm={4} lg={3} xl={2} key={index}>
+                    <Grid item xs={12} sm={4} lg={3} xl={3} key={index}>
                         <Tool config={config} />
                     </Grid>
                 ))}

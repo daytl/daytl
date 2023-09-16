@@ -4,13 +4,13 @@ import Typography from "@mui/material/Typography"
 import makeStyles from '@mui/styles/makeStyles';
 import Grid from "@mui/material/Grid"
 import {
-  FormattedHTMLMessage,
   FormattedMessage,
   useIntl,
 } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import Divider from "@mui/material/Divider"
+import FormattedHTMLMessage from '../components/FormattedHTMLMessage';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -12,7 +12,7 @@ module.exports = {
     "gatsby-plugin-netlify",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-material-ui`,
+    // `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
