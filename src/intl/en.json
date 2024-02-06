@@ -22,6 +22,7 @@
     "copy": "Copy to clipboard",
     "keywords": "online tools",
     "description": "Simple and useful online tools in one place.",
+    "otherTools": "Other online tools",
     "languages": {
       "cs": "Česky",
       "sk": "Slovensky",
