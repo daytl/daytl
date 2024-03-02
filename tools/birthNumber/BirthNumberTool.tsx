@@ -85,7 +85,8 @@ export const BirthNumberTool = () => {
 				{
 					'textarea': {
 						fontSize: '2rem',
-						paddingTop: '10px'
+						paddingTop: '10px',
+						lineHeight: '2rem',
 					}
 				}
 			}
@@ -175,7 +176,7 @@ export const BirthNumberTool = () => {
 					</RadioGroup>
 				</FormControl>
 			</Grid>
-			<Grid item xs={12}>
+			<Grid item xs={12} paddingBottom={2}>
 				<TextField
 					variant="outlined"
 					label={<FormattedMessage id="tools.birthnumber.count" />}
