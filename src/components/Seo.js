@@ -79,14 +79,14 @@ function Seo({ description, lang, meta, keywords, title }) {
         )
         .concat(meta)}
     >
-      <script
-        data-host="https://microanalytics.io"
-        data-dnt="false"
-        src="https://microanalytics.io/js/script.js"
-        id="ZwSg9rf6GA"
-        async
-        defer
-      />
+      {/*<script*/}
+      {/*  data-host="https://microanalytics.io"*/}
+      {/*  data-dnt="false"*/}
+      {/*  src="https://microanalytics.io/js/script.js"*/}
+      {/*  id="ZwSg9rf6GA"*/}
+      {/*  async*/}
+      {/*  defer*/}
+      {/*/>*/}
     </Helmet>
   )
 }
