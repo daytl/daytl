@@ -109,8 +109,6 @@ export const PasswordGenerator = () => {
 
     const classes = useStyles(!useMediaQuery('(min-width:600px)'))
 
-    console.log(passwordStats?.crack_times_display?.online_no_throttling_10_per_second)
-
     return (
         <form>
             <Helmet>
@@ -140,7 +138,7 @@ export const PasswordGenerator = () => {
                                         <FormattedMessage
                                             tagName="strong"
                                             id={`tools.passwordgenerator.strength.${passwordStats.score}`} />{' / '}
-                                        <FormattedHTMLMessage id="tools.passwordgenerator.crackTime"
+                                        <FormattedMessage id="tools.passwordgenerator.crackTime"
                                                               values={
                                             {time: <strong>{passwordStats?.crack_times_display?.online_no_throttling_10_per_second}</strong>}}
                                         />
