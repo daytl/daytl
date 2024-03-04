@@ -6,12 +6,12 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import { Checkbox, FormControlLabel, InputAdornment, Slider, useMediaQuery } from "@mui/material";
 import { generateMultiple } from 'generate-password';
 import { Controller, useForm } from 'react-hook-form';
-import zxcvbn from 'zxcvbn';
 import filesaver from 'file-saver';
 import { Refresh, Save } from '@mui/icons-material';
 import Grid from '@mui/material/Grid';
 import { CopyButton } from '../../src/components/tool/CopyButton';
 import FormattedHTMLMessage from '../../src/components/FormattedHTMLMessage';
+import Helmet from 'react-helmet';
 
 const useStyles = makeStyles(() => {
     return {
@@ -83,7 +83,10 @@ export const PasswordGenerator = () => {
 
     const watchPasswords = watch('passwords');
     const passwords = getValues('passwords');
-    const passwordStats = useMemo(() => zxcvbn(watchPasswords.split('\n')[0]), [watchPasswords])
+
+    const passwordStats = useMemo(() =>
+            window.zxcvbn  ? window.zxcvbn(watchPasswords.split('\n')[0]) : {}, [window.zxcvbn?.name, watchPasswords ]
+    )
 
     const handleGeneratePassword = useCallback((event) => {
         setValue('passwords', generatePass(getValues()));
@@ -102,11 +105,16 @@ export const PasswordGenerator = () => {
         return () => subscription.unsubscribe();
     }, [watch]);
 
-
     const classes = useStyles(!useMediaQuery('(min-width:600px)'))
 
     return (
         <form>
+            <Helmet>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"
+                        integrity="sha512-TZlMGFY9xKj38t/5m2FzJ+RM/aD5alMHDe26p0mYUMoCF5G7ibfHUQILq0qQPV3wlsnCwL+TPRNK4vIWGLOkUQ=="
+                        crossOrigin="anonymous" referrerpolicy="no-referrer" />
+
+            </Helmet>
             <Grid container spacing={1}>
                 <Grid item xs={12}>
                     <Controller
@@ -124,13 +132,13 @@ export const PasswordGenerator = () => {
                                 variant="outlined"
                                 onFocus={(event)=> event.target.select()}
                                 helperText={
-                                    <>
+                                    passwordStats.score ? <>
                                         <FormattedMessage
                                             tagName="strong"
                                             id={`tools.passwordgenerator.strength.${passwordStats.score}`} />{' / '}
                                         <FormattedHTMLMessage id="tools.passwordgenerator.crackTime"
-                                                              values={{time: passwordStats.crack_times_display.online_no_throttling_10_per_second}} />
-                                    </>
+                                                              values={{time: passwordStats?.crack_times_display?.online_no_throttling_10_per_second}} />
+                                    </> : null
 
                                 }
                                 InputProps={{

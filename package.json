@@ -41,14 +41,13 @@
     "react-hook-form": "^7.51.0",
     "react-use": "^17.5.0",
     "stream-browserify": "^3.0.0",
-    "striptags": "^3.2.0",
-    "zxcvbn": "^4.4.2"
+    "striptags": "^3.2.0"
   },
   "devDependencies": {
     "esm": "^3.2.25",
-    "gatsby-plugin-netlify": "^5.1.0",
+    "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-plugin-perf-budgets": "0.0.18",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.32",
     "prettier": "^2.7.1"
   },
   "keywords": [
