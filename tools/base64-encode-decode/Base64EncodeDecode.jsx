@@ -127,13 +127,12 @@ export const Base64EncodeDecode = () => {
             </Grid>
 
             <Grid item xs={12}>
-
                 <Button color="primary" variant="contained" onClick={handleEncode} className={classes.button}>
                     <FormattedMessage id="tools.base64-encode-decode.encode" />
-                </Button>
+                </Button>{' '}
                 <Button color="primary" variant="contained" onClick={handleDecode} className={classes.button}>
                     <FormattedMessage id="tools.base64-encode-decode.decode" />
-                </Button>
+                </Button>{' '}
                 <Button variant="contained" color="secondary" onClick={handleClear} className={classes.button}>
                     <FormattedMessage
                         id="tools.base64-encode-decode.clear" /></Button>

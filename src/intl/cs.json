@@ -61,7 +61,7 @@
     },
     "base64-encode-decode": {
       "title": "Base64 Encode a Decode",
-      "info": "Enkodování a dekódování textu nebo obrázků do base64.",
+      "info": "Jednoduchý online nástroj pro Base64 kódování a dekódování. Konvertujte text nebo obrázek do formátu Base64 a zpět",
       "source": "Zdroj",
       "result": "Výsledek",
       "base64": "Base64",
@@ -82,7 +82,7 @@
         "3": "Silné",
         "4": "Velmi silné"
       },
-      "crackTime": "Odhadovaný čas prolomení: <strong>{time}</strong>",
+      "crackTime": "Odhadovaný čas prolomení: {time}",
       "letters": "písmena",
       "symbols": "symboly",
       "numbers": "čísla",

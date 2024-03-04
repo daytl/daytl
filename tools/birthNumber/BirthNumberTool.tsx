@@ -184,6 +184,7 @@ export const BirthNumberTool = () => {
 					inputProps={{
 						type: 'number',
 						max: 500,
+						width: '50px'
 					}}
 					value={count}
 					size="small"
