@@ -84,8 +84,10 @@ export const PasswordGenerator = () => {
     const watchPasswords = watch('passwords');
     const passwords = getValues('passwords');
 
+    const win = typeof window !== "undefined" ? window : {};
+
     const passwordStats = useMemo(() =>
-            window.zxcvbn  ? window.zxcvbn(watchPasswords.split('\n')[0]) : {}, [window.zxcvbn?.name, watchPasswords ]
+        win.zxcvbn  ? win.zxcvbn(watchPasswords.split('\n')[0]) : {}, [win.zxcvbn?.name, watchPasswords ]
     )
 
     const handleGeneratePassword = useCallback((event) => {
