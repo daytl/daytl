@@ -2,7 +2,6 @@ import React from "react"
 import {
   IntlContextConsumer,
   changeLocale,
-  useIntl,
   FormattedMessage,
 } from "gatsby-plugin-intl"
 import { MenuItem, Select } from '@mui/material';
@@ -18,7 +17,7 @@ const Language = () => {
             size="small"
             value={currentLocale} onChange={handleChange}>
           {languages.map((language) => (
-            <MenuItem value={language}>
+            <MenuItem value={language} key={language}>
               <FormattedMessage id={`common.languages.${language}`} />
             </MenuItem>
           ))}

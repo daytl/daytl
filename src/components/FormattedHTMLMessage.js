@@ -1,11 +1,11 @@
 import React from 'react';
 import { useIntl } from 'gatsby-plugin-intl';
 
-const FormattedHTMLMessage = ({id, values, tagName = 'span'}) => {
+const FormattedHTMLMessage = ({id, values, TagName = 'span'}) => {
     const intl = useIntl()
     const message = intl.formatMessage({id}, values);
     return (
-        <tagName dangerouslySetInnerHTML={{__html: message}} />
+        <TagName dangerouslySetInnerHTML={{__html: message}} />
     )
 }
 

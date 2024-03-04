@@ -16,7 +16,7 @@ const Layout = ({children, intl, index}) => {
                 }`}</style>
             <Header
                 showLogo={!index}
-                siteTitle={intl.formatMessage({id: "main.title"})}
+                siteTitle={intl.formatMessage({id: "common.title"})}
             />
             <Grid container justifyContent="center">
                 <Grid item xs={12} md={10} component="main">
