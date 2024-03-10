@@ -10,7 +10,6 @@ import filesaver from 'file-saver';
 import { Refresh, Save } from '@mui/icons-material';
 import Grid from '@mui/material/Grid';
 import { CopyButton } from '../../src/components/tool/CopyButton';
-import FormattedHTMLMessage from '../../src/components/FormattedHTMLMessage';
 import Helmet from 'react-helmet';
 
 const useStyles = makeStyles(() => {

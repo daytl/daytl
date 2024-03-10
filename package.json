@@ -40,7 +40,9 @@
     "react-hook-form": "^7.51.0",
     "react-use": "^17.5.0",
     "stream-browserify": "^3.0.0",
-    "striptags": "^3.2.0"
+    "striptags": "^3.2.0",
+    "gatsby-plugin-gdpr-cookies": "^2.0.9",
+    "js-cookie": "^3.0.5"
   },
   "devDependencies": {
     "esm": "^3.2.25",

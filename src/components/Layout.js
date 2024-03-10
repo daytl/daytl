@@ -2,34 +2,36 @@ import React from "react"
 import PropTypes from "prop-types"
 import { injectIntl } from "gatsby-plugin-intl"
 import Header from "./Header"
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material"
 import theme from "../styles/getTheme"
 import Footer from "./Footer"
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid"
+import CookieBanner from "./cookies/CookieBanner"
 
-const Layout = ({children, intl, index}) => {
-    return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <style>{`body {
+const Layout = ({ children, intl, index }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <style>{`body {
                 margin: 0;
                 }`}</style>
-            <Header
-                showLogo={!index}
-                siteTitle={intl.formatMessage({id: "common.title"})}
-            />
-            <Grid container justifyContent="center">
-                <Grid item xs={12} md={10} component="main">
-                    {children}
-                </Grid>
-            </Grid>
-            <Footer />
-        </ThemeProvider>
-    );
+      <Header
+        showLogo={!index}
+        siteTitle={intl.formatMessage({ id: "common.title" })}
+      />
+      <Grid container justifyContent="center">
+        <Grid item xs={12} md={10} component="main">
+          {children}
+        </Grid>
+      </Grid>
+      <Footer />
+      <CookieBanner />
+    </ThemeProvider>
+  )
 }
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default injectIntl(Layout)
