@@ -46,7 +46,8 @@
       "description": "Generate czech birth number",
       "setupBirthDate": "Setup birth date",
       "male": "Male",
-      "female": "Female"
+      "female": "Female",
+      "birthNumber": "Birth number"
     },
     "remover": {
       "title": "Html and breaks Remover",

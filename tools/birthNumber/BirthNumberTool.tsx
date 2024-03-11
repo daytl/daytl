@@ -11,6 +11,7 @@ import filesaver from 'file-saver';
 import Grid from '@mui/material/Grid';
 import { Save } from '@mui/icons-material';
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import useTranslation from "../../src/utils/useTranslation"
 
 const buttonSx = {
 	marginRight: {
@@ -33,6 +34,7 @@ export const BirthNumberTool = () => {
 	const [settings, setSettings] = useState<any>()
 	const [birthDate, setBirthDate] = useState<Date>();
 	const [isFemale, setIsFemale] = useState(false);
+	const t = useTranslation()
 
 	useEffect(() => {
 			if (count) {
@@ -80,6 +82,7 @@ export const BirthNumberTool = () => {
 					<InputAdornment position="end">
 						<CopyButton text={birthNumber} />
 					</InputAdornment>,
+				'aria-label': t('tools.birthnumber.birthNumber')
 			}}
 			sx={
 				{

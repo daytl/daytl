@@ -53,7 +53,7 @@ const Header = () => {
                             {" "}
                         </Grid>
                         <Language />{' '}
-                        <IconButton href={packageJson.repository.url} size="small">
+                        <IconButton href={packageJson.repository.url} size="small" title="Github source">
                             <GitHubIcon />
                         </IconButton>
                     </Toolbar>

@@ -45,7 +45,8 @@
       "content": "<p>Rodné číslo je jednoznačný číselný identifikátor přidělovaný obyvatelům Česka a Slovenska.</p><p>Rodné číslo je upraveno v zákoně č. 133/2000 Sb., o evidenci obyvatel. Z rodného čísla lze odvodit datum narození a pohlaví příslušné osoby. V Česku patří rodné číslo mezi osobní údaje. V mnoha dalších státech se používají obdobné číselné identifikátory, shodný formát jako v Česku mají rodná čísla na Slovensku.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku „Rodné číslo na Wikipedii</a></p>",
       "setupBirthDate": "Nastavit datum narození",
       "male": "Muž",
-      "female": "Žena"
+      "female": "Žena",
+      "birthNumber": "Rodné číslo"
     },
     "remover": {
       "title": "Html cleaner, zalomení řádků a mezer",
