@@ -68,7 +68,7 @@ export const BirthNumberTool = () => {
 		setSettings({ isFemale: isfemale, minAge: parseInt(minage), maxAge: parseInt(maxage) })
 	}, [])
 
-	const handleDownload = useCallback((event) => {
+	const handleDownload = useCallback(() => {
 		filesaver.saveAs(new Blob([birthNumber], { type: "text/plain;charset=utf-8" }), "birthnumbers.txt");
 	}, [birthNumber])
 
@@ -184,7 +184,9 @@ export const BirthNumberTool = () => {
 					inputProps={{
 						type: 'number',
 						max: 500,
-						width: '50px'
+						sx: {
+							width: '50px'
+						}
 					}}
 					value={count}
 					size="small"

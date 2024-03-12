@@ -3,8 +3,8 @@ import Typography from "@mui/material/Typography"
 import Card from "@mui/material/Card"
 import React from "react"
 import { object } from "prop-types"
-import makeStyles from '@mui/styles/makeStyles';
-import { FormattedMessage, Link, useIntl, } from "gatsby-plugin-intl"
+import makeStyles from "@mui/styles/makeStyles"
+import { FormattedMessage, Link, useIntl } from "gatsby-plugin-intl"
 
 export const Tool = ({ config }) => {
   const { name } = config
@@ -18,13 +18,13 @@ export const Tool = ({ config }) => {
       <Card sx={{
         cursor: "pointer",
         "&:hover": {
-          color: 'primary.contrastText',
-          backgroundColor: 'primary.main',
+          color: "primary.contrastText",
+          backgroundColor: "primary.main",
         },
         minHeight: "8rem",
         height: "100%",
       }}
-      fullWidth
+            fullWidth
       >
         <CardContent>
           <Typography variant="h5" component="h2">

@@ -12,6 +12,21 @@ import Grid from '@mui/material/Grid';
 import { CopyButton } from '../../src/components/tool/CopyButton';
 import Helmet from 'react-helmet';
 
+const buttonSx = {
+    marginRight: {
+        xs: 0,
+        sm: '5px'
+    },
+    marginBottom: {
+        xs: '5px',
+        sm: 0
+    },
+    width: {
+        xs: '100%',
+        sm: 'auto',
+    }
+};
+
 const useStyles = makeStyles(() => {
     return {
         input: {
@@ -263,6 +278,7 @@ export const PasswordGenerator = () => {
                     <Button variant="contained"
                             className={classes.button}
                             color="primary"
+                            sx={buttonSx}
                             onClick={handleGeneratePassword}
                             startIcon={<Refresh />}
                     >
@@ -271,6 +287,7 @@ export const PasswordGenerator = () => {
                     <Button
                         variant="contained"
                         className={classes.button}
+                        sx={buttonSx}
                         onClick={handleDownload}
                         startIcon={<Save />}
                     >
