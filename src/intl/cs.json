@@ -55,6 +55,7 @@
       "birthDate": "Datum narození",
       "male": "Muž",
       "female": "Žena",
+      "placeholder": "vložte rodné číslo",
       "keywords": "rodné číslo, kontrola rodného čísla, validátor rodného čísla",
       "description": "Tento online nástroj poskytuje rychlou a přesnou validaci rodných čísel. Ověřte platnost svého rodného čísla v několika snadných krocích a získejte detailní informace o datu narození a pohlaví. Ideální pro jednotlivce i profesionály potřebující ověřit osobní údaje.",
       "content": "<p>Rodné číslo je jednoznačný číselný identifikátor přidělovaný obyvatelům Česka a Slovenska.</p><p>Rodné číslo je upraveno v zákoně č. 133/2000 Sb., o evidenci obyvatel. Z rodného čísla lze odvodit datum narození a pohlaví příslušné osoby. V Česku patří rodné číslo mezi osobní údaje. V mnoha dalších státech se používají obdobné číselné identifikátory, shodný formát jako v Česku mají rodná čísla na Slovensku.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku „Rodné číslo na Wikipedii</a></p>"
@@ -103,7 +104,6 @@
       "refresh": "Nové heslo",
       "length": "Délka",
       "count": "Počet hesel",
-      "placeholder": "vložte rodné číslo",
       "keywords": "generátor bezpečných hesel",
       "description": "Generátor bezpečných hesel s možností vygenerovat více hesel najednou a stáhnout jako soubor. Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků.",
       "content": "<p>Náhodné heslo se generuje přímo ve vašem prohlížeči a není nikam odesláno. Použitím náhodného dostatečně silného hesla zvýšíte bezpečnost vašich online přístupů.</p><p>Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků. Ideální je také použít pro každou online službu jiné heslo.</p><p>K správě vygenerovaných hesel je dobré použít takzvaný manažer hesel, jako je třeba <a href='https://keepass.info/' target='_blank'>KeePass</a>, který ukládá hesla v zašifrovaném souboru ve vašem počítači. Vám pak stačí si pamatovat jedno hlavní heslo, kterým tento soubor odemknete.</p>"
