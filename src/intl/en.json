@@ -15,7 +15,7 @@
       "message": "Message",
       "emailError": "Email is not valid"
     },
-    "404": {
+    "page404": {
       "info": "Ooops, page not found."
     },
     "copied": "Copied!",
@@ -33,10 +33,10 @@
     "birthnumber": {
       "title": "Czech Birth number generator",
       "info": "Generate czech birth number",
-      "button.women.adult": "Female 18+",
-      "button.men.adult": "Male 18+",
-      "button.women.child": "Female 0-17",
-      "button.men.child": "Male 0-17",
+      "buttonWomenAdult": "Female 18+",
+      "buttonMenAdult": "Male 18+",
+      "buttonWomenChild": "Female 0-17",
+      "buttonMenChild": "Male 0-17",
       "birthDate": "Birthdate",
       "detail": "dependencies, changelog and etc..",
       "content": "<p>The birth number is a unique numerical identifier assigned to residents of the Czech Republic.</p><p>The birth number is regulated in Act No. 133/2000 Coll., on population registration. The date of birth and the sex of the person concerned can be derived from the birth number. In the Czech Republic, the birth number belongs to personal data. In many other countries similar numerical identifiers are used, the format of birth numbers in Slovakia is identical to that in the Czech Republic.</p><p>This article is licensed under the terms of <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share license 3.0</a>. His text was taken and translated from <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>article „Rodné číslo on Wikipedii</a></p>",
@@ -77,13 +77,6 @@
     "passwordgenerator": {
       "title": "Password generator",
       "info": "Secure password generator with the ability to generate multiple passwords at once and download as a file.",
-      "strength": {
-        "0": "-",
-        "1": "Weak",
-        "2": "Good",
-        "3": "Strong",
-        "4": "Very strong"
-      },
       "crackTime": "Estimated cracking time: <strong>{time}</strong>",
       "letters": "letters",
       "symbols": "symbols",
@@ -95,7 +88,27 @@
       "count": "Number of passwords",
       "keywords": "secure password generator",
       "content": "<p>A random password is generated directly in your browser and is not sent anywhere. Using a random password that is strong enough will increase the security of your online access.</p><p>A secure password should be long enough and consist of upper and lower case letters, numbers and special characters. Ideální je také použít pro každou online službu jiné heslo.</p><p>To manage the passwords you generate, it's a good idea to use a so-called password manager, such as <a href='https://keepass.info/' target='_blank'>KeePass</a>, which stores passwords in an encrypted file on your computer. You then just need to remember one master password to unlock that file.</p>",
-      "description": "Secure password generator with the ability to generate multiple passwords at once and download as a file."
+      "description": "Secure password generator with the ability to generate multiple passwords at once and download as a file.",
+      "strength": {
+        "s-": "-",
+        "s1": "Weak",
+        "s2": "Good",
+        "s3": "Strong",
+        "s4": "Very strong"
+      }
+    },
+    "birthnumbervalidator": {
+      "title": "Birth Number Validator",
+      "info": "This online tool provides fast and accurate validation of birth numbers. Verify the validity of your birth number.",
+      "valid": "Valid",
+      "invalid": "The Invalid",
+      "birthDate": "Date of birth",
+      "male": "Man",
+      "female": "Woman",
+      "placeholder": "insert birth number",
+      "keywords": "birth number, birth number checker, birth number validator",
+      "description": "This online tool provides fast and accurate validation of birth numbers. Verify the validity of your birth number in a few easy steps and get detailed information about your date of birth and gender. Ideal for individuals and professionals needing to verify personal information.",
+      "content": "<p>Birth number is a unique numerical identifier assigned to residents of the Czech Republic and Slovakia.</p><p>The birth number is regulated in Act No.133/2000 Coll., on population registration. The date of birth and sex of the person concerned can be derived from the birth number. In the Czech Republic, the birth number belongs to personal data. In many other countries similar numerical identifiers are used, and the same format as in the Czech Republic is used for birth numbers in Slovakia.</p><p>This article is licensed under the terms of a <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share-Alike License 3.0</a>. Its text was taken from the <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>Wikipedia article \"Birth number on Wikipedia</a></p>"
     }
   }
 }

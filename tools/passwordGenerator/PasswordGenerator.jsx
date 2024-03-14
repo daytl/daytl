@@ -151,7 +151,7 @@ export const PasswordGenerator = () => {
                                     passwordStats.score ? <>
                                         <FormattedMessage
                                             tagName="strong"
-                                            id={`tools.passwordgenerator.strength.${passwordStats.score}`} />{' / '}
+                                            id={`tools.passwordgenerator.strength.s${passwordStats.score}`} />{' / '}
                                         <FormattedMessage id="tools.passwordgenerator.crackTime"
                                                               values={
                                             {time: <strong>{passwordStats?.crack_times_display?.online_no_throttling_10_per_second}</strong>}}

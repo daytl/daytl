@@ -21,7 +21,7 @@ const NotFoundPage = () => {
     <Layout>
       <Seo
         lang={intl.locale}
-        title={`404: ${intl.formatMessage({ id: "title" })}`}
+        title={`page404: ${intl.formatMessage({ id: "title" })}`}
       />
       <Grid container>
         <Grid item xs={12} className={classes.root}>
