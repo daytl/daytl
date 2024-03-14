@@ -15,7 +15,7 @@
       "text": "Chýba vám nejaký nástroj alebo funkcie?",
       "emailError": "Zadajte platný email"
     },
-    "404": {
+    "page404": {
       "info": "Ooops, stránka nenájdená."
     },
     "copied": "Skopírované!",
@@ -33,16 +33,17 @@
     "birthnumber": {
       "title": "Generátor Rodných čísel",
       "info": "Online generátor rodných čísel s možnosťou vygenerovať viac rodných čísel naraz a stiahnuť ich ako textový súbor.",
-      "button.women.adult": "Žena 18+",
-      "button.men.adult": "Muž 18+",
-      "button.women.child": "Žena 0-17",
-      "button.men.child": "Muž 0-17",
+      "buttonWomenAdult": "Žena 18+",
+      "buttonMenAdult": "Muž 18+",
+      "buttonWomenChild": "Žena 0-17",
+      "buttonMenChild": "Muž 0-17",
       "birthDate": "Dátum narodenia",
       "keywords": "rodné číslo, kontrola rodného čísla",
       "download": "Stiahnuť čísla ako .txt",
       "count": "Počet čísel",
       "description": "Online generátor rodného čísla",
-      "content": "<p>Rodné číslo je jednoznačný číselný identifikátor prideľovaný obyvateľom Slovenska a Česka.</p><p>Rodné číslo je upravené v zákone č. 133/2000 Zb. o evidencii obyvateľov. Z rodného čísla je možné odvodiť dátum narodenia a pohlavie príslušnej osoby. V Česku patrí rodné číslo medzi osobné údaje. V mnohých ďalších štátoch sa používajú podobné číselné identifikátory, zhodný formát ako v Česku majú rodné čísla na Slovensku. Tento článok je licencovaný za podmienok <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licencia Creative Commons Uveďte autora/Zachovajte licenciu 3.0</a> Jeho text bol prevzatý z <a href='https://sk.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku „Rodné číslo na Wikipédii</a></p>",   "setupBirthDate": "Nastaviť dátum narodenia",
+      "content": "<p>Rodné číslo je jednoznačný číselný identifikátor prideľovaný obyvateľom Slovenska a Česka.</p><p>Rodné číslo je upravené v zákone č. 133/2000 Zb. o evidencii obyvateľov. Z rodného čísla je možné odvodiť dátum narodenia a pohlavie príslušnej osoby. V Česku patrí rodné číslo medzi osobné údaje. V mnohých ďalších štátoch sa používajú podobné číselné identifikátory, zhodný formát ako v Česku majú rodné čísla na Slovensku. Tento článok je licencovaný za podmienok <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licencia Creative Commons Uveďte autora/Zachovajte licenciu 3.0</a> Jeho text bol prevzatý z <a href='https://sk.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku „Rodné číslo na Wikipédii</a></p>",
+      "setupBirthDate": "Nastaviť dátum narodenia",
       "male": "Muž",
       "female": "Žena",
       "birthNumber": "Rodné číslo"
@@ -75,13 +76,6 @@
     "passwordgenerator": {
       "title": "Generátor hesiel",
       "info": "Generátor bezpečných hesiel s možnosťou vygenerovať viac hesiel naraz a stiahnuť ako súbor.",
-      "strength": {
-        "-": "-",
-        "1": "Slabé",
-        "2": "Dobré",
-        "3": "Silné",
-        "4": "Veľmi silné"
-      },
       "crackTime": "Odhadovaný čas prelomenia: <strong>{time}</strong>",
       "letters": "písmená",
       "symbols": "symboly",
@@ -93,7 +87,27 @@
       "count": "Počet hesiel",
       "keywords": "generátor bezpečných hesiel",
       "description": "Generátor bezpečných hesiel s možnosťou vygenerovať viac hesiel naraz a stiahnuť ako súbor.",
-      "content": "<p>Náhodné heslo sa generuje priamo vo vašom prehliadači a nie je nikam odoslané. Použitím náhodného dostatočne silného hesla zvýšite bezpečnosť vašich online prístupov.</p><p>Bezpečné heslo by malo byť dostatočne dlhé a zložené z malých a veľkých písmen, číslic a špeciálnych znakov.Ideálne je tiež použiť pre každú online službu iné heslo.</p><p>K správe vygenerovaných hesiel je dobré použiť takzvaný manažér hesiel, ako je napríklad <a href='https://keepass.info/' target='_blank'>KeePass</a>, ktorý ukladá heslá v zašifrovanom súbore vo vašom počítači. Vám potom stačí si pamätať jedno hlavné heslo, ktorým tento súbor odomknete.</p>"
+      "content": "<p>Náhodné heslo sa generuje priamo vo vašom prehliadači a nie je nikam odoslané. Použitím náhodného dostatočne silného hesla zvýšite bezpečnosť vašich online prístupov.</p><p>Bezpečné heslo by malo byť dostatočne dlhé a zložené z malých a veľkých písmen, číslic a špeciálnych znakov.Ideálne je tiež použiť pre každú online službu iné heslo.</p><p>K správe vygenerovaných hesiel je dobré použiť takzvaný manažér hesiel, ako je napríklad <a href='https://keepass.info/' target='_blank'>KeePass</a>, ktorý ukladá heslá v zašifrovanom súbore vo vašom počítači. Vám potom stačí si pamätať jedno hlavné heslo, ktorým tento súbor odomknete.</p>",
+      "strength": {
+        "s-": "-",
+        "s1": "Slabé",
+        "s2": "Dobrý",
+        "s3": "Silný",
+        "s4": "Veľmi silný"
+      }
+    },
+    "birthnumbervalidator": {
+      "title": "Overovač rodného čísla",
+      "info": "Tento online nástroj umožňuje rýchle a presné overenie rodných čísel. Overte si platnosť svojho rodného čísla.",
+      "valid": "Platné",
+      "invalid": "Invalidný",
+      "birthDate": "Dátum narodenia",
+      "male": "Muž",
+      "female": "Žena",
+      "placeholder": "vložte rodné číslo",
+      "keywords": "rodné číslo, kontrolór rodného čísla, validátor rodného čísla",
+      "description": "Tento online nástroj umožňuje rýchle a presné overenie rodných čísel. V niekoľkých jednoduchých krokoch overíte platnosť svojho rodného čísla a získate podrobné informácie o svojom dátume narodenia a pohlaví. Ideálne pre jednotlivcov a profesionálov, ktorí potrebujú overiť osobné údaje.",
+      "content": "<p>Rodné číslo je jedinečný číselný identifikátor pridelený obyvateľom Českej republiky a Slovenskej republiky.</p><p>Rodné číslo upravuje zákon č. 133/2000 Z. z. o evidencii obyvateľstva. Z rodného čísla možno zistiť dátum narodenia a pohlavie dotknutej osoby. V Českej republike patrí rodné číslo medzi osobné údaje. V mnohých ďalších krajinách sa používajú podobné číselné identifikátory a rovnaký formát ako v Českej republike sa pre rodné čísla používa aj na Slovensku.</p><p>Tento článok je licencovaný podľa podmienok <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share-Alike License 3.0</a>. Jeho text bol prevzatý z <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku Wikipédie \"Rodné číslo na Wikipédii</a></p>."
     }
   }
 }

@@ -20,7 +20,7 @@ const Layout = ({ children, intl, index }) => {
         siteTitle={intl.formatMessage({ id: "common.title" })}
       />
       <Grid container justifyContent="center">
-        <Grid item xs={12} md={10} component="main">
+        <Grid item xs={12} md={10} component="main" padding={1}>
           {children}
         </Grid>
       </Grid>

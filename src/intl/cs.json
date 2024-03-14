@@ -15,7 +15,7 @@
       "text": "Chybí vám nějaký nástroj nebo funkce?",
       "emailError": "Zadejte platný email"
     },
-    "404": {
+    "page404": {
       "info": "Ooops, stránka nenalezena."
     },
     "copied": "Zkopírováno!",
@@ -33,10 +33,10 @@
     "birthnumber": {
       "title": "Generátor Rodných čísel",
       "info": "Online generátor rodných čísel s možností vygenerovat více rodných čísel najednou a stáhnout je jako textový soubor.",
-      "button.women.adult": "Žena 18+",
-      "button.men.adult": "Muž 18+",
-      "button.women.child": "Žena 0-17",
-      "button.men.child": "Muž 0-17",
+      "buttonWomenAdult": "Žena 18+",
+      "buttonMenAdult": "Muž 18+",
+      "buttonWomenChild": "Žena 0-17",
+      "buttonMenChild": "Muž 0-17",
       "birthDate": "Datum narození",
       "keywords": "rodné číslo, kontrola rodného čísla",
       "download": "Stáhnout čísla jako .txt",
@@ -47,6 +47,19 @@
       "male": "Muž",
       "female": "Žena",
       "birthNumber": "Rodné číslo"
+    },
+    "birthnumbervalidator": {
+      "title": "Validátor rodného čísla",
+      "info": "Tento online nástroj poskytuje rychlou a přesnou validaci rodných čísel. Ověřte platnost rodného čísla.",
+      "valid": "Validni",
+      "invalid": "Nevalidni",
+      "birthDate": "Datum narození",
+      "male": "Muž",
+      "female": "Žena",
+      "placeholder": "vložte rodné číslo",
+      "keywords": "rodné číslo, kontrola rodného čísla, validátor rodného čísla",
+      "description": "Tento online nástroj poskytuje rychlou a přesnou validaci rodných čísel. Ověřte platnost svého rodného čísla v několika snadných krocích a získejte detailní informace o datu narození a pohlaví. Ideální pro jednotlivce i profesionály potřebující ověřit osobní údaje.",
+      "content": "<p>Rodné číslo je jednoznačný číselný identifikátor přidělovaný obyvatelům Česka a Slovenska.</p><p>Rodné číslo je upraveno v zákoně č. 133/2000 Sb., o evidenci obyvatel. Z rodného čísla lze odvodit datum narození a pohlaví příslušné osoby. V Česku patří rodné číslo mezi osobní údaje. V mnoha dalších státech se používají obdobné číselné identifikátory, shodný formát jako v Česku mají rodná čísla na Slovensku.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku „Rodné číslo na Wikipedii</a></p>"
     },
     "remover": {
       "title": "Html cleaner, zalomení řádků a mezer",
@@ -77,11 +90,11 @@
       "title": "Generátor hesel",
       "info": "Generátor bezpečných hesel s možností vygenerovat více hesel najednou a stáhnout jako soubor.",
       "strength": {
-        "-": "-",
-        "1": "Slabé",
-        "2": "Dobré",
-        "3": "Silné",
-        "4": "Velmi silné"
+        "s-": "-",
+        "s1": "Slabé",
+        "s2": "Dobré",
+        "s3": "Silné",
+        "s4": "Velmi silné"
       },
       "crackTime": "Odhadovaný čas prolomení: {time}",
       "letters": "písmena",
