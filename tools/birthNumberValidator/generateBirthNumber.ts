@@ -21,23 +21,19 @@ export const isValidBirthNumber = (birthNumber: string): boolean => {
 
   return (result === 10 && numericLastChar === 0) || result === numericLastChar
 }
-export const parseBirthNumber = (birthNumber: string): {birthDate: Date, gender: String}  => {
-  let year = parseInt(birthNumber.substring(0, 2), 10)
-  let month = parseInt(birthNumber.substring(2, 4), 10)
-  let day = parseInt(birthNumber.substring(4, 6), 10)
+export const parseBirthNumber = (birthNumber: string): {birthDate: Date, gender: String} | false => {
+  const [yearPart, monthPart, dayPart] = [birthNumber.slice(0, 2), birthNumber.slice(2, 4), birthNumber.slice(4, 6)];
+  let [year, month, day] = [parseInt(yearPart), parseInt(monthPart), parseInt(dayPart)];
 
-  year += (year < 54) ? 2000 : 1900
-  let gender = "male"
-  if (month > 50) {
-    gender = "female"
-    month -= 50
-  }
+  year += (year < 54) ? 2000 : 1900;
+  const gender = month > 50 ? "female" : "male";
+  month = month > 50 ? month - 50 : month;
 
-  let birthDate = new Date(year, month - 1, day)
+  const birthDate = new Date(year, month - 1, day);
   if (birthDate.getFullYear() !== year || birthDate.getMonth() + 1 !== month || birthDate.getDate() !== day) {
-    return false
+    return false;
   }
 
-  return { birthDate, gender }
+  return { birthDate, gender };
 }
 

@@ -64,7 +64,7 @@ export const BirthNumberValidatorTool = () => {
       }}
       multiline
       maxRows={3}
-      placeholder={t("tools.birthnumberValidator.placeholder")}
+      placeholder={t("tools.birthnumbervalidator.placeholder")}
       onFocus={(event) => event.target.select()}
       fullWidth
       FormHelperTextProps={{
