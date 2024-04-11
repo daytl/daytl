@@ -37,8 +37,8 @@ export const BirthNumberValidatorTool = () => {
         endAdornment:
           birthNumber ? <InputAdornment position="end">
             {birthNumberValid ?
-              <Chip color="success" label={<FormattedMessage id="tools.birthnumberValidator.valid" />} />
-              : <Chip color="error" label={<FormattedMessage id="tools.birthnumberValidator.invalid" />} />}
+              <Chip color="success" label={<FormattedMessage id="tools.birthnumbervalidator.valid" />} />
+              : <Chip color="error" label={<FormattedMessage id="tools.birthnumbervalidator.invalid" />} />}
           </InputAdornment> : null,
       }}
       sx={
@@ -74,14 +74,15 @@ export const BirthNumberValidatorTool = () => {
       }}
       helperText={
         birthDate ? <>
-          <FormattedMessage id="tools.birthnumberValidator.birthDate" />:
+          <FormattedMessage id="tools.birthnumbervalidator.birthDate" />:
           <strong><FormattedDate value={birthDate} /></strong>
           {" / "}
-          <FormattedMessage id={`tools.birthnumberValidator.${gender}`} />
+          <FormattedMessage id={`tools.birthnumbervalidator.${gender}`} />
         </> : null
       }
     />
     <br />
     <br />
+    <FormattedMessage id="tools.birthnumbervalidator.valid" />
   </LocalizationProvider>)
 }
