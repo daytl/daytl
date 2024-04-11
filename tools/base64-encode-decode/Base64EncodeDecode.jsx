@@ -160,7 +160,3 @@ export const Base64EncodeDecode = () => {
         </Grid>
     </>;
 };
-
-// TODO
-// image encoding
-// error hadling
