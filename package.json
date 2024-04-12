@@ -23,6 +23,7 @@
     "gatsby-image": "^3.11.0",
     "gatsby-legacy-polyfills": "^3.13.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-gdpr-cookies": "^2.0.9",
     "gatsby-plugin-intl": "^5.10.0",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-material-ui": "^4.1.0",
@@ -31,6 +32,8 @@
     "gatsby-source-filesystem": "^5.13.1",
     "generate-password": "^1.7.1",
     "js-base64": "^3.7.7",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^4.0.0",
     "postcss": "^8.4.35",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -38,11 +41,10 @@
     "react-dropzone": "^11.5.1",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.51.0",
+    "@uiw/react-json-view": "2.0.0-alpha.23",
     "react-use": "^17.5.0",
     "stream-browserify": "^3.0.0",
-    "striptags": "^3.2.0",
-    "gatsby-plugin-gdpr-cookies": "^2.0.9",
-    "js-cookie": "^3.0.5"
+    "striptags": "^3.2.0"
   },
   "devDependencies": {
     "esm": "^3.2.25",

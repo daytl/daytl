@@ -110,6 +110,17 @@
       "keywords": "birth number, birth number checker, birth number validator",
       "description": "This online tool provides fast and accurate validation of birth numbers. Verify the validity of your birth number in a few easy steps and get detailed information about your date of birth and gender. Ideal for individuals and professionals needing to verify personal information.",
       "content": "<p>Birth number is a unique numerical identifier assigned to residents of the Czech Republic and Slovakia.</p><p>The birth number is regulated in Act No.133/2000 Coll., on population registration. The date of birth and sex of the person concerned can be derived from the birth number. In the Czech Republic, the birth number belongs to personal data. In many other countries similar numerical identifiers are used, and the same format as in the Czech Republic is used for birth numbers in Slovakia.</p><p>This article is licensed under the terms of a <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share-Alike License 3.0</a>. Its text was taken from the <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>Wikipedia article \"Birth number on Wikipedia</a></p>"
+    },
+    "jwt-decode": {
+      "title": "JWT Decoder",
+      "info": "JWT Decoder is an online tool for decoding and parsing JWT (JSON Web Tokens). It allows secure verification and inspection of JWT token content without the need for installation.",
+      "source": "Insert encoded JWT",
+      "clear": "Delete",
+      "header": "Header",
+      "payload": "Table of Contents",
+      "content": "<p>Welcome to our online JWT decoder, where you can quickly and securely decode your JSON Web Tokens (JWT). JWTs are compact, secure tokens that allow parties to interact with authenticated and secure information.       If you need to explore the contents of your JWT, our tool provides an easy and secure way to view headers, payloads, and signatures without sharing your secret keys.</p> <h2>How JWT Decoder Works</h2> <p>Our JWT decoder is designed for ease of use. Just paste your JWT into the text box and press 'Decode'.       The tool will immediately display the decoded parts of the token, such as the header and payload. Importantly, decryption takes place locally on your device, ensuring that your data remains yours and never leaves your browser</p> <h2>Security Warning</h2> <p>Although our tool ensures that JWT decryption takes place locally and your data is not shared, it is important to exercise caution when handling JWTs. Never share your JWT if it contains sensitive information, nor store it in unsecured locations. Always use HTTPS to communicate and secure your tokens.</p>",
+      "keywords": "JWT Detector, JWT Decoding, Online JWT Analyzer, JWT Token Verification, JWT Tool, Secure JWT Decoding, JSON Web Token Decoder, Online JWT Verification, Decode JWT Online, JWT Inspector, JWT Analysis Tool, JWT Data Access, Secure JWT Decoder, JWT Visualization, JWT Token Decoding Tool",
+      "description": "JWT Decoder is an online tool for decoding and parsing JWT (JSON Web Tokens). It allows secure verification and inspection of JWT token content without the need for installation. Perfect for developers and security professionals looking for an easy way to verify and analyze data stored in JWTs. With our tool, you get instant access to decrypted data and can better understand the security of your applications."
     }
   }
 }

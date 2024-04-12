@@ -108,6 +108,18 @@
       "keywords": "generátor bezpečných hesel",
       "description": "Generátor bezpečných hesel s možností vygenerovat více hesel najednou a stáhnout jako soubor. Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků.",
       "content": "<p>Náhodné heslo se generuje přímo ve vašem prohlížeči a není nikam odesláno. Použitím náhodného dostatečně silného hesla zvýšíte bezpečnost vašich online přístupů.</p><p>Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků. Ideální je také použít pro každou online službu jiné heslo.</p><p>K správě vygenerovaných hesel je dobré použít takzvaný manažer hesel, jako je třeba <a href='https://keepass.info/' target='_blank'>KeePass</a>, který ukládá hesla v zašifrovaném souboru ve vašem počítači. Vám pak stačí si pamatovat jedno hlavní heslo, kterým tento soubor odemknete.</p>"
+    },
+    "jwt-decode": {
+      "title": "JWT Dekodér",
+      "info": "JWT dekodér je online nástroj pro dekodování a analý6zu JWT (JSON Web Tokenů). Umožňuje bezpečné ověření a inspekci obsahu JWT tokenů bez nutnosti instalace.",
+      "source": "Vložte zakódovaný JWT",
+      "clear": "Vymazat",
+      "header": "Hlavička",
+      "payload": "Obsah",
+      "content": "<p>Vítejte na našem online dekodéru JWT, kde můžete rychle a bezpečně dekódovat vaše JSON Web Tokeny (JWT). JWT jsou       kompaktní, bezpečnostní tokeny, které umožňují stranám komunikovat s autentizovanými a bezpečnými informacemi.       Pokud potřebujete prozkoumat obsah svého JWT, náš nástroj poskytuje snadný a bezpečný způsob, jak zobrazit       hlavičky, payloady a podpisy bez potřeby sdílení vašich tajných klíčů.</p>         <h2>Jak funguje JWT dekodér</h2>           <p>Náš JWT dekodér je navržen pro snadné použití. Stačí vložit váš JWT do textového pole a stisknout 'Dekódovat'.       Nástroj okamžitě zobrazí dekódované části tokenu, jako jsou hlavička a payload. Důležité je, že dešifrování       probíhá lokálně na vašem zařízení, což zaručuje, že vaše data zůstávají vaše a nikdy neopustí váš prohlížeč</p>             <h2>Bezpečnostní upozornění</h2>               <p>Ačkoli náš nástroj zajišťuje, že dekódování JWT probíhá lokálně a vaše data nejsou sdílena, je důležité zachovat       opatrnost při zacházení s JWT. Nikdy nesdílejte vaše JWT, pokud obsahuje citlivé informace, ani je neukládejte na nezabezpečených místech. Vždy používejte HTTPS pro komunikaci a zabezpečení vašich tokenů.</p>",
+      "keywords": "JWT Odhalovač, Dekodování JWT, Online JWT Analyzátor, Ověření JWT Tokenů, Nástroj pro JWT, Bezpečné Dekódování JWT, JSON Web Token Dekodér, Online Ověření JWT, Dekodovat JWT Online, JWT Inspektor, Nástroj pro Analýzu JWT, Přístup k JWT Data, Zabezpečený JWT Dekodér, Vizualizace JWT, JWT Token Dekodovací Nástroj",
+      "description": "JWT dekodér je online nástroj pro dekodování a analýzu JWT (JSON Web Tokenů). Umožňuje bezpečné ověření a inspekci obsahu JWT tokenů bez nutnosti instalace. Perfektní pro vývojáře a bezpečnostní odborníky hledající snadný způsob, jak ověřit a analyzovat data uložená v JWT. S naším nástrojem získáte okamžitý přístup k dekódovaným datům a můžete lépe porozumět zabezpečení vašich aplikací."
     }
   }
 }
+
