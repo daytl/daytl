@@ -4,9 +4,8 @@ import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import makeStyles from "@mui/styles/makeStyles"
-import { Alert, CardHeader, InputAdornment, useMediaQuery } from "@mui/material"
+import { Alert, CardHeader, useMediaQuery } from "@mui/material"
 import useTranslation from "../../src/utils/useTranslation"
-import { CopyButton } from "../../src/components/tool/CopyButton"
 import { jwtDecode } from "jwt-decode"
 import JsonView from "@uiw/react-json-view"
 import CardContent from "@mui/material/CardContent"
@@ -39,7 +38,6 @@ export const JwtDecode = () => {
     setSource(null)
     setResult(null)
     setError(null)
-
   }, [])
 
   useEffect(() => {
@@ -51,8 +49,7 @@ export const JwtDecode = () => {
       setError(e)
     }
   }, [source])
-
-  console.log(result)
+  console.log(source)
   return <>
     <Grid container spacing={1}>
       <Grid item xs={12}>
@@ -63,7 +60,7 @@ export const JwtDecode = () => {
           maxRows={4}
           fullWidth
           variant="outlined"
-          value={source}
+          value={source || "" }
           onChange={handleSource}
         />
       </Grid>
