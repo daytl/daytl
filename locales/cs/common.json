@@ -1,0 +1,31 @@
+{
+  "title": "Daytl.",
+  "author": "Daytl",
+  "info": "Vaše užitečné online nástroje jednoduše a na jednom místě.",
+  "info2": "Chybí vám zde oblíbený online nástroj? Dejte nám vědět nebo nám ho pomůžte <a href='https://github.com/daytl/daytl' target='_blank'>vytvořit</a>.<br /><strong>Daytl.com</strong> je open source postaven na <a href='https://www.nextjs.org/' target='_blank'>Next.js</a>",
+  "toolPage": "Vlastní stránka nástroje",
+  "titleSuffix": "Online nástroje",
+  "contribute": "Contribute",
+  "feedback": {
+    "button": "Napište nám",
+    "submit": "Odeslat",
+    "success": "Děkujeme za zprávu.",
+    "email": "Email",
+    "message": "Zpráva",
+    "text": "Chybí vám nějaký nástroj nebo funkce?",
+    "emailError": "Zadejte platný email"
+  },
+  "page404": {
+    "info": "Ooops, stránka nenalezena."
+  },
+  "copied": "Zkopírováno!",
+  "copy": "Zkopírovat do schránky",
+  "keywords": "online nástroje",
+  "description": "Vaše užitečné online nástroje jednoduše a na jednom místě.",
+  "otherTools": "Další online nástroje",
+  "languages": {
+    "cs": "Česky",
+    "sk": "Slovensky",
+    "en": "English"
+  }
+}

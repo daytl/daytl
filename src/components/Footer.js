@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Divider } from "@mui/material"
 import makeStyles from '@mui/styles/makeStyles';
 import Grid from "@mui/material/Grid"

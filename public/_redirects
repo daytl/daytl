@@ -1,0 +1,6 @@
+/cs/recipes/  /app/
+/app/recipes/*/edit  /app/recipes/[id]/edit/index.html 200
+/app/recipes/*/  /app/recipes/[id]/index.html 200
+/app/users/*/  /app/users/[id]/index.html 200
+/s/share/*/  /s/share/[userid]/index.html 200
+/recipe/*/  /recipe/[sharetoken]/index.html 200

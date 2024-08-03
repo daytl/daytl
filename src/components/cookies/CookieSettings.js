@@ -8,12 +8,12 @@ const CookieSettings = ({
                             initTracking,
                             handleCloseAll
                         }) => {
-    const [trackAnalytics, setTrackAnalytics] = useState(Cookies.get('gatsby-gdpr-google-analytics') === 'true')
+    const [trackAnalytics, setTrackAnalytics] = useState(Cookies.get('nextjs-gdpr-google-analytics') === 'true')
     const handleToggle = (cookieName) => {
-        Cookies.set('gatsby-gdpr-responded', true, {expires: 365});
+        Cookies.set('nextjs-gdpr-responded', true, {expires: 365});
 
         switch (cookieName) {
-            case 'gatsby-gdpr-google-analytics':
+            case 'nextjs-gdpr-google-analytics':
                 return setTrackAnalytics((prevState) => {
                     if (prevState) {
                         Cookies.remove(cookieName);

@@ -1,21 +1,18 @@
-import React, { useEffect, useState } from 'react';
-
-import { useLocation } from '@reach/router';
-import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies';
+import React, {useEffect, useState} from 'react';
+import {useRouter} from 'next/router';
 import Cookies from 'js-cookie';
-
-import { Box, Button, Dialog, DialogActions, DialogContent, Fab, Grid, Switch, Typography } from '@mui/material';
-import CookieIcon from '@mui/icons-material/Cookie';
+import {Box, Button, DialogActions, DialogContent, Fab, Grid, Switch, Typography} from '@mui/material';
+import {MdCookie as CookieIcon} from "react-icons/md"
 
 const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
 
 const CookieBanner = () => {
     const [showBanner, setShowBanner] = useState(false);
-    const [cookieConsent] = useState(Cookies.get('gatsby-gdpr-responded'));
-    const shouldShowBannerOnLoad = Cookies.get('gatsby-gdpr-responded') !== 'true';
-    const [cookieGa, setCookieGa] = useState(Cookies.get('gatsby-gdpr-google-analytics'));
+    const [cookieConsent] = useState(Cookies.get('nextjs-gdpr-responded'));
+    const shouldShowBannerOnLoad = Cookies.get('nextjs-gdpr-responded') !== 'true';
+    const [cookieGa, setCookieGa] = useState(Cookies.get('nextjs-gdpr-google-analytics'));
     const [showSettings, setShowSettings] = useState(false);
-    const location = useLocation();
+    const router = useRouter();
 
     const triggerScripts = () => {
         setShowBanner(true);
@@ -33,26 +30,29 @@ const CookieBanner = () => {
                 triggerScripts();
             }, 5000);
         }
-    }, []);
+    }, [shouldShowBannerOnLoad]);
 
     useEffect(() => {
         if (cookieConsent && cookieGa) {
-            initializeAndTrack(location)
+            window.gtag("consent", 'update', {
+                'analytics_storage': 'granted'
+            });
         }
     }, [cookieConsent, cookieGa])
 
     const handleAccept = (close = true) => {
-        Cookies.set('gatsby-gdpr-google-analytics', true, {expires: 365})
-        initializeAndTrack(location)
+        Cookies.set('nextjs-gdpr-google-analytics', true, {expires: 365})
+        window.gtag("consent", 'update', {
+            'analytics_storage': 'granted'
+        });
         if (close) {
             handleCloseAll();
         }
     }
 
     const handleDecline = (close = true) => {
-        Cookies.remove('gatsby-gdpr-google-analytics');
+        Cookies.remove('nextjs-gdpr-google-analytics');
         Cookies.remove('_ga');
-        // TODO remove wildcard
         if (close) {
             handleCloseAll();
         }
@@ -61,7 +61,7 @@ const CookieBanner = () => {
     const handleCloseAll = () => {
         setShowSettings(false);
         setShowBanner(false);
-        Cookies.set('gatsby-gdpr-responded', true, {expires: 365});
+        Cookies.set('nextjs-gdpr-responded', true, {expires: 365});
     }
 
     return (
@@ -86,7 +86,7 @@ const CookieBanner = () => {
                 {showSettings && <DialogContent>
                     <Grid container>
                         <Grid item xs={4}>
-                            <Switch disabled checked />
+                            <Switch disabled checked/>
                         </Grid>
                         <Grid item xs={8}>
                             <Typography variant="body1" sx={{fontSize: '0.9rem', fontWeight: 'bold'}}>Nezbytné soubory
@@ -104,7 +104,7 @@ const CookieBanner = () => {
                                 } else {
                                     handleDecline(false);
                                 }
-                            }} />
+                            }}/>
                         </Grid>
                         <Grid item xs={8}>
 
@@ -136,11 +136,11 @@ const CookieBanner = () => {
 
                  }} onClick={() => {
                 setShowBanner(true);
-                setCookieGa(Cookies.get('gatsby-gdpr-google-analytics'));
+                setCookieGa(Cookies.get('nextjs-gdpr-google-analytics'));
             }}
                  title="Nastavení cookies"
             >
-                <CookieIcon sx={{fontsize: 24}} />
+                <CookieIcon sx={{fontsize: 24}}/>
             </Fab>
     )
 }

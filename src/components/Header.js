@@ -1,14 +1,15 @@
-import { FormattedMessage, Link } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 import React from "react"
-import Language from "./Language"
 import { AppBar, Grid } from "@mui/material"
 import Toolbar from "@mui/material/Toolbar"
 import Button from "@mui/material/Button"
 import makeStyles from '@mui/styles/makeStyles';
 import packageJson from "../../package.json"
 import IconButton from '@mui/material/IconButton';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { FaGithub as GitHubIcon } from "react-icons/fa"
+import FormattedMessage from "./FormattedMessage";
+import LanguageSwitcher from "./LanguageSwitcher";
+import {Link} from "@/components/_shared/Link";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -47,12 +48,12 @@ const Header = () => {
                             color="inherit"
                             aria-label="menu"
                         >
-                            <FormattedMessage id="common.title" />
+                            <FormattedMessage id="title" />
                         </Button>
                         <Grid item className={classes.title}>
                             {" "}
                         </Grid>
-                        <Language />{' '}
+                        <LanguageSwitcher />{' '}
                         <IconButton href={packageJson.repository.url} size="small" title="Github source">
                             <GitHubIcon />
                         </IconButton>

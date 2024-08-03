@@ -1,0 +1,30 @@
+{
+  "title": "Daytl.",
+  "info": "Simple and useful online tools in one place.",
+  "info2": "Missing your favorite online tool? Let us know or help us <a href='https://github.com/daytl/daytl' target='_blank'>create it</a>.<br /><strong>Daytl.com</strong> is an open source built on <a href='https://www.nextjs.org/' target='_blank'>Next.js</a>",
+  "toolPage": "Tool static page",
+  "titleSuffix": "Online tools",
+  "contribute": "Contribute",
+  "feedback": {
+    "button": "Let us know",
+    "text": "Are you missing some feature?",
+    "submit": "Submit",
+    "success": "Thanks for your feedback.",
+    "email": "Email",
+    "message": "Message",
+    "emailError": "Email is not valid"
+  },
+  "page404": {
+    "info": "Ooops, page not found."
+  },
+  "copied": "Copied!",
+  "copy": "Copy to clipboard",
+  "keywords": "online tools",
+  "description": "Simple and useful online tools in one place.",
+  "otherTools": "Other online tools",
+  "languages": {
+    "cs": "Česky",
+    "sk": "Slovensky",
+    "en": "English"
+  }
+}
