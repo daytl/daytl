@@ -1,6 +1,6 @@
 {
-  "name": "nextjs-i18n-output",
-  "version": "0.1.0",
+  "name": "Daytl",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
