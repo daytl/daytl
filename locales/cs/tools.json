@@ -15,7 +15,20 @@
     "setupBirthDate": "Nastavit datum narození",
     "male": "Muž",
     "female": "Žena",
-    "birthNumber": "Rodné číslo"
+    "birthNumber": "Rodné číslo",
+    "faqsTitle": "Často kladené otázky ohleně rodného čísla",
+    "faqs": {
+      "q1": "Co je rodné číslo (RČ)?",
+      "a1": "Rodné číslo je unikátní identifikátor přidělený každému občanovi České republiky. Používá se k identifikaci jednotlivců v oficiálních systémech, jako je zdravotní pojištění, sociální zabezpečení a další administrativní účely.",
+      "q2": "Jaké, jsou části rodného čísla?",
+      "a2": "Rodné, číslo má dvě části. První část označuje datum narození (ve formátu RRMMDD) a druhá část je čtyřmístné číslo, které je unikátní pro každou osobu narozenou v ten stejný den. U žen se k měsíci narození přidává 50.",
+      "q3":"Proč, bych měl používat nástroj na generování rodných čísel?",
+      "a3": "Nástroj, může být užitečný pro testovací účely v softwaru nebo simulaci systémů, kde je třeba pracovat s rodnými čísly. Je důležité zdůraznit, že generovaná RČ nejsou platná pro oficiální účely a nesmí být zneužita.",
+      "q4":"Je, použití tohoto nástroje legální?",
+      "a4": "Použití, tohoto nástroje je legální pro testovací a výukové účely. Generovaná rodná čísla by neměla být používána v reálných administrativních systémech.",
+      "q5":"Jak, se liší rodné číslo pro muže a ženy?",
+      "a5": "Rozdíl, je v měsíci narození. U žen se k měsíci přidává číslo 50. Například muž narozený v lednu bude mít měsíc označen jako '01', zatímco žena narozená ve stejném měsíci bude mít měsíc '51'."
+    }
   },
   "birthnumbervalidator": {
     "title": "Validátor rodného čísla",

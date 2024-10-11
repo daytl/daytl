@@ -6,8 +6,14 @@ const theme = createTheme({
         MuiTypography: {
             styleOverrides: {
                 root: {},
-                h5: {
+                h3: {
+                    fontSize: 24,
+                    paddingBottom: 4,
                     fontWeight: "600 !important",
+                },
+                h4: {
+                    paddingBottom: 4,
+                    fontSize: 20,
                 },
             }
         },

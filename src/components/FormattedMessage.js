@@ -1,4 +1,3 @@
-import {useI18n} from "@/utils/useI18n";
 import Trans from "next-translate/Trans";
 
 

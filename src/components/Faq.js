@@ -2,7 +2,7 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Typography,
+  Typography, Grid,
 } from "@mui/material"
 import { MdExpandMore } from "react-icons/md"
 import PropTypes from "prop-types"
@@ -19,24 +19,21 @@ const Faq = ({ faqs, name }) => {
   }
 
   return (
-    <>
-      <Typography variant="h4">
-        <FormattedMessage id={`${name}.faqsTitle`} namespace="tools" />
-      </Typography>
+    <Grid container spacing={1}>
+      <Grid item>
+        <Typography variant="h3">
+          <FormattedMessage id={`${name}.faqsTitle`} namespace="tools" />
+        </Typography>
+      </Grid>
       {faqs.map((faq, index) => {
         return (
-          <Accordion key={index}>
-            <AccordionSummary
-              expandIcon={<MdExpandMore />}
-              sx={{ paddingTop: 1, paddingBottom: 1 }}
-            >
-              <Typography variant="h5"><FormattedMessage id={`${name}.faqs.q${faq}`} namespace="tools" /></Typography>
-            </AccordionSummary>
-            <AccordionDetails sx={{ paddingTop: 0 }}>
-              <Typography variant="body1"><FormattedMessage id={`${name}.faqs.a${faq}`}
-                                                            namespace="tools" /></Typography>
-            </AccordionDetails>
-          </Accordion>
+          <Grid item>
+            <Typography variant="h4"><FormattedMessage id={`${name}.faqs.q${faq}`} namespace="tools" /></Typography>
+
+            <Typography variant="body1"><FormattedMessage id={`${name}.faqs.a${faq}`}
+                                                          namespace="tools" /></Typography>
+
+          </Grid>
         )
       })}
       <Script type="application/ld+json">{`
@@ -48,7 +45,7 @@ ${faqs
         .join(",")}]}        
         `}</Script>
 
-    </>
+    </Grid>
   )
 }
 
