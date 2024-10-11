@@ -26,7 +26,6 @@ async function getPageList() {
         return sortedPages;
     } else {
         if (typeof window !== "undefined" && window.__BUILD_MANIFEST?.sortedPages) {
-            console.log(window.__BUILD_MANIFEST.sortedPages);
             return window.__BUILD_MANIFEST.sortedPages;
         }
     }

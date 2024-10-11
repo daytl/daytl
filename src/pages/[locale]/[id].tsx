@@ -23,7 +23,7 @@ const DynamicPage = () => {
     redirect("404")
     return null
   }
-  console.log(tool)
+
   return (
     <Layout>
       <Seo

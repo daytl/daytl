@@ -49,7 +49,7 @@ export const JwtDecode = () => {
       setError(e)
     }
   }, [source])
-  console.log(source)
+
   return <>
     <Grid container spacing={1}>
       <Grid item xs={12}>
