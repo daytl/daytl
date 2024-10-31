@@ -13,6 +13,7 @@ const theme = createTheme({
                 },
                 h4: {
                     paddingBottom: 4,
+                    fontWeight: 600,
                     fontSize: 20,
                 },
             }
