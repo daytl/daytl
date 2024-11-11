@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run build-sitemap",
+    "build-sitemap": "tsc ./src/sitemap.ts  && node ./src/sitemap.js",
     "start": "next start",
     "lint": "next lint",
     "preview": "serve out/ -p 3000"
@@ -23,7 +24,7 @@
     "js-base64": "^3.7.7",
     "js-cookie": "^3.0.5",
     "jwt-decode": "^4.0.0",
-    "next": "^14.2.16",
+    "next": "^14.2.17",
     "next-language-detector": "^1.1.0",
     "next-translate": "^2.6.2",
     "react": "^18.3.1",
