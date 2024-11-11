@@ -38,6 +38,7 @@
     "clear": "Vymazať",
     "decode": "Dekódovať",
     "encode": "Enkodovať",
+    "stripHeader": "Odstrániť hlavičku base64 súboru",
     "keywords": "base64 decoder, base64 decoder",
     "description": "Enkodovanie a dekódovanie textu alebo obrázkov do base64.",
     "content": "<p>Base64 je kódovanie, ktoré prevádza binárne dáta na postupnosti tlačiteľných znakov. Umožňuje prenos binárnych dát kanálmi, ktoré dovoľujú iba prenos textov. Používa sa napríklad v rozšírení MIME pre prenos e-mailov pôvodne 7bitovým poštovým systémom na Internete Je definované v RFC 4648.</p><p>Tento článok je licencovaný za podmienok <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licencia Creative Commons Uveďte autora/Zachovajte licenciu 3.0</a>. Jeho text bol prevzatý z <a href='https://sk.wikipedia.org/wiki/Base64'>článku „Base64 na Wikipédii</a></p>"

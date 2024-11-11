@@ -40,6 +40,7 @@
     "clear": "Clear",
     "decode": "Encode",
     "encode": "Decode",
+    "stripHeader": "Strip base64 file header",
     "keywords": "base64 decoder, base64 encoder",
     "description": "Encode and decode text or images to base64 format.",
     "content": "<p>In computer programming, Base64 is a group of binary-to-text encoding schemes that represent binary data (more specifically, a sequence of 8-bit bytes) in sequences of 24 bits that can be represented by four 6-bit Base64 digits.</p><p>This article is licensed under the terms of <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share license 3.0</a>. His text was taken and translated from <a href='https://en.wikipedia.org/wiki/Base64'>article „Base64 on Wikipedii</a></p>"
