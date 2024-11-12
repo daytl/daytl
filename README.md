@@ -7,34 +7,20 @@ Your useful online tools simply at one place.
 ## Tools
 * Czech BirthNumber tool
 * Remover
-* Base64 decoder/emcoder inc. image support
+* Base64 decoder/encoder inc. image support
+* JWT parser
 
 ### Dev in progress
 
-* JWT parser, case convertor
-
+* QR code generator
 
 ### Upcoming tools
-
+* QR code generator
 * Encode/decode - utf, url encode, html
-* formatter
-* minification
+* Formatter
+* Minification
+* Case convertor
 
 ## Contribute
 
 Missing your favorite online tool? Let us know or become a collaborator and create it.
-
-## TODO
-
-* add lint
-* Remover
-  design
-  remove empty chars as tabs etc...
-
-* Add search tools by keywords
-
-
-
-
-
-
