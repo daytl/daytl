@@ -1,9 +1,13 @@
 import commonSk from "../../locales/sk/common.json";
 import commonEn from "../../locales/en/common.json";
 import commonCs from "../../locales/cs/common.json";
+import commonPl from "../../locales/pl/common.json";
+import commonDe from "../../locales/de/common.json";
 import toolsSk from "../../locales/sk/tools.json";
 import toolsEn from "../../locales/en/tools.json";
 import toolsCs from "../../locales/cs/tools.json";
+import toolsPl from "../../locales/pl/tools.json";
+import toolsDe from "../../locales/de/tools.json";
 
 import { Locale } from "@/types/i18n.type";
 
@@ -30,6 +34,16 @@ export const getLanguageFile = (lang: Locale) => {
       return {
         common: commonSk,
         tools: toolsSk
+      };
+      case "pl":
+      return {
+        common: commonPl,
+        tools: toolsPl
+      };
+      case "de":
+      return {
+        common: commonDe,
+        tools: toolsDe
       };
     default:
       return {

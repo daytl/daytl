@@ -26,6 +26,9 @@
   "languages": {
     "cs": "Česky",
     "sk": "Slovensky",
-    "en": "English"
-  }
+    "en": "English",
+    "de": "German",
+    "pl": "Polish"
+  },
+  "author": "Daytl"
 }

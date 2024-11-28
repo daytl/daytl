@@ -22,11 +22,11 @@
       "a1": "Rodné číslo je unikátní identifikátor přidělený každému občanovi České republiky. Používá se k identifikaci jednotlivců v oficiálních systémech, jako je zdravotní pojištění, sociální zabezpečení a další administrativní účely.",
       "q2": "Jaké, jsou části rodného čísla?",
       "a2": "Rodné, číslo má dvě části. První část označuje datum narození (ve formátu RRMMDD) a druhá část je čtyřmístné číslo, které je unikátní pro každou osobu narozenou v ten stejný den. U žen se k měsíci narození přidává 50.",
-      "q3":"Proč, bych měl používat nástroj na generování rodných čísel?",
+      "q3": "Proč, bych měl používat nástroj na generování rodných čísel?",
       "a3": "Nástroj, může být užitečný pro testovací účely v softwaru nebo simulaci systémů, kde je třeba pracovat s rodnými čísly. Je důležité zdůraznit, že generovaná RČ nejsou platná pro oficiální účely a nesmí být zneužita.",
-      "q4":"Je, použití tohoto nástroje legální?",
+      "q4": "Je, použití tohoto nástroje legální?",
       "a4": "Použití, tohoto nástroje je legální pro testovací a výukové účely. Generovaná rodná čísla by neměla být používána v reálných administrativních systémech.",
-      "q5":"Jak, se liší rodné číslo pro muže a ženy?",
+      "q5": "Jak, se liší rodné číslo pro muže a ženy?",
       "a5": "Rozdíl, je v měsíci narození. U žen se k měsíci přidává číslo 50. Například muž narozený v lednu bude mít měsíc označen jako '01', zatímco žena narozená ve stejném měsíci bude mít měsíc '51'."
     }
   },
@@ -41,7 +41,19 @@
     "placeholder": "vložte rodné číslo",
     "keywords": "rodné číslo, kontrola rodného čísla, validátor rodného čísla",
     "description": "Tento online nástroj poskytuje rychlou a přesnou validaci rodných čísel. Ověřte platnost svého rodného čísla v několika snadných krocích a získejte detailní informace o datu narození a pohlaví. Ideální pro jednotlivce i profesionály potřebující ověřit osobní údaje.",
-    "content": "<p>Rodné číslo je jednoznačný číselný identifikátor přidělovaný obyvatelům Česka a Slovenska.</p><p>Rodné číslo je upraveno v zákoně č. 133/2000 Sb., o evidenci obyvatel. Z rodného čísla lze odvodit datum narození a pohlaví příslušné osoby. V Česku patří rodné číslo mezi osobní údaje. V mnoha dalších státech se používají obdobné číselné identifikátory, shodný formát jako v Česku mají rodná čísla na Slovensku.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku „Rodné číslo na Wikipedii</a></p>"
+    "content": "<p>Rodné číslo je jednoznačný číselný identifikátor přidělovaný obyvatelům Česka a Slovenska.</p><p>Rodné číslo je upraveno v zákoně č. 133/2000 Sb., o evidenci obyvatel. Z rodného čísla lze odvodit datum narození a pohlaví příslušné osoby. V Česku patří rodné číslo mezi osobní údaje. V mnoha dalších státech se používají obdobné číselné identifikátory, shodný formát jako v Česku mají rodná čísla na Slovensku.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>článku „Rodné číslo na Wikipedii</a></p>",
+    "faqs": {
+      "q1": "Co je rodné číslo (RČ)?",
+      "a1": "Rodné číslo je unikátní identifikátor přidělený každému občanovi České republiky. Používá se k identifikaci jednotlivců v oficiálních systémech, jako je zdravotní pojištění, sociální zabezpečení a další administrativní účely.",
+      "q2": "Jaké, jsou části rodného čísla?",
+      "a2": "Rodné, číslo má dvě části. První část označuje datum narození (ve formátu RRMMDD) a druhá část je čtyřmístné číslo, které je unikátní pro každou osobu narozenou v ten stejný den. U žen se k měsíci narození přidává 50.",
+      "q3": "Proč, bych měl používat nástroj na generování rodných čísel?",
+      "a3": "Nástroj, může být užitečný pro testovací účely v softwaru nebo simulaci systémů, kde je třeba pracovat s rodnými čísly. Je důležité zdůraznit, že generovaná RČ nejsou platná pro oficiální účely a nesmí být zneužita.",
+      "q4": "Je, použití tohoto nástroje legální?",
+      "a4": "Použití, tohoto nástroje je legální pro testovací a výukové účely. Generovaná rodná čísla by neměla být používána v reálných administrativních systémech.",
+      "q5": "Jak, se liší rodné číslo pro muže a ženy?",
+      "a5": "Rozdíl, je v měsíci narození. U žen se k měsíci přidává číslo 50. Například muž narozený v lednu bude mít měsíc označen jako '01', zatímco žena narozená ve stejném měsíci bude mít měsíc '51'."
+    }
   },
   "remover": {
     "title": "Html cleaner, zalomení řádků a mezer",
@@ -53,12 +65,20 @@
     "clear": "Vymazat",
     "keywords": "odstranit mezery",
     "description": "Odstraňovač mezer a html cleaner, který odstraní zalomení řádků a html značky.",
-    "content": "<p>Tento nástroj pomůže jednoduše odstranit zalomení řádku nebo odstranit html značky a získat tak čistý text.</p>"
+    "content": "<p>Tento nástroj pomůže jednoduše odstranit zalomení řádku nebo odstranit html značky a získat tak čistý text.</p>",
+    "faqs": {
+      "q1": "Jak funguje odstranění HTML?",
+      "a1": "Odstranění HTML je proces, který odstraní všechny HTML značky z textu a zanechá pouze čistý text. Tento proces je užitečný, pokud potřebujete získat pouze obsah textu a odstranit všechny formátovací značky.",
+      "q2": "Jak funguje odstranění odřádkování?",
+      "a2": "Odstranění odřádkování je proces, který odstraní všechny odřádkování a zalomení řádků z textu. Tento proces je užitečný, pokud potřebujete získat text bez odřádkování a vytvořit jeden souvislý text.",
+      "q3": "Proč používat odstranění HTML a odřádkování?",
+      "a3": "Odstranění HTML a odřádkování jsou užitečné procesy, které vám pomohou získat čistý text bez formátování. Tyto procesy jsou užitečné, pokud potřebujete získat pouze obsah textu a odstranit všechny formátovací značky."
+    }
   },
   "base64-encode-decode": {
     "title": "Base64 Encode a Decode",
-    "info": "Jednoduchý online nástroj pro Base64 kódování a dekódování. Konvertujte text nebo obrázek do formátu Base64 a zpět",
-    "source": "Zdroj",
+    "info": "Jednoduchý online nástroj pro Base64 kódování a dekódování. Konvertujte text, obrázek nebo jiný soubor do formátu Base64 a zpět",
+    "source": "Text k zakódování / dekódování",
     "result": "Výsledek",
     "base64": "Base64",
     "clear": "Vymazat",
@@ -67,7 +87,13 @@
     "stripHeader": "Odstranit base64 hlavičku souboru",
     "keywords": "base64 encoder, base64 decoder, base64 encode, base64 decode",
     "description": "Enkodování a dekódování textu nebo obrázků do base64. Base64 je kódování, které převádí binární data na posloupnosti tisknutelných znaků.",
-    "content": "<p>Base64 je kódování, které převádí binární data na posloupnosti tisknutelných znaků. Umožňuje přenos binárních dat kanály, které dovolují pouze přenos textů. Používá se například v rozšíření MIME pro přenos e-mailů původně 7bitovým poštovním systémem v Internetu. Je definováno v RFC 4648.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Base64'>článku „Base64 na Wikipedii</a></p>"
+    "content": "<p>Base64 je kódování, které převádí binární data na posloupnosti tisknutelných znaků. Umožňuje přenos binárních dat kanály, které dovolují pouze přenos textů. Používá se například v rozšíření MIME pro přenos e-mailů původně 7bitovým poštovním systémem v Internetu. Je definováno v RFC 4648.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Base64'>článku „Base64 na Wikipedii</a></p>",
+    "faqs": {
+      "q1": "Co je Base64?",
+      "a1": "Base64 je skupina binárních kódovacích schémat, která reprezentují binární data (konkrétně sekvenci 8bitových bytů) ve sekvencích 24 bitů, které mohou být reprezentovány čtyřmi 6bitovými číslicemi.",
+      "q2": "Jak funguje Base64?",
+      "a2": "Base64 je kódování, které převádí binární data na posloupnosti tisknutelných znaků. Umožňuje přenos binárních dat kanály, které dovolují pouze přenos textů. Používá se například v rozšíření MIME pro přenos e-mailů původně 7bitovým poštovním systémem v Internetu. Je definováno v RFC 4648."
+    }
   },
   "passwordgenerator": {
     "title": "Generátor hesel",
@@ -90,11 +116,21 @@
     "count": "Počet hesel",
     "keywords": "generátor bezpečných hesel",
     "description": "Generátor bezpečných hesel s možností vygenerovat více hesel najednou a stáhnout jako soubor. Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků.",
-    "content": "<p>Náhodné heslo se generuje přímo ve vašem prohlížeči a není nikam odesláno. Použitím náhodného dostatečně silného hesla zvýšíte bezpečnost vašich online přístupů.</p><p>Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků. Ideální je také použít pro každou online službu jiné heslo.</p><p>K správě vygenerovaných hesel je dobré použít takzvaný manažer hesel, jako je třeba <a href='https://keepass.info/' target='_blank'>KeePass</a>, který ukládá hesla v zašifrovaném souboru ve vašem počítači. Vám pak stačí si pamatovat jedno hlavní heslo, kterým tento soubor odemknete.</p>"
+    "content": "<p>Náhodné heslo se generuje přímo ve vašem prohlížeči a není nikam odesláno. Použitím náhodného dostatečně silného hesla zvýšíte bezpečnost vašich online přístupů.</p><p>Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků. Ideální je také použít pro každou online službu jiné heslo.</p><p>K správě vygenerovaných hesel je dobré použít takzvaný manažer hesel, jako je třeba <a href='https://keepass.info/' target='_blank'>KeePass</a>, který ukládá hesla v zašifrovaném souboru ve vašem počítači. Vám pak stačí si pamatovat jedno hlavní heslo, kterým tento soubor odemknete.</p>",
+    "faqs": {
+      "q1": "Jak funguje generátor hesel?",
+      "a1": "Generátor hesel vytváří náhodná hesla pomocí kryptograficky bezpečného generátoru náhodných čísel. Hesla jsou generována přímo ve vašem prohlížeči a nejsou nikam odesílána. Generátor umožňuje nastavit délku hesla a použití písmen, číslic a speciálních znaků.",
+      "q2": "Jaká je síla hesla?",
+      "a2": "Síla hesla závisí na jeho délce a složitosti. Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků. Generátor hesel vám ukáže odhadovaný čas prolomení hesla pomocí různých útoků.",
+      "q3": "Je bezpečné používat generátor hesel?",
+      "a3": "Ano, generátor hesel vytváří náhodná hesla pomocí kryptograficky bezpečného generátoru náhodných čísel. Hesla jsou generována přímo ve vašem prohlížeči a nejsou nikam odesílána. Generátor umožňuje nastavit délku hesla a použití písmen, číslic a speciálních znaků.",
+      "q4": "Jaká je délka bezpečného hesla?",
+      "a4": "Bezpečné heslo by mělo mít minimálně 12 znaků a mělo by být dostatečně složité. Doporučuje se použít kombinaci malých a velkých písmen, číslic a speciálních znaků."
+    }
   },
   "jwt-decode": {
     "title": "JWT Dekodér",
-    "info": "JWT dekodér je online nástroj pro dekodování a analý6zu JWT (JSON Web Tokenů). Umožňuje bezpečné ověření a inspekci obsahu JWT tokenů bez nutnosti instalace.",
+    "info": "JWT dekodér je online nástroj pro dekodování a analý6zu JWT (JSON Web Tokenů). Umožňuje bezpečné ověření a inspekci obsahu JWT tokenů bez nutnosti instalace. Vše probíhá v prohlížeči a žádná data se neodesílají.",
     "source": "Vložte zakódovaný JWT",
     "clear": "Vymazat",
     "header": "Hlavička",
@@ -105,7 +141,11 @@
     "faqsTitle": "Často kladené otázky o JWT decode",
     "faqs": {
       "q1": "Co je JWT?",
-      "a1": "JWT  (JSON Web Token) je standardizovaný formát pro vytváření tokenů, které obsahují informace v JSON formátu. Tyto tokeny jsou často používány pro autentizaci a zabezpečení aplikací a API. JWT se skládá ze tří částí: hlavičky, payloadu a podpisu."
+      "a1": "JWT  (JSON Web Token) je standardizovaný formát pro vytváření tokenů, které obsahují informace v JSON formátu. Tyto tokeny jsou často používány pro autentizaci a zabezpečení aplikací a API. JWT se skládá ze tří částí: hlavičky, payloadu a podpisu.",
+      "q2": "Odesíá nástroj nějaká data na server?",
+      "a2": "Ne, náš nástroj dekóduje JWT pouze v prohlížeči a žádná data nejsou odesílána na server. Vše probíhá lokálně ve vašem prohlížeči.",
+      "q3": "Můžu JWT změnit?",
+      "a3": "Ano, můžete změnit obsah JWT, ale pokud je token podepsán, bude následná změna způsobovat chybu při ověření podpisu."
     }
   }
 }

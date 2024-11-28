@@ -1,0 +1,151 @@
+{
+  "birthnumber": {
+    "title": "Geburtsnummer-Generator",
+    "info": "Online-Generator für Geburtsnummern mit der Möglichkeit, mehrere Geburtsnummern auf einmal zu generieren und sie als Textdatei herunterzuladen.",
+    "buttonWomenAdult": "Weiblich 18+",
+    "buttonMenAdult": "Männlich 18+",
+    "buttonWomenChild": "Weiblich 0-17",
+    "buttonMenChild": "Männlich 0-17",
+    "birthDate": "Datum der Geburt",
+    "keywords": "Geburtsnummer, Überprüfung der Geburtsnummer",
+    "download": "Zahlen als .txt herunterladen",
+    "count": "Anzahl der Nummern",
+    "description": "Online-Generator für Geburtsnummern mit der Möglichkeit, mehrere Geburtsnummern auf einmal zu generieren und sie als Textdatei herunterzuladen.",
+    "content": "<p>Die Geburtsnummer ist ein eindeutiger numerischer Identifikator, der den Einwohnern der Tschechischen Republik und der Slowakei zugewiesen wird.</p><p>Die Geburtsnummer ist im Gesetz Nr. 133/2000 Slg. über das Bevölkerungsregister geregelt. Aus der Geburtsnummer können das Geburtsdatum und das Geschlecht der betreffenden Person abgeleitet werden. In der Tschechischen Republik gehört die Geburtsnummer zu den personenbezogenen Daten. In vielen anderen Ländern werden ähnliche numerische Identifikatoren verwendet, und das gleiche Format wie in der Tschechischen Republik wird für Geburtsnummern in der Slowakei verwendet.</p><p>Dieser Artikel ist unter den Bedingungen einer <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share-Alike License 3.0</a> lizenziert. Der Text wurde dem <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>Wikipedia-Artikel \"Geburtsnummer auf Wikipedia</a></p> entnommen.",
+    "setupBirthDate": "Einstellen des Geburtsdatums",
+    "male": "Mann",
+    "female": "Frau",
+    "birthNumber": "Geburtsnummer",
+    "faqsTitle": "Häufig gestellte Fragen zu Ihrer Geburtsnummer",
+    "faqs": {
+      "q1": "Was ist eine Geburtsnummer (BN)?",
+      "a1": "Die Geburtsnummer ist eine eindeutige Kennung, die jedem Bürger der Tschechischen Republik zugewiesen wird. Sie wird zur Identifizierung von Personen in offiziellen Systemen wie der Krankenversicherung, der Sozialversicherung und anderen Verwaltungszwecken verwendet.",
+      "q2": "Aus welchen Bestandteilen besteht die Geburtsnummer?",
+      "a2": "Nativ besteht die Nummer aus zwei Teilen. Der erste Teil gibt das Geburtsdatum an (im Format JJJJMMTT), der zweite Teil ist eine vierstellige Zahl, die für jede am selben Tag geborene Person eindeutig ist. Bei Frauen wird die Zahl 50 zum Geburtsmonat addiert.",
+      "q3": "Warum sollte ich ein Tool zur Erstellung von Geburtsnummern verwenden?",
+      "a3": "Das Tool kann zu Testzwecken in Software oder zur Simulation von Systemen, in denen mit Geburtsnummern gearbeitet werden muss, nützlich sein. Es ist wichtig zu betonen, dass die generierten RNs nicht für offizielle Zwecke gültig sind und nicht missbraucht werden dürfen.",
+      "q4": "Ist es legal, dieses Tool zu verwenden?",
+      "a4": "Die Verwendung dieses Tools ist für Test- und Ausbildungszwecke legal. Die erzeugten Geburtsnummern sollten nicht in realen Verwaltungssystemen verwendet werden.",
+      "q5": "Wie unterscheidet sich die Geburtsnummer bei Männern und Frauen?",
+      "a5": "Der Unterschied ist der Geburtsmonat. Bei Frauen wird die Zahl 50 an den Monat angehängt. Bei einem Mann, der im Januar geboren wurde, ist der Monat beispielsweise mit \"01\" gekennzeichnet, während eine Frau, die im selben Monat geboren wurde, den Monat \"51\" hat."
+    }
+  },
+  "birthnumbervalidator": {
+    "title": "Geburtsnummer Validator",
+    "info": "Dieses Online-Tool ermöglicht eine schnelle und genaue Validierung von Geburtsnummern. Überprüfen Sie die Gültigkeit Ihrer Geburtsnummer.",
+    "valid": "Gültig",
+    "invalid": "Die Ungültigen",
+    "birthDate": "Datum der Geburt",
+    "male": "Mann",
+    "female": "Frau",
+    "placeholder": "Geburtsnummer einfügen",
+    "keywords": "geburtsnummer, geburtsnummer prüfung, geburtsnummer validator",
+    "description": "Dieses Online-Tool bietet eine schnelle und genaue Validierung von Geburtsnummern. Überprüfen Sie die Gültigkeit Ihrer Geburtsnummer in wenigen einfachen Schritten und erhalten Sie detaillierte Informationen zu Ihrem Geburtsdatum und Geschlecht. Ideal für Privatpersonen und Berufstätige, die ihre persönlichen Daten überprüfen müssen.",
+    "content": "<p>Die Geburtsnummer ist ein eindeutiger numerischer Identifikator, der den Einwohnern der Tschechischen Republik und der Slowakei zugewiesen wird.</p><p>Die Geburtsnummer ist im Gesetz Nr. 133/2000 Slg. über das Bevölkerungsregister geregelt. Aus der Geburtsnummer können das Geburtsdatum und das Geschlecht der betreffenden Person abgeleitet werden. In der Tschechischen Republik gehört die Geburtsnummer zu den personenbezogenen Daten. In vielen anderen Ländern werden ähnliche numerische Identifikatoren verwendet, und das gleiche Format wie in der Tschechischen Republik wird für Geburtsnummern in der Slowakei verwendet.</p><p>Dieser Artikel ist unter den Bedingungen einer <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share-Alike License 3.0</a> lizenziert. Der Text wurde dem <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>Wikipedia-Artikel \"Geburtsnummer auf Wikipedia</a></p> entnommen.",
+    "faqs": {
+      "q1": "Was ist eine Geburtsnummer (BN)?",
+      "a1": "Die Geburtsnummer ist eine eindeutige Kennung, die jedem Bürger der Tschechischen Republik zugewiesen wird. Sie wird zur Identifizierung von Personen in offiziellen Systemen wie der Krankenversicherung, der Sozialversicherung und anderen Verwaltungszwecken verwendet.",
+      "q2": "Aus welchen Bestandteilen setzt sich die Geburtsnummer zusammen?",
+      "a2": "Nativ besteht die Nummer aus zwei Teilen. Der erste Teil gibt das Geburtsdatum an (im Format JJJJMMTT), der zweite Teil ist eine vierstellige Zahl, die für jede am selben Tag geborene Person eindeutig ist. Bei Frauen wird die Zahl 50 zum Geburtsmonat addiert.",
+      "q3": "Warum sollte ich ein Tool zur Erstellung von Geburtsnummern verwenden?",
+      "a3": "Das Tool kann zu Testzwecken in Software oder zur Simulation von Systemen, in denen mit Geburtsnummern gearbeitet werden muss, nützlich sein. Es ist wichtig zu betonen, dass die generierten RNs nicht für offizielle Zwecke gültig sind und nicht missbraucht werden dürfen.",
+      "q4": "Ist es legal, dieses Tool zu verwenden?",
+      "a4": "Die Verwendung dieses Tools ist für Test- und Ausbildungszwecke legal. Die erzeugten Geburtsnummern sollten nicht in realen Verwaltungssystemen verwendet werden.",
+      "q5": "Wie unterscheidet sich die Geburtsnummer bei Männern und Frauen?",
+      "a5": "Der Unterschied ist der Geburtsmonat. Bei Frauen wird die Zahl 50 an den Monat angehängt. Bei einem Mann, der im Januar geboren wurde, ist der Monat beispielsweise mit \"01\" gekennzeichnet, während eine Frau, die im selben Monat geboren wurde, den Monat \"51\" hat."
+    }
+  },
+  "remover": {
+    "title": "Html Cleaner, Zeilen- und Leerzeichenumbruch",
+    "info": "Entferner von Leerzeichen und html-Tags.",
+    "source": "Quelle:",
+    "result": "Ergebnis",
+    "html": "HTML entfernen",
+    "breaks": "Zeilenumbrüche entfernen",
+    "clear": "Löschen",
+    "keywords": "Lücken entfernen",
+    "description": "Ein Leerzeichenentferner und HTML-Cleaner, der Zeilenumbrüche und HTML-Tags entfernt.",
+    "content": "<p>Mit diesem Tool können Sie ganz einfach Zeilenumbrüche oder HTML-Tags entfernen, um einen sauberen Text zu erhalten.</p>",
+    "faqs": {
+      "q1": "Wie funktioniert die HTML-Entfernung?",
+      "a1": "Beim Entfernen von HTML werden alle HTML-Tags aus dem Text entfernt, so dass nur der reine Text übrig bleibt. Dieser Prozess ist nützlich, wenn Sie nur den Textinhalt extrahieren und alle Formatierungs-Tags entfernen möchten.",
+      "q2": "Wie funktioniert das De-Lining?",
+      "a2": "Beim De-Lining werden alle Zeilenumbrüche aus dem Text entfernt. Dieses Verfahren ist nützlich, wenn Sie Text ohne Zeilenumbrüche erhalten und einen durchgehenden Text erstellen möchten.",
+      "q3": "Warum HTML-Entfernung und Einrückung verwenden?",
+      "a3": "Das Entfernen von HTML und das Entlining sind nützliche Verfahren, mit denen Sie sauberen Text ohne Formatierung erhalten. Diese Verfahren sind nützlich, wenn Sie nur den Textinhalt erhalten und alle Formatierungs-Tags entfernen möchten."
+    }
+  },
+  "base64-encode-decode": {
+    "title": "Base64 Kodierung und Dekodierung",
+    "info": "Einfaches Online-Tool zur Base64-Kodierung und -Dekodierung. Konvertieren Sie Text, Bilder oder andere Dateien in das Base64-Format und zurück",
+    "source": "Zu kodierender/dekodierender Text",
+    "result": "Ergebnis",
+    "base64": "Base64",
+    "clear": "Löschen",
+    "decode": "Dekodieren",
+    "encode": "Verschlüsseln",
+    "stripHeader": "base64-Dateikopf entfernen",
+    "keywords": "base64 Kodierer, base64 Dekodierer, base64 kodieren, base64 dekodieren",
+    "description": "Kodierung und Dekodierung von Text oder Bildern in Base64. Base64 ist eine Kodierung, die binäre Daten in Sequenzen von druckbaren Zeichen umwandelt.",
+    "content": "<p>Base64 ist eine Kodierung, die binäre Daten in Sequenzen von druckbaren Zeichen umwandelt. Sie ermöglicht die Übertragung von Binärdaten über Kanäle, die nur die Übertragung von Text erlauben. Sie wird z.B. in der MIME-Erweiterung für die Übertragung von E-Mails verwendet, die ursprünglich vom 7-Bit-Mailsystem im Internet stammt. Sie ist in RFC 4648 definiert.</p><p>Dieser Artikel steht unter den Bedingungen der <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-ShareAlike License 3.0</a>. Der Text wurde dem <a href='https://cs.wikipedia.org/wiki/Base64'>Wikipedia Artikel \"Base64</a></p> entnommen.",
+    "faqs": {
+      "q1": "Was ist Base64?",
+      "a1": "Base64 ist eine Gruppe von Binärkodierungsverfahren, die Binärdaten (insbesondere eine Folge von 8-Bit-Bytes) in Sequenzen von 24 Bits darstellen, die durch vier 6-Bit-Ziffern repräsentiert werden können.",
+      "q2": "Wie funktioniert Base64?",
+      "a2": "Base64 ist eine Kodierung, die binäre Daten in Sequenzen von druckbaren Zeichen umwandelt. Sie ermöglicht die Übertragung von Binärdaten über Kanäle, die nur die Übertragung von Text erlauben. Sie wird z. B. in der MIME-Erweiterung für die Übertragung von E-Mails verwendet, die ursprünglich mit dem 7-Bit-Postsystem im Internet übermittelt wurden. Es ist in RFC 4648 definiert."
+    }
+  },
+  "passwordgenerator": {
+    "title": "Passwort-Generator",
+    "info": "Sicherer Passwortgenerator mit der Möglichkeit, mehrere Passwörter auf einmal zu generieren und als Datei herunterzuladen.",
+    "strength": {
+      "s-": "-",
+      "s1": "Schwach",
+      "s2": "Gut",
+      "s3": "Stark",
+      "s4": "Sehr stark"
+    },
+    "crackTime": "Geschätzte Zeit bis zum Ausbruch: <strong>{{Zeit}}</strong>",
+    "letters": "Buchstaben",
+    "symbols": "Symbole",
+    "numbers": "Zahlen",
+    "copy": "Zum Kopieren anklicken",
+    "download": "Passwörter als .txt herunterladen",
+    "refresh": "Neues Passwort",
+    "length": "Länge",
+    "count": "Anzahl der Passwörter",
+    "keywords": "sicherer Passwort-Generator",
+    "description": "Sicherer Passwortgenerator mit der Möglichkeit, mehrere Passwörter auf einmal zu generieren und als Datei herunterzuladen. Das sichere Passwort sollte lang genug sein und aus Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen bestehen.",
+    "content": "<p>Ein Zufallspasswort wird direkt in Ihrem Browser generiert und nirgendwohin gesendet. Die Verwendung eines zufälligen Passworts, das stark genug ist, erhöht die Sicherheit Ihres Online-Zugangs.</p><p>Ein sicheres Passwort sollte lang genug sein und aus Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen bestehen. Ideal ist es auch, für jeden Online-Dienst ein anderes Passwort zu verwenden.</p><p>Um die von Ihnen erstellten Passwörter zu verwalten, empfiehlt sich die Verwendung eines Passwortmanagers wie <a href='https://keepass.info/' target='_blank'>KeePass</a>, der Passwörter in einer verschlüsselten Datei auf Ihrem Computer speichert. Sie müssen sich dann nur ein Hauptpasswort merken, um diese Datei zu entsperren.</p>",
+    "faqs": {
+      "q1": "Wie funktioniert der Passwortgenerator?",
+      "a1": "Der Passwort-Generator erstellt zufällige Passwörter mit Hilfe eines kryptographisch sicheren Zufallszahlengenerators. Die Passwörter werden direkt in Ihrem Browser generiert und nirgendwohin gesendet. Mit dem Generator können Sie die Länge des Kennworts und die Verwendung von Buchstaben, Zahlen und Sonderzeichen festlegen.",
+      "q2": "Wie stark ist das Passwort?",
+      "a2": "Die Stärke eines Passworts hängt von seiner Länge und Komplexität ab. Ein sicheres Passwort sollte lang genug sein und aus Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen bestehen. Der Passwort-Generator zeigt Ihnen die geschätzte Zeit an, um das Passwort mit verschiedenen Angriffen zu knacken.",
+      "q3": "Ist es sicher, einen Passwortgenerator zu verwenden?",
+      "a3": "Ja, der Passwort-Generator erstellt zufällige Passwörter mit Hilfe eines kryptographisch sicheren Zufallszahlengenerators. Die Passwörter werden direkt in Ihrem Browser generiert und nirgendwo hin gesendet. Mit dem Generator können Sie die Länge des Kennworts und die Verwendung von Buchstaben, Zahlen und Sonderzeichen festlegen.",
+      "q4": "Wie lang muss ein sicheres Passwort sein?",
+      "a4": "Ein sicheres Passwort sollte mindestens 12 Zeichen lang und ausreichend komplex sein. Es wird empfohlen, eine Kombination aus Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen zu verwenden."
+    }
+  },
+  "jwt-decode": {
+    "title": "JWT-Decoder",
+    "info": "JWT Decoder ist ein Online-Tool zum Dekodieren und Parsen von JWT (JSON Web Tokens). Es ermöglicht die sichere Überprüfung und Inspektion von JWT-Token-Inhalten, ohne dass eine Installation erforderlich ist. Alles wird im Browser erledigt und es werden keine Daten gesendet.",
+    "source": "Verschlüsselte JWT einfügen",
+    "clear": "Löschen",
+    "header": "Kopfzeile",
+    "payload": "Inhaltsübersicht",
+    "content": "<p>Willkommen zu unserem Online-JWT-Decoder, mit dem Sie Ihre JSON-Web-Token (JWT) schnell und sicher dekodieren können. JWTs sind kompakte, sichere Token, die es Parteien ermöglichen, mit authentifizierten und sicheren Informationen zu interagieren.       Wenn Sie den Inhalt Ihres JWTs untersuchen möchten, bietet Ihnen unser Tool eine einfache und sichere Möglichkeit, Header, Nutzdaten und Signaturen einzusehen, ohne Ihre geheimen Schlüssel weitergeben zu müssen.</p> <h2>Wie funktioniert der JWT Decoder</h2> <p>Unser JWT Decoder ist benutzerfreundlich gestaltet. Fügen Sie einfach Ihre JWT in das Textfeld ein und klicken Sie auf \"Decode\".       Das Tool zeigt sofort die entschlüsselten Teile des Tokens an, z. B. den Header und die Nutzlast. Wichtig ist, dass die Entschlüsselung lokal auf Ihrem Gerät stattfindet, so dass Ihre Daten Ihnen gehören und Ihren Browser nicht verlassen</p> <h2>Sicherheitswarnung</h2> <p>Obwohl unser Tool sicherstellt, dass die JWT-Entschlüsselung lokal stattfindet und Ihre Daten nicht weitergegeben werden, sollten Sie beim Umgang mit JWTs Vorsicht walten lassen. Geben Sie Ihr JWT niemals weiter, wenn es sensible Informationen enthält, und speichern Sie es nicht an ungesicherten Orten. Verwenden Sie immer HTTPS, um zu kommunizieren und Ihre Token zu sichern.</p>",
+    "keywords": "JWT Detektor, JWT Dekodierung, Online JWT Analyzer, JWT Token Verifizierung, JWT Tool, Sichere JWT Dekodierung, JSON Web Token Decoder, Online JWT Verifizierung, JWT online dekodieren, JWT Inspektor, JWT Analyse Tool, JWT Datenzugriff, Sicherer JWT Dekodierer, JWT Visualisierung, JWT Token Dekodierung Tool",
+    "description": "JWT Decoder ist ein Online-Tool zum Dekodieren und Parsen von JWT (JSON Web Tokens). Es ermöglicht die sichere Überprüfung und Inspektion von JWT-Token-Inhalten, ohne dass eine Installation erforderlich ist. Es ist ideal für Entwickler und Sicherheitsexperten, die eine einfache Möglichkeit suchen, in JWTs gespeicherte Daten zu verifizieren und zu analysieren. Mit unserem Tool erhalten Sie sofortigen Zugriff auf entschlüsselte Daten und können die Sicherheit Ihrer Anwendungen besser verstehen.",
+    "faqsTitle": "Häufig gestellte Fragen zur JWT-Dekodierung",
+    "faqs": {
+      "q1": "Was ist JWT?",
+      "a1": "JWT (JSON Web Token) ist ein standardisiertes Format zur Erstellung von Token, die Informationen im JSON-Format enthalten. Diese Token werden häufig für die Authentifizierung und Sicherheit von Anwendungen und APIs verwendet. Ein JWT besteht aus drei Teilen: einem Header, einer Nutzlast und einer Signatur.",
+      "q2": "Sendet das Tool irgendwelche Daten an den Server?",
+      "a2": "Nein, unser Tool dekodiert den JWT nur im Browser und es werden keine Daten an den Server gesendet. Alles wird lokal in Ihrem Browser erledigt.",
+      "q3": "Kann ich den JWT ändern?",
+      "a3": "Ja, Sie können den Inhalt des JWT ändern, aber wenn das Token signiert ist, führt die nachfolgende Änderung zu einem Fehler bei der Signaturprüfung."
+    }
+  }
+}

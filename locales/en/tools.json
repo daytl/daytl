@@ -16,7 +16,20 @@
     "setupBirthDate": "Setup birth date",
     "male": "Male",
     "female": "Female",
-    "birthNumber": "Birth number"
+    "birthNumber": "Birth number",
+    "faqsTitle": "Frequently Asked Questions about your birth number",
+    "faqs": {
+      "q1": "What is a birth number (BN)?",
+      "a1": "The birth number is a unique identifier assigned to each citizen of the Czech Republic. It is used to identify individuals in official systems such as health insurance, social security and other administrative purposes.",
+      "q2": "What are the parts of the birth number?",
+      "a2": "Native, the number has two parts. The first part indicates the date of birth (in the format YYYYMMDD) and the second part is a four-digit number that is unique for each person born on the same day. For women, 50 is added to the month of birth.",
+      "q3": "Why should I use a tool to generate birth numbers?",
+      "a3": "The tool can be useful for testing purposes in software or simulating systems where you need to work with birth numbers. It is important to emphasize that the generated RNs are not valid for official purposes and must not be misused.",
+      "q4": "Is it legal to use this tool?",
+      "a4": "The use of this tool is legal for testing and educational purposes. Generated birth numbers should not be used in real administrative systems.",
+      "q5": "How, is the birth number different for men and women?",
+      "a5": "The difference is the month of birth. For women, the number 50 is added to the month. For example, a man born in January will have the month marked as '01', while a woman born in the same month will have the month '51'."
+    }
   },
   "remover": {
     "title": "Html and breaks Remover",
@@ -29,7 +42,15 @@
     "detail": "dependencies, changelog and etc..",
     "keywords": "online breaks remover, online html remover",
     "description": "Remover breaklines, html tags and even more.",
-    "content": "<p>This tool will help you easily remove line breaks or remove html tags to get clean text.</p>"
+    "content": "<p>This tool will help you easily remove line breaks or remove html tags to get clean text.</p>",
+    "faqs": {
+      "q1": "How does HTML removal work?",
+      "a1": "Removing HTML is a process that removes all HTML tags from the text, leaving only plain text. This process is useful if you need to extract only the text content and remove all formatting tags.",
+      "q2": "How does de-lining work?",
+      "a2": "De-lining is a process that removes all line breaks and line breaks from text. This process is useful if you need to get text without line breaks and create one continuous text.",
+      "q3": "Why use HTML removal and indentation?",
+      "a3": "Removing HTML and de-lining are useful processes to help you get clean text without formatting. These processes are useful if you only need to get the text content and remove all formatting tags."
+    }
   },
   "base64-encode-decode": {
     "title": "Base64 Encode and Decode",
@@ -43,7 +64,13 @@
     "stripHeader": "Strip base64 file header",
     "keywords": "base64 decoder, base64 encoder",
     "description": "Encode and decode text or images to base64 format.",
-    "content": "<p>In computer programming, Base64 is a group of binary-to-text encoding schemes that represent binary data (more specifically, a sequence of 8-bit bytes) in sequences of 24 bits that can be represented by four 6-bit Base64 digits.</p><p>This article is licensed under the terms of <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share license 3.0</a>. His text was taken and translated from <a href='https://en.wikipedia.org/wiki/Base64'>article „Base64 on Wikipedii</a></p>"
+    "content": "<p>In computer programming, Base64 is a group of binary-to-text encoding schemes that represent binary data (more specifically, a sequence of 8-bit bytes) in sequences of 24 bits that can be represented by four 6-bit Base64 digits.</p><p>This article is licensed under the terms of <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share license 3.0</a>. His text was taken and translated from <a href='https://en.wikipedia.org/wiki/Base64'>article „Base64 on Wikipedii</a></p>",
+    "faqs": {
+      "q1": "What is Base64?",
+      "a1": "Base64 is a group of binary encoding schemes that represent binary data (specifically a sequence of 8-bit bytes) in sequences of 24 bits, which can be represented by four 6-bit digits.",
+      "q2": "How does Base64 work?",
+      "a2": "Base64 is an encoding that converts binary data into sequences of printable characters. It allows the transmission of binary data over channels that only allow the transmission of text. It is used, for example, in the MIME extension for the transmission of e-mail originally by the 7-bit postal system on the Internet. It is defined in RFC 4648."
+    }
   },
   "passwordgenerator": {
     "title": "Password generator",
@@ -66,6 +93,16 @@
       "s2": "Good",
       "s3": "Strong",
       "s4": "Very strong"
+    },
+    "faqs": {
+      "q1": "How does the password generator work?",
+      "a1": "The password generator creates random passwords using a cryptographically secure random number generator. Passwords are generated directly in your browser and are not sent anywhere. The generator allows you to set the length of the password and the use of letters, numbers and special characters.",
+      "q2": "What is the strength of the password?",
+      "a2": "The strength of a password depends on its length and complexity. A secure password should be long enough and composed of upper and lower case letters, numbers and special characters. The password generator will show you the estimated time to crack the password using various attacks.",
+      "q3": "Is it safe to use a password generator?",
+      "a3": "Yes, the password generator creates random passwords using a cryptographically secure random number generator. Passwords are generated directly in your browser and are not sent anywhere. The generator allows you to set the length of the password and the use of letters, numbers and special characters.",
+      "q4": "What is the length of a secure password?",
+      "a4": "A secure password should be at least 12 characters long and should be sufficiently complex. It is recommended to use a combination of upper and lower case letters, numbers and special characters."
     }
   },
   "birthnumbervalidator": {
@@ -79,7 +116,19 @@
     "placeholder": "insert birth number",
     "keywords": "birth number, birth number checker, birth number validator",
     "description": "This online tool provides fast and accurate validation of birth numbers. Verify the validity of your birth number in a few easy steps and get detailed information about your date of birth and gender. Ideal for individuals and professionals needing to verify personal information.",
-    "content": "<p>Birth number is a unique numerical identifier assigned to residents of the Czech Republic and Slovakia.</p><p>The birth number is regulated in Act No.133/2000 Coll., on population registration. The date of birth and sex of the person concerned can be derived from the birth number. In the Czech Republic, the birth number belongs to personal data. In many other countries similar numerical identifiers are used, and the same format as in the Czech Republic is used for birth numbers in Slovakia.</p><p>This article is licensed under the terms of a <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share-Alike License 3.0</a>. Its text was taken from the <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>Wikipedia article \"Birth number on Wikipedia</a></p>"
+    "content": "<p>Birth number is a unique numerical identifier assigned to residents of the Czech Republic and Slovakia.</p><p>The birth number is regulated in Act No.133/2000 Coll., on population registration. The date of birth and sex of the person concerned can be derived from the birth number. In the Czech Republic, the birth number belongs to personal data. In many other countries similar numerical identifiers are used, and the same format as in the Czech Republic is used for birth numbers in Slovakia.</p><p>This article is licensed under the terms of a <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share-Alike License 3.0</a>. Its text was taken from the <a href='https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo'>Wikipedia article \"Birth number on Wikipedia</a></p>",
+    "faqs": {
+      "q1": "What is a birth number (BN)?",
+      "a1": "The birth number is a unique identifier assigned to each citizen of the Czech Republic. It is used to identify individuals in official systems such as health insurance, social security and other administrative purposes.",
+      "q2": "What are the parts of the birth number?",
+      "a2": "Native, the number has two parts. The first part indicates the date of birth (in the format YYYYMMDD) and the second part is a four-digit number that is unique for each person born on the same day. For women, 50 is added to the month of birth.",
+      "q3": "Why should I use a tool to generate birth numbers?",
+      "a3": "The tool can be useful for testing purposes in software or simulating systems where you need to work with birth numbers. It is important to emphasize that the generated RNs are not valid for official purposes and must not be misused.",
+      "q4": "Is it legal to use this tool?",
+      "a4": "The use of this tool is legal for testing and educational purposes. Generated birth numbers should not be used in real administrative systems.",
+      "q5": "How, is the birth number different for men and women?",
+      "a5": "The difference is the month of birth. For women, the number 50 is added to the month. For example, a man born in January will have the month marked as '01', while a woman born in the same month will have the month '51'."
+    }
   },
   "jwt-decode": {
     "title": "JWT Decoder",
@@ -94,7 +143,11 @@
     "faqsTitle": "Frequently asked questions about JWT decode",
     "faqs": {
       "q1": "What is JWT?",
-      "a1": "JWT (JSON Web Token) is a standardized format for creating tokens that contain information in JSON format. These tokens are often used to authenticate and secure applications and APIs. A JWT consists of three parts: a header, a payload, and a signature."
+      "a1": "JWT (JSON Web Token) is a standardized format for creating tokens that contain information in JSON format. These tokens are often used to authenticate and secure applications and APIs. A JWT consists of three parts: a header, a payload, and a signature.",
+      "q2": "Does the tool send any data to the server?",
+      "a2": "No, our tool only decodes the JWT in the browser and no data is sent to the server. Everything is done locally in your browser.",
+      "q3": "Can I change the JWT?",
+      "a3": "Yes, you can change the contents of the JWT, but if the token is signed, the subsequent change will cause a signature verification error."
     }
   }
 }

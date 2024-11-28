@@ -1,0 +1,34 @@
+{
+  "title": "Daytl.",
+  "author": "Daytl",
+  "info": "Ihre nützlichen Online-Tools einfach und an einem Ort.",
+  "info2": "Vermissen Sie Ihr Lieblings-Online-Tool? Lassen Sie es uns wissen oder helfen Sie uns, es <a href='https://github.com/daytl/daytl' target='_blank'>zu erstellen</a>.<br /><strong>Daytl.com</strong> ist Open Source und basiert auf <a href='https://www.nextjs.org/' target='_blank'>Next.js</a>.",
+  "toolPage": "Benutzerdefinierte Werkzeugseite",
+  "titleSuffix": "Online-Tools",
+  "contribute": "Beitragen",
+  "feedback": {
+    "button": "Schreiben Sie uns",
+    "submit": "Senden an",
+    "success": "Vielen Dank für diese Nachricht.",
+    "email": "E-Mail",
+    "message": "Bericht",
+    "text": "Vermissen Sie ein Werkzeug oder eine Funktion?",
+    "emailError": "Geben Sie eine gültige E-Mail ein"
+  },
+  "page404": {
+    "info": "Ooops, Seite nicht gefunden."
+  },
+  "copied": "Kopiert!",
+  "automaticCopy": "Automatisch in die Zwischenablage kopieren",
+  "copy": "In die Zwischenablage kopieren",
+  "keywords": "Online-Tools",
+  "description": "Ihre nützlichen Online-Tools einfach und an einem Ort.",
+  "otherTools": "Andere Online-Tools",
+  "languages": {
+    "cs": "Tschechisch",
+    "sk": "Slowakisch",
+    "en": "Englisch",
+    "de": "Deutsch",
+    "pl": "Polnisch"
+  }
+}

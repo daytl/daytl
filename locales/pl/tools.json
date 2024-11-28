@@ -1,0 +1,151 @@
+{
+  "birthnumber": {
+    "title": "Generator numeru urodzenia",
+    "info": "Generator numerów urodzenia online z możliwością generowania wielu numerów urodzenia jednocześnie i pobierania ich w postaci pliku tekstowego.",
+    "buttonWomenAdult": "Kobieta 18+",
+    "buttonMenAdult": "Mężczyzna 18+",
+    "buttonWomenChild": "Kobieta 0-17",
+    "buttonMenChild": "Mężczyzna 0-17",
+    "birthDate": "Data urodzenia",
+    "keywords": "numer urodzenia, sprawdzanie numeru urodzenia",
+    "download": "Pobierz liczby jako .txt",
+    "count": "Liczba numerów",
+    "description": "Generator numerów urodzenia online z możliwością generowania wielu numerów urodzenia jednocześnie i pobierania ich w postaci pliku tekstowego.",
+    "content": "<p>Numer urodzenia jest unikalnym identyfikatorem numerycznym przypisanym mieszkańcom Republiki Czeskiej i Słowacji.</p><p>Numer urodzenia jest regulowany ustawą nr 133/2000 Coll. o rejestracji ludności. Na podstawie numeru urodzenia można określić datę urodzenia i płeć danej osoby. W Republice Czeskiej numer urodzenia należy do danych osobowych. W wielu innych krajach używane są podobne identyfikatory numeryczne, a ten sam format jak w Czechach jest używany dla numerów urodzenia na Słowacji.</p><p>Ten artykuł jest dostępny na licencji <a href=\"https://creativecommons.org/licenses/by-sa/3.0/deed.cs\">Creative Commons Attribution-Share-Alike License 3.0</a>. Jego tekst został zaczerpnięty z <a href=\"https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo\">artykułu Wikipedii \"Numer urodzenia na Wikipedii</a></p>>",
+    "setupBirthDate": "Ustaw datę urodzenia",
+    "male": "Człowiek",
+    "female": "Kobieta",
+    "birthNumber": "Numer urodzenia",
+    "faqsTitle": "Często zadawane pytania dotyczące numeru urodzenia",
+    "faqs": {
+      "q1": "Co to jest numer urodzenia (BN)?",
+      "a1": "Numer urodzenia jest unikalnym identyfikatorem przypisanym do każdego obywatela Republiki Czeskiej. Jest on wykorzystywany do identyfikacji osób w oficjalnych systemach, takich jak ubezpieczenie zdrowotne, ubezpieczenie społeczne i inne cele administracyjne.",
+      "q2": "Jakie są części numeru urodzenia?",
+      "a2": "Rodzimy numer składa się z dwóch części. Pierwsza część wskazuje datę urodzenia (w formacie RRRRMMDD), a druga to czterocyfrowa liczba, która jest unikalna dla każdej osoby urodzonej tego samego dnia. W przypadku kobiet do miesiąca urodzenia dodaje się 50.",
+      "q3": "Dlaczego powinienem używać narzędzia do generowania numerów urodzenia?",
+      "a3": "Narzędzie to może być przydatne do testowania oprogramowania lub symulowania systemów, w których trzeba pracować z numerami urodzenia. Należy podkreślić, że wygenerowane numery RN nie są ważne do celów urzędowych i nie mogą być nadużywane.",
+      "q4": "Czy korzystanie z tego narzędzia jest legalne?",
+      "a4": "Korzystanie z tego narzędzia jest legalne do celów testowych i edukacyjnych. Wygenerowane numery urodzenia nie powinny być używane w rzeczywistych systemach administracyjnych.",
+      "q5": "W jaki sposób liczba urodzeniowa różni się dla mężczyzn i kobiet?",
+      "a5": "Różnica polega na miesiącu urodzenia. W przypadku kobiet do miesiąca dodawana jest liczba 50. Na przykład mężczyzna urodzony w styczniu będzie miał miesiąc oznaczony jako \"01\", podczas gdy kobieta urodzona w tym samym miesiącu będzie miała miesiąc \"51\"."
+    }
+  },
+  "birthnumbervalidator": {
+    "title": "Walidator numeru urodzenia",
+    "info": "To narzędzie online zapewnia szybką i dokładną weryfikację numerów urodzenia. Sprawdź ważność swojego numeru urodzenia.",
+    "valid": "Ważny",
+    "invalid": "Nieważny",
+    "birthDate": "Data urodzenia",
+    "male": "Człowiek",
+    "female": "Kobieta",
+    "placeholder": "wstawić numer urodzenia",
+    "keywords": "numer urodzenia, sprawdzanie numeru urodzenia, weryfikator numeru urodzenia",
+    "description": "To narzędzie online zapewnia szybką i dokładną weryfikację numerów urodzenia. Zweryfikuj ważność swojego numeru urodzenia w kilku prostych krokach i uzyskaj szczegółowe informacje na temat daty urodzenia i płci. Idealny dla osób prywatnych i profesjonalistów potrzebujących zweryfikować dane osobowe.",
+    "content": "<p>Numer urodzenia jest unikalnym identyfikatorem numerycznym przypisanym mieszkańcom Republiki Czeskiej i Słowacji.</p><p>Numer urodzenia jest regulowany ustawą nr 133/2000 Coll. o rejestracji ludności. Na podstawie numeru urodzenia można określić datę urodzenia i płeć danej osoby. W Republice Czeskiej numer urodzenia należy do danych osobowych. W wielu innych krajach używane są podobne identyfikatory numeryczne, a ten sam format jak w Czechach jest używany dla numerów urodzenia na Słowacji.</p><p>Ten artykuł jest dostępny na licencji <a href=\"https://creativecommons.org/licenses/by-sa/3.0/deed.cs\">Creative Commons Attribution-Share-Alike License 3.0</a>. Jego tekst został zaczerpnięty z <a href=\"https://cs.wikipedia.org/wiki/Rodn%C3%A9_%C4%8D%C3%ADslo\">artykułu Wikipedii \"Numer urodzenia na Wikipedii</a></p>>",
+    "faqs": {
+      "q1": "Co to jest numer urodzenia (BN)?",
+      "a1": "Numer urodzenia jest unikalnym identyfikatorem przypisanym do każdego obywatela Republiki Czeskiej. Jest on wykorzystywany do identyfikacji osób w oficjalnych systemach, takich jak ubezpieczenie zdrowotne, ubezpieczenie społeczne i inne cele administracyjne.",
+      "q2": "Jakie są części numeru urodzenia?",
+      "a2": "Rodzimy numer składa się z dwóch części. Pierwsza część wskazuje datę urodzenia (w formacie RRRRMMDD), a druga to czterocyfrowa liczba, która jest unikalna dla każdej osoby urodzonej tego samego dnia. W przypadku kobiet do miesiąca urodzenia dodaje się 50.",
+      "q3": "Dlaczego powinienem używać narzędzia do generowania numerów urodzenia?",
+      "a3": "Narzędzie to może być przydatne do testowania oprogramowania lub symulowania systemów, w których trzeba pracować z numerami urodzenia. Należy podkreślić, że wygenerowane numery RN nie są ważne do celów urzędowych i nie mogą być nadużywane.",
+      "q4": "Czy korzystanie z tego narzędzia jest legalne?",
+      "a4": "Korzystanie z tego narzędzia jest legalne do celów testowych i edukacyjnych. Wygenerowane numery urodzenia nie powinny być używane w rzeczywistych systemach administracyjnych.",
+      "q5": "W jaki sposób liczba urodzeniowa różni się dla mężczyzn i kobiet?",
+      "a5": "Różnica polega na miesiącu urodzenia. W przypadku kobiet do miesiąca dodawana jest liczba 50. Na przykład mężczyzna urodzony w styczniu będzie miał miesiąc oznaczony jako \"01\", podczas gdy kobieta urodzona w tym samym miesiącu będzie miała miesiąc \"51\"."
+    }
+  },
+  "remover": {
+    "title": "Czyszczenie html, zawijanie linii i spacji",
+    "info": "Usuwa spacje i znaczniki html.",
+    "source": "Źródło :",
+    "result": "Wynik",
+    "html": "Usuń HTML",
+    "breaks": "Usuń podziały wierszy",
+    "clear": "Usuń",
+    "keywords": "usuwanie luk",
+    "description": "Narzędzie do usuwania spacji i html, które usuwa podziały wierszy i znaczniki html.",
+    "content": "<p>To narzędzie pomoże ci łatwo usunąć podziały wierszy lub usunąć znaczniki html, aby uzyskać czysty tekst.</p>",
+    "faqs": {
+      "q1": "Jak działa usuwanie HTML?",
+      "a1": "Usuwanie HTML to proces, który usuwa wszystkie znaczniki HTML z tekstu, pozostawiając tylko zwykły tekst. Proces ten jest przydatny, jeśli chcesz wyodrębnić tylko zawartość tekstową i usunąć wszystkie znaczniki formatujące.",
+      "q2": "Jak działa usuwanie podszewki?",
+      "a2": "Usuwanie linii to proces, który usuwa wszystkie podziały wierszy i linie z tekstu. Proces ten jest przydatny, jeśli chcesz uzyskać tekst bez podziałów wierszy i utworzyć jeden ciągły tekst.",
+      "q3": "Dlaczego warto używać usuwania HTML i wcięć?",
+      "a3": "Usuwanie HTML i usuwanie linii to przydatne procesy, które pomagają uzyskać czysty tekst bez formatowania. Procesy te są przydatne, jeśli chcesz uzyskać tylko treść tekstu i usunąć wszystkie znaczniki formatujące."
+    }
+  },
+  "base64-encode-decode": {
+    "title": "Kodowanie i dekodowanie Base64",
+    "info": "Proste narzędzie online do kodowania i dekodowania Base64. Konwersja tekstu, obrazu lub innego pliku do formatu Base64 i z powrotem",
+    "source": "Tekst do kodowania/dekodowania",
+    "result": "Wynik",
+    "base64": "Base64",
+    "clear": "Usuń",
+    "decode": "Dekodowanie",
+    "encode": "Kodowanie",
+    "stripHeader": "Usuń nagłówek pliku base64",
+    "keywords": "koder base64, dekoder base64, kodowanie base64, dekodowanie base64",
+    "description": "Kodowanie i dekodowanie tekstu lub obrazów do base64. Base64 to kodowanie, które konwertuje dane binarne na sekwencje znaków drukowalnych.",
+    "content": "<p>Base64 to kodowanie, które konwertuje dane binarne na sekwencje znaków do druku. Umożliwia transmisję danych binarnych przez kanały, które pozwalają tylko na transmisję tekstu. Jest używane na przykład w rozszerzeniu MIME do przesyłania wiadomości e-mail pierwotnie przez 7-bitowy system pocztowy w Internecie. Jest zdefiniowany w RFC 4648.</p><p>Ten artykuł jest dostępny na licencji <a href=\"https://creativecommons.org/licenses/by-sa/3.0/deed.cs\">Creative Commons Attribution-ShareAlike License 3.0</a>. Jego tekst został zaczerpnięty z <a href=\"https://cs.wikipedia.org/wiki/Base64\">artykułu Wikipedii \"Base64</a></p>",
+    "faqs": {
+      "q1": "Co to jest Base64?",
+      "a1": "Base64 to grupa schematów kodowania binarnego, które reprezentują dane binarne (w szczególności sekwencję 8-bitowych bajtów) w sekwencjach 24 bitów, które mogą być reprezentowane przez cztery 6-bitowe cyfry.",
+      "q2": "Jak działa Base64?",
+      "a2": "Base64 to kodowanie, które konwertuje dane binarne na sekwencje znaków drukowalnych. Umożliwia transmisję danych binarnych przez kanały, które pozwalają jedynie na transmisję tekstu. Jest używany na przykład w rozszerzeniu MIME do przesyłania wiadomości e-mail pierwotnie przez 7-bitowy system pocztowy w Internecie. Został zdefiniowany w dokumencie RFC 4648."
+    }
+  },
+  "passwordgenerator": {
+    "title": "Generator haseł",
+    "info": "Bezpieczny generator haseł z możliwością generowania wielu haseł jednocześnie i pobierania ich w postaci pliku.",
+    "strength": {
+      "s-": "-",
+      "s1": "Słaby",
+      "s2": "Dobry",
+      "s3": "Silny",
+      "s4": "Bardzo silny"
+    },
+    "crackTime": "Szacowany czas do wybicia: <strong>{{time}}</strong>",
+    "letters": "listy",
+    "symbols": "symbole",
+    "numbers": "liczby",
+    "copy": "Kliknij, aby skopiować",
+    "download": "Pobierz hasła w formacie .txt",
+    "refresh": "Nowe hasło",
+    "length": "Długość",
+    "count": "Liczba haseł",
+    "keywords": "bezpieczny generator haseł",
+    "description": "Generator bezpiecznych haseł z możliwością generowania wielu haseł jednocześnie i pobierania ich w postaci pliku. Bezpieczne hasło powinno być wystarczająco długie i składać się z wielkich i małych liter, cyfr i znaków specjalnych.",
+    "content": "<p>Losowe hasło jest generowane bezpośrednio w przeglądarce i nie jest nigdzie wysyłane. Korzystanie z losowego hasła, które jest wystarczająco silne, zwiększy bezpieczeństwo dostępu online.</p><p>Bezpieczne hasło powinno być wystarczająco długie i składać się z wielkich i małych liter, cyfr i znaków specjalnych. Idealnie jest również używać innego hasła dla każdej usługi online.</p><p>Aby zarządzać wygenerowanymi hasłami, dobrym pomysłem jest skorzystanie z menedżera haseł, takiego jak <a href='https://keepass.info/' target='_blank'>KeePass</a>, który przechowuje hasła w zaszyfrowanym pliku na komputerze. Następnie wystarczy zapamiętać jedno hasło główne, aby odblokować ten plik.</p>",
+    "faqs": {
+      "q1": "Jak działa generator haseł?",
+      "a1": "Generator haseł tworzy losowe hasła przy użyciu kryptograficznie bezpiecznego generatora liczb losowych. Hasła są generowane bezpośrednio w przeglądarce i nie są nigdzie wysyłane. Generator umożliwia ustawienie długości hasła oraz użycie liter, cyfr i znaków specjalnych.",
+      "q2": "Jaka jest siła hasła?",
+      "a2": "Siła hasła zależy od jego długości i złożoności. Bezpieczne hasło powinno być wystarczająco długie i składać się z wielkich i małych liter, cyfr i znaków specjalnych. Generator haseł pokaże szacowany czas złamania hasła przy użyciu różnych ataków.",
+      "q3": "Czy korzystanie z generatora haseł jest bezpieczne?",
+      "a3": "Tak, generator haseł tworzy losowe hasła przy użyciu kryptograficznie bezpiecznego generatora liczb losowych. Hasła są generowane bezpośrednio w przeglądarce i nie są nigdzie wysyłane. Generator pozwala ustawić długość hasła oraz użycie liter, cyfr i znaków specjalnych.",
+      "q4": "Jaka jest długość bezpiecznego hasła?",
+      "a4": "Bezpieczne hasło powinno składać się z co najmniej 12 znaków i być wystarczająco złożone. Zaleca się stosowanie kombinacji wielkich i małych liter, cyfr i znaków specjalnych."
+    }
+  },
+  "jwt-decode": {
+    "title": "Dekoder JWT",
+    "info": "JWT Decoder to narzędzie online do dekodowania i analizowania tokenów JWT (JSON Web Tokens). Umożliwia bezpieczną weryfikację i kontrolę zawartości tokenów JWT bez konieczności instalacji. Wszystko odbywa się w przeglądarce i żadne dane nie są wysyłane.",
+    "source": "Wstaw zakodowany JWT",
+    "clear": "Usuń",
+    "header": "Nagłówek",
+    "payload": "Spis treści",
+    "content": "<p>Witamy w naszym internetowym dekoderze JWT, w którym można szybko i bezpiecznie dekodować tokeny sieciowe JSON (JWT). JWT to kompaktowe, bezpieczne tokeny, które umożliwiają stronom interakcję z uwierzytelnionymi i bezpiecznymi informacjami.       Jeśli chcesz zbadać zawartość swojego JWT, nasze narzędzie zapewnia łatwy i bezpieczny sposób przeglądania nagłówków, ładunków i podpisów bez udostępniania tajnych kluczy.</p> <h2>Jak działa dekoder JWT</h2> <p>Nasz dekoder JWT został zaprojektowany z myślą o łatwości użytkowania. Wystarczy wkleić JWT do pola tekstowego i nacisnąć \"Decode\".       Narzędzie natychmiast wyświetli zdekodowane części tokena, takie jak nagłówek i ładunek. Co ważne, deszyfrowanie odbywa się lokalnie na urządzeniu użytkownika, zapewniając, że dane pozostają jego własnością i nigdy nie opuszczają przeglądarki</p> <h2>Ostrzeżenie dotyczące bezpieczeństwa</h2> <p>Chociaż nasze narzędzie zapewnia, że deszyfrowanie JWT odbywa się lokalnie, a dane nie są udostępniane, ważne jest, aby zachować ostrożność podczas obsługi JWT. Nigdy nie udostępniaj swojego JWT, jeśli zawiera poufne informacje, ani nie przechowuj go w niezabezpieczonych lokalizacjach. Zawsze używaj protokołu HTTPS do komunikacji i zabezpieczania tokenów.</p>",
+    "keywords": "JWT Detector, JWT Decoding, Online JWT Analyzer, JWT Token Verification, JWT Tool, Secure JWT Decoding, JSON Web Token Decoder, Online JWT Verification, Decode JWT Online, JWT Inspector, JWT Analysis Tool, JWT Data Access, Secure JWT Decoder, JWT Visualization, JWT Token Decoding Tool",
+    "description": "JWT Decoder to narzędzie online do dekodowania i analizowania tokenów JWT (JSON Web Tokens). Umożliwia bezpieczną weryfikację i kontrolę zawartości tokenów JWT bez konieczności instalacji. Idealny dla programistów i specjalistów ds. bezpieczeństwa poszukujących łatwego sposobu weryfikacji i analizy danych przechowywanych w tokenach JWT. Dzięki naszemu narzędziu uzyskujesz natychmiastowy dostęp do odszyfrowanych danych i możesz lepiej zrozumieć bezpieczeństwo swoich aplikacji.",
+    "faqsTitle": "Często zadawane pytania dotyczące dekodowania JWT",
+    "faqs": {
+      "q1": "Czym jest JWT?",
+      "a1": "JWT (JSON Web Token) to ustandaryzowany format tworzenia tokenów zawierających informacje w formacie JSON. Tokeny te są często używane do uwierzytelniania i zabezpieczania aplikacji i interfejsów API. JWT składa się z trzech części: nagłówka, ładunku i podpisu.",
+      "q2": "Czy narzędzie wysyła jakiekolwiek dane do serwera?",
+      "a2": "Nie, nasze narzędzie tylko dekoduje JWT w przeglądarce i żadne dane nie są wysyłane na serwer. Wszystko odbywa się lokalnie w przeglądarce.",
+      "q3": "Czy mogę zmienić JWT?",
+      "a3": "Tak, można zmienić zawartość JWT, ale jeśli token jest podpisany, kolejna zmiana spowoduje błąd weryfikacji podpisu."
+    }
+  }
+}
