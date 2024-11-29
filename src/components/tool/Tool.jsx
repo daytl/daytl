@@ -23,6 +23,7 @@ export const Tool = ({config}) => {
                     color: "primary.contrastText",
                     backgroundColor: "primary.main",
                 },
+                border: "1px solid #1976d2",
                 minHeight: "8rem",
                 height: "100%",
             }}
