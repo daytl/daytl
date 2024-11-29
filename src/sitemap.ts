@@ -1,7 +1,7 @@
 import * as fs from "node:fs"
 
 const locales = ["cs", "en", "sk", "de", "pl"]
-const tools = ["birthnumber"]
+const tools = ["birthnumber", "birthnumbervalidator","remover", "base64-encode-decode", "passwordgenerator", "jwt-decode"]
 
 interface Sitemap {
   url: string
