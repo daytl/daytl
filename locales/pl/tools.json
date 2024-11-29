@@ -78,13 +78,11 @@
   "base64-encode-decode": {
     "title": "Kodowanie i dekodowanie Base64",
     "info": "Proste narzędzie online do kodowania i dekodowania Base64. Konwersja tekstu, obrazu lub innego pliku do formatu Base64 i z powrotem",
-    "source": "Tekst do kodowania/dekodowania",
     "result": "Wynik",
     "base64": "Base64",
     "clear": "Usuń",
     "decode": "Dekodowanie",
     "encode": "Kodowanie",
-    "stripHeader": "Usuń nagłówek pliku base64",
     "keywords": "koder base64, dekoder base64, kodowanie base64, dekodowanie base64",
     "description": "Kodowanie i dekodowanie tekstu lub obrazów do base64. Base64 to kodowanie, które konwertuje dane binarne na sekwencje znaków drukowalnych.",
     "content": "<p>Base64 to kodowanie, które konwertuje dane binarne na sekwencje znaków do druku. Umożliwia transmisję danych binarnych przez kanały, które pozwalają tylko na transmisję tekstu. Jest używane na przykład w rozszerzeniu MIME do przesyłania wiadomości e-mail pierwotnie przez 7-bitowy system pocztowy w Internecie. Jest zdefiniowany w RFC 4648.</p><p>Ten artykuł jest dostępny na licencji <a href=\"https://creativecommons.org/licenses/by-sa/3.0/deed.cs\">Creative Commons Attribution-ShareAlike License 3.0</a>. Jego tekst został zaczerpnięty z <a href=\"https://cs.wikipedia.org/wiki/Base64\">artykułu Wikipedii \"Base64</a></p>",
@@ -92,8 +90,13 @@
       "q1": "Co to jest Base64?",
       "a1": "Base64 to grupa schematów kodowania binarnego, które reprezentują dane binarne (w szczególności sekwencję 8-bitowych bajtów) w sekwencjach 24 bitów, które mogą być reprezentowane przez cztery 6-bitowe cyfry.",
       "q2": "Jak działa Base64?",
-      "a2": "Base64 to kodowanie, które konwertuje dane binarne na sekwencje znaków drukowalnych. Umożliwia transmisję danych binarnych przez kanały, które pozwalają jedynie na transmisję tekstu. Jest używany na przykład w rozszerzeniu MIME do przesyłania wiadomości e-mail pierwotnie przez 7-bitowy system pocztowy w Internecie. Został zdefiniowany w dokumencie RFC 4648."
-    }
+      "a2": "Base64 to kodowanie, które konwertuje dane binarne na sekwencje znaków drukowalnych. Umożliwia transmisję danych binarnych przez kanały, które pozwalają jedynie na transmisję tekstu. Jest używany na przykład w rozszerzeniu MIME do przesyłania wiadomości e-mail pierwotnie przez 7-bitowy system pocztowy w Internecie. Został zdefiniowany w dokumencie RFC 4648.",
+      "q3": "Czym jest nagłówek pliku Base64?",
+      "a3": "Nagłówek pliku Base64 to specjalny ciąg znaków, który zwykle znajduje się na początku zakodowanego pliku. Zawiera on informacje o typie pliku i kodowaniu. Na przykład dla obrazów image/png; base64."
+    },
+    "source": "Tekst lub dane pliku base64 (w tym nagłówek) do kodowania/dekodowania",
+    "drag": "Przeciągnij plik tutaj lub kliknij, aby wybrać plik z komputera.",
+    "keepHeader": "Zachowanie nagłówka pliku base64"
   },
   "passwordgenerator": {
     "title": "Generator haseł",

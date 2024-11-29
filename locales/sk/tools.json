@@ -53,13 +53,11 @@
   "base64-encode-decode": {
     "title": "Base64 Encode a Decode",
     "info": "Enkodovanie a dekódovanie textu alebo obrázkov do base64.",
-    "source": "Zdroj",
     "result": "Výsledok",
     "base64": "Base64",
     "clear": "Vymazať",
     "decode": "Dekódovať",
     "encode": "Enkodovať",
-    "stripHeader": "Odstrániť hlavičku base64 súboru",
     "keywords": "base64 decoder, base64 decoder",
     "description": "Enkodovanie a dekódovanie textu alebo obrázkov do base64.",
     "content": "<p>Base64 je kódovanie, ktoré prevádza binárne dáta na postupnosti tlačiteľných znakov. Umožňuje prenos binárnych dát kanálmi, ktoré dovoľujú iba prenos textov. Používa sa napríklad v rozšírení MIME pre prenos e-mailov pôvodne 7bitovým poštovým systémom na Internete Je definované v RFC 4648.</p><p>Tento článok je licencovaný za podmienok <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licencia Creative Commons Uveďte autora/Zachovajte licenciu 3.0</a>. Jeho text bol prevzatý z <a href='https://sk.wikipedia.org/wiki/Base64'>článku „Base64 na Wikipédii</a></p>",
@@ -67,8 +65,13 @@
       "q1": "Čo je Base64?",
       "a1": "Base64 je skupina binárnych kódovacích schém, ktoré reprezentujú binárne údaje (konkrétne postupnosť 8-bitových bajtov) v postupnostiach 24 bitov, ktoré možno reprezentovať štyrmi 6-bitovými číslicami.",
       "q2": "Ako funguje Base64?",
-      "a2": "Base64 je kódovanie, ktoré konvertuje binárne údaje na sekvencie tlačiteľných znakov. Umožňuje prenos binárnych údajov cez kanály, ktoré umožňujú iba prenos textu. Používa sa napríklad v rozšírení MIME na prenos e-mailov pôvodne 7-bitovým poštovým systémom na internete. Je definovaný v dokumente RFC 4648."
-    }
+      "a2": "Base64 je kódovanie, ktoré konvertuje binárne údaje na sekvencie tlačiteľných znakov. Umožňuje prenos binárnych údajov cez kanály, ktoré umožňujú iba prenos textu. Používa sa napríklad v rozšírení MIME na prenos e-mailov pôvodne 7-bitovým poštovým systémom na internete. Je definovaný v dokumente RFC 4648.",
+      "q3": "Čo je to hlavička súboru Base64?",
+      "a3": "Hlavička súboru Base64 je špeciálny reťazec znakov, ktorý sa zvyčajne nachádza na začiatku kódovaného súboru. Obsahuje informácie o type a kódovaní súboru. Napríklad pre obrázky image/png; base64."
+    },
+    "source": "Textové alebo base64 údaje súboru (vrátane hlavičky) na kódovanie/dekódovanie",
+    "drag": "Potiahnite sem súbor alebo kliknite na tlačidlo a vyberte súbor z počítača",
+    "keepHeader": "Zachovanie hlavičky súboru base64"
   },
   "passwordgenerator": {
     "title": "Generátor hesiel",

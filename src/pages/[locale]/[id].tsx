@@ -43,6 +43,7 @@ const DynamicPage = () => {
           <ToolComponent />
         </Grid>
         <Grid item xs={12}>
+          <br />
           <Divider />
           <FormattedHTMLMessage id={`${tool.name}.content`} namespace="tools" TagName="div" />
         </Grid>

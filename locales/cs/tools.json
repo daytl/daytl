@@ -78,13 +78,14 @@
   "base64-encode-decode": {
     "title": "Base64 Encode a Decode",
     "info": "Jednoduchý online nástroj pro Base64 kódování a dekódování. Konvertujte text, obrázek nebo jiný soubor do formátu Base64 a zpět",
-    "source": "Text k zakódování / dekódování",
+    "source": "Text nebo base64 data souboru (včetně hlavičky) k zakódování / dekódování",
     "result": "Výsledek",
     "base64": "Base64",
     "clear": "Vymazat",
     "decode": "Dekódovat",
     "encode": "Enkodovat",
-    "stripHeader": "Odstranit base64 hlavičku souboru",
+    "drag": "Přetáhněte sem soubor a nebo kliněte pro výběr souboru z PC",
+    "keepHeader": "Zachovat base64 hlavičku souboru",
     "keywords": "base64 encoder, base64 decoder, base64 encode, base64 decode",
     "description": "Enkodování a dekódování textu nebo obrázků do base64. Base64 je kódování, které převádí binární data na posloupnosti tisknutelných znaků.",
     "content": "<p>Base64 je kódování, které převádí binární data na posloupnosti tisknutelných znaků. Umožňuje přenos binárních dat kanály, které dovolují pouze přenos textů. Používá se například v rozšíření MIME pro přenos e-mailů původně 7bitovým poštovním systémem v Internetu. Je definováno v RFC 4648.</p><p>Tento článek je licencován za podmínek <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>licence Creative Commons Uveďte autora/Zachovejte licenci 3.0</a>. Jeho text byl převzat z <a href='https://cs.wikipedia.org/wiki/Base64'>článku „Base64 na Wikipedii</a></p>",
@@ -92,7 +93,9 @@
       "q1": "Co je Base64?",
       "a1": "Base64 je skupina binárních kódovacích schémat, která reprezentují binární data (konkrétně sekvenci 8bitových bytů) ve sekvencích 24 bitů, které mohou být reprezentovány čtyřmi 6bitovými číslicemi.",
       "q2": "Jak funguje Base64?",
-      "a2": "Base64 je kódování, které převádí binární data na posloupnosti tisknutelných znaků. Umožňuje přenos binárních dat kanály, které dovolují pouze přenos textů. Používá se například v rozšíření MIME pro přenos e-mailů původně 7bitovým poštovním systémem v Internetu. Je definováno v RFC 4648."
+      "a2": "Base64 je kódování, které převádí binární data na posloupnosti tisknutelných znaků. Umožňuje přenos binárních dat kanály, které dovolují pouze přenos textů. Používá se například v rozšíření MIME pro přenos e-mailů původně 7bitovým poštovním systémem v Internetu. Je definováno v RFC 4648.",
+      "q3": "Coje Base64 hlavička souboru?",
+      "a3": "Base64 hlavička souboru je speciální řetězec znaků, který se obvykle nachází na začátku zakódovaného souboru. Obsahuje informace o typu souboru a kódování. Například pro obrázky image/png; base64."
     }
   },
   "passwordgenerator": {

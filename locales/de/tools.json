@@ -78,13 +78,11 @@
   "base64-encode-decode": {
     "title": "Base64 Kodierung und Dekodierung",
     "info": "Einfaches Online-Tool zur Base64-Kodierung und -Dekodierung. Konvertieren Sie Text, Bilder oder andere Dateien in das Base64-Format und zurück",
-    "source": "Zu kodierender/dekodierender Text",
     "result": "Ergebnis",
     "base64": "Base64",
     "clear": "Löschen",
     "decode": "Dekodieren",
     "encode": "Verschlüsseln",
-    "stripHeader": "base64-Dateikopf entfernen",
     "keywords": "base64 Kodierer, base64 Dekodierer, base64 kodieren, base64 dekodieren",
     "description": "Kodierung und Dekodierung von Text oder Bildern in Base64. Base64 ist eine Kodierung, die binäre Daten in Sequenzen von druckbaren Zeichen umwandelt.",
     "content": "<p>Base64 ist eine Kodierung, die binäre Daten in Sequenzen von druckbaren Zeichen umwandelt. Sie ermöglicht die Übertragung von Binärdaten über Kanäle, die nur die Übertragung von Text erlauben. Sie wird z.B. in der MIME-Erweiterung für die Übertragung von E-Mails verwendet, die ursprünglich vom 7-Bit-Mailsystem im Internet stammt. Sie ist in RFC 4648 definiert.</p><p>Dieser Artikel steht unter den Bedingungen der <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-ShareAlike License 3.0</a>. Der Text wurde dem <a href='https://cs.wikipedia.org/wiki/Base64'>Wikipedia Artikel \"Base64</a></p> entnommen.",
@@ -92,8 +90,13 @@
       "q1": "Was ist Base64?",
       "a1": "Base64 ist eine Gruppe von Binärkodierungsverfahren, die Binärdaten (insbesondere eine Folge von 8-Bit-Bytes) in Sequenzen von 24 Bits darstellen, die durch vier 6-Bit-Ziffern repräsentiert werden können.",
       "q2": "Wie funktioniert Base64?",
-      "a2": "Base64 ist eine Kodierung, die binäre Daten in Sequenzen von druckbaren Zeichen umwandelt. Sie ermöglicht die Übertragung von Binärdaten über Kanäle, die nur die Übertragung von Text erlauben. Sie wird z. B. in der MIME-Erweiterung für die Übertragung von E-Mails verwendet, die ursprünglich mit dem 7-Bit-Postsystem im Internet übermittelt wurden. Es ist in RFC 4648 definiert."
-    }
+      "a2": "Base64 ist eine Kodierung, die binäre Daten in Sequenzen von druckbaren Zeichen umwandelt. Sie ermöglicht die Übertragung von Binärdaten über Kanäle, die nur die Übertragung von Text erlauben. Sie wird z. B. in der MIME-Erweiterung für die Übertragung von E-Mails verwendet, die ursprünglich mit dem 7-Bit-Postsystem im Internet übermittelt wurden. Es ist in RFC 4648 definiert.",
+      "q3": "Was ist der Base64-Dateikopf?",
+      "a3": "Der Base64-Dateiheader ist eine spezielle Zeichenkette, die normalerweise am Anfang einer kodierten Datei steht. Sie enthält Informationen über den Dateityp und die Kodierung. Zum Beispiel für Bilder image/png; base64."
+    },
+    "source": "Zu kodierende/dekodierende Text- oder base64-Dateidaten (einschließlich Header)",
+    "drag": "Ziehen Sie die Datei hierher oder klicken Sie, um die Datei auf dem PC auszuwählen",
+    "keepHeader": "base64-Dateikopf beibehalten"
   },
   "passwordgenerator": {
     "title": "Passwort-Generator",

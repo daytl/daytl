@@ -55,13 +55,11 @@
   "base64-encode-decode": {
     "title": "Base64 Encode and Decode",
     "info": "Base64 Encode and decode text or images to base64 format.",
-    "source": "Source",
     "result": "Result",
     "base64": "Base64",
     "clear": "Clear",
     "decode": "Encode",
     "encode": "Decode",
-    "stripHeader": "Strip base64 file header",
     "keywords": "base64 decoder, base64 encoder",
     "description": "Encode and decode text or images to base64 format.",
     "content": "<p>In computer programming, Base64 is a group of binary-to-text encoding schemes that represent binary data (more specifically, a sequence of 8-bit bytes) in sequences of 24 bits that can be represented by four 6-bit Base64 digits.</p><p>This article is licensed under the terms of <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.cs'>Creative Commons Attribution-Share license 3.0</a>. His text was taken and translated from <a href='https://en.wikipedia.org/wiki/Base64'>article „Base64 on Wikipedii</a></p>",
@@ -69,8 +67,13 @@
       "q1": "What is Base64?",
       "a1": "Base64 is a group of binary encoding schemes that represent binary data (specifically a sequence of 8-bit bytes) in sequences of 24 bits, which can be represented by four 6-bit digits.",
       "q2": "How does Base64 work?",
-      "a2": "Base64 is an encoding that converts binary data into sequences of printable characters. It allows the transmission of binary data over channels that only allow the transmission of text. It is used, for example, in the MIME extension for the transmission of e-mail originally by the 7-bit postal system on the Internet. It is defined in RFC 4648."
-    }
+      "a2": "Base64 is an encoding that converts binary data into sequences of printable characters. It allows the transmission of binary data over channels that only allow the transmission of text. It is used, for example, in the MIME extension for the transmission of e-mail originally by the 7-bit postal system on the Internet. It is defined in RFC 4648.",
+      "q3": "What is the Base64 file header?",
+      "a3": "The Base64 file header is a special character string usually found at the beginning of an encoded file. It contains information about the file type and encoding. For example, for images image/png; base64."
+    },
+    "source": "Text or base64 file data (including header) to encode/decode",
+    "drag": "Drag the file here or click to select the file from the PC",
+    "keepHeader": "Preserve base64 file header"
   },
   "passwordgenerator": {
     "title": "Password generator",

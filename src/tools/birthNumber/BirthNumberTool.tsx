@@ -239,5 +239,3 @@ export const BirthNumberTool = () => {
     </Grid>
   </LocalizationProvider>)
 }
-
-// copy button
