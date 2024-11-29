@@ -43,7 +43,6 @@ export const LanguageSwitcher = ({
         router.push(href, href, {locale});
     };
 
-    console.log(i18nConfig.locales)
     return (
         <Select
             size="small"

@@ -1,6 +1,6 @@
 import * as fs from "node:fs"
-import { i18nConfig } from "../i18n"
 
+const locales = ["cs", "en", "sk", "de", "pl"]
 const tools = ["birthnumber"]
 
 interface Sitemap {
@@ -32,7 +32,7 @@ export default function sitemap() {
       priority: 1,
     })
 
-  i18nConfig.locales.forEach((locale) => {
+  locales.forEach((locale) => {
     sitemap += printItem({
       url: `https://www.daytl.com/${locale}`,
       lastModified: new Date().toISOString(),
