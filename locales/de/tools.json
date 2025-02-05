@@ -53,7 +53,8 @@
       "a4": "Die Verwendung dieses Tools ist für Test- und Ausbildungszwecke legal. Die erzeugten Geburtsnummern sollten nicht in realen Verwaltungssystemen verwendet werden.",
       "q5": "Wie unterscheidet sich die Geburtsnummer bei Männern und Frauen?",
       "a5": "Der Unterschied ist der Geburtsmonat. Bei Frauen wird die Zahl 50 an den Monat angehängt. Bei einem Mann, der im Januar geboren wurde, ist der Monat beispielsweise mit \"01\" gekennzeichnet, während eine Frau, die im selben Monat geboren wurde, den Monat \"51\" hat."
-    }
+    },
+    "faqsTitle": "Häufig gestellte Fragen zur Überprüfung der Geburtsnummer"
   },
   "remover": {
     "title": "Html Cleaner, Zeilen- und Leerzeichenumbruch",
@@ -73,7 +74,8 @@
       "a2": "Beim De-Lining werden alle Zeilenumbrüche aus dem Text entfernt. Dieses Verfahren ist nützlich, wenn Sie Text ohne Zeilenumbrüche erhalten und einen durchgehenden Text erstellen möchten.",
       "q3": "Warum HTML-Entfernung und Einrückung verwenden?",
       "a3": "Das Entfernen von HTML und das Entlining sind nützliche Verfahren, mit denen Sie sauberen Text ohne Formatierung erhalten. Diese Verfahren sind nützlich, wenn Sie nur den Textinhalt erhalten und alle Formatierungs-Tags entfernen möchten."
-    }
+    },
+    "faqsTitle": "Häufig gestellte Fragen zum Entfernen von HTML und Einrückungen"
   },
   "base64-encode-decode": {
     "title": "Base64 Kodierung und Dekodierung",
@@ -96,7 +98,8 @@
     },
     "source": "Zu kodierende/dekodierende Text- oder base64-Dateidaten (einschließlich Header)",
     "drag": "Ziehen Sie die Datei hierher oder klicken Sie, um die Datei auf dem PC auszuwählen",
-    "keepHeader": "base64-Dateikopf beibehalten"
+    "keepHeader": "base64-Dateikopf beibehalten",
+    "faqsTitle": "Base64 FAQ"
   },
   "passwordgenerator": {
     "title": "Passwort-Generator",
@@ -129,7 +132,8 @@
       "a3": "Ja, der Passwort-Generator erstellt zufällige Passwörter mit Hilfe eines kryptographisch sicheren Zufallszahlengenerators. Die Passwörter werden direkt in Ihrem Browser generiert und nirgendwo hin gesendet. Mit dem Generator können Sie die Länge des Kennworts und die Verwendung von Buchstaben, Zahlen und Sonderzeichen festlegen.",
       "q4": "Wie lang muss ein sicheres Passwort sein?",
       "a4": "Ein sicheres Passwort sollte mindestens 12 Zeichen lang und ausreichend komplex sein. Es wird empfohlen, eine Kombination aus Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen zu verwenden."
-    }
+    },
+    "faqsTitle": "Häufig gestellte Fragen zum Passwortgenerator"
   },
   "jwt-decode": {
     "title": "JWT-Decoder",

@@ -53,7 +53,8 @@
       "a4": "Korzystanie z tego narzędzia jest legalne do celów testowych i edukacyjnych. Wygenerowane numery urodzenia nie powinny być używane w rzeczywistych systemach administracyjnych.",
       "q5": "W jaki sposób liczba urodzeniowa różni się dla mężczyzn i kobiet?",
       "a5": "Różnica polega na miesiącu urodzenia. W przypadku kobiet do miesiąca dodawana jest liczba 50. Na przykład mężczyzna urodzony w styczniu będzie miał miesiąc oznaczony jako \"01\", podczas gdy kobieta urodzona w tym samym miesiącu będzie miała miesiąc \"51\"."
-    }
+    },
+    "faqsTitle": "Często zadawane pytania dotyczące weryfikacji numeru urodzenia"
   },
   "remover": {
     "title": "Czyszczenie html, zawijanie linii i spacji",
@@ -73,7 +74,8 @@
       "a2": "Usuwanie linii to proces, który usuwa wszystkie podziały wierszy i linie z tekstu. Proces ten jest przydatny, jeśli chcesz uzyskać tekst bez podziałów wierszy i utworzyć jeden ciągły tekst.",
       "q3": "Dlaczego warto używać usuwania HTML i wcięć?",
       "a3": "Usuwanie HTML i usuwanie linii to przydatne procesy, które pomagają uzyskać czysty tekst bez formatowania. Procesy te są przydatne, jeśli chcesz uzyskać tylko treść tekstu i usunąć wszystkie znaczniki formatujące."
-    }
+    },
+    "faqsTitle": "Często zadawane pytania dotyczące usuwania HTML i wcięć"
   },
   "base64-encode-decode": {
     "title": "Kodowanie i dekodowanie Base64",
@@ -96,7 +98,8 @@
     },
     "source": "Tekst lub dane pliku base64 (w tym nagłówek) do kodowania/dekodowania",
     "drag": "Przeciągnij plik tutaj lub kliknij, aby wybrać plik z komputera.",
-    "keepHeader": "Zachowanie nagłówka pliku base64"
+    "keepHeader": "Zachowanie nagłówka pliku base64",
+    "faqsTitle": "Base64 FAQ"
   },
   "passwordgenerator": {
     "title": "Generator haseł",
@@ -129,7 +132,8 @@
       "a3": "Tak, generator haseł tworzy losowe hasła przy użyciu kryptograficznie bezpiecznego generatora liczb losowych. Hasła są generowane bezpośrednio w przeglądarce i nie są nigdzie wysyłane. Generator pozwala ustawić długość hasła oraz użycie liter, cyfr i znaków specjalnych.",
       "q4": "Jaka jest długość bezpiecznego hasła?",
       "a4": "Bezpieczne hasło powinno składać się z co najmniej 12 znaków i być wystarczająco złożone. Zaleca się stosowanie kombinacji wielkich i małych liter, cyfr i znaków specjalnych."
-    }
+    },
+    "faqsTitle": "Często zadawane pytania dotyczące generatora haseł"
   },
   "jwt-decode": {
     "title": "Dekoder JWT",

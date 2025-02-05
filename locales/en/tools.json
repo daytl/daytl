@@ -50,7 +50,8 @@
       "a2": "De-lining is a process that removes all line breaks and line breaks from text. This process is useful if you need to get text without line breaks and create one continuous text.",
       "q3": "Why use HTML removal and indentation?",
       "a3": "Removing HTML and de-lining are useful processes to help you get clean text without formatting. These processes are useful if you only need to get the text content and remove all formatting tags."
-    }
+    },
+    "faqsTitle": "Frequently asked questions about removing HTML and indenting"
   },
   "base64-encode-decode": {
     "title": "Base64 Encode and Decode",
@@ -73,7 +74,8 @@
     },
     "source": "Text or base64 file data (including header) to encode/decode",
     "drag": "Drag the file here or click to select the file from the PC",
-    "keepHeader": "Preserve base64 file header"
+    "keepHeader": "Preserve base64 file header",
+    "faqsTitle": "Base64 FAQ"
   },
   "passwordgenerator": {
     "title": "Password generator",
@@ -106,7 +108,8 @@
       "a3": "Yes, the password generator creates random passwords using a cryptographically secure random number generator. Passwords are generated directly in your browser and are not sent anywhere. The generator allows you to set the length of the password and the use of letters, numbers and special characters.",
       "q4": "What is the length of a secure password?",
       "a4": "A secure password should be at least 12 characters long and should be sufficiently complex. It is recommended to use a combination of upper and lower case letters, numbers and special characters."
-    }
+    },
+    "faqsTitle": "Frequently asked questions about the password generator"
   },
   "birthnumbervalidator": {
     "title": "Birth Number Validator",
@@ -131,7 +134,8 @@
       "a4": "The use of this tool is legal for testing and educational purposes. Generated birth numbers should not be used in real administrative systems.",
       "q5": "How, is the birth number different for men and women?",
       "a5": "The difference is the month of birth. For women, the number 50 is added to the month. For example, a man born in January will have the month marked as '01', while a woman born in the same month will have the month '51'."
-    }
+    },
+    "faqsTitle": "Frequently asked questions about birth number verification"
   },
   "jwt-decode": {
     "title": "JWT Decoder",
