@@ -15,7 +15,6 @@ Your useful online tools simply at one place.
 * QR code generator
 
 ### Upcoming tools
-* QR code generator
 * Encode/decode - utf, url encode, html
 * Formatter
 * Minification

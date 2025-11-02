@@ -48,7 +48,8 @@
       "a2": "Odstránenie riadkovania je proces, pri ktorom sa z textu odstránia všetky zalomenia riadkov a riadkové zlomy. Tento proces je užitočný, ak potrebujete získať text bez zalomení riadkov a vytvoriť jeden súvislý text.",
       "q3": "Prečo používať odstránenie a odsadenie HTML?",
       "a3": "Odstránenie HTML a odstránenie riadkovania sú užitočné postupy, ktoré vám pomôžu získať čistý text bez formátovania. Tieto procesy sú užitočné, ak potrebujete získať len obsah textu a odstrániť všetky formátovacie značky."
-    }
+    },
+    "faqsTitle": "Často kladené otázky o odstraňovaní HTML a odsadení"
   },
   "base64-encode-decode": {
     "title": "Base64 Encode a Decode",
@@ -71,7 +72,8 @@
     },
     "source": "Textové alebo base64 údaje súboru (vrátane hlavičky) na kódovanie/dekódovanie",
     "drag": "Potiahnite sem súbor alebo kliknite na tlačidlo a vyberte súbor z počítača",
-    "keepHeader": "Zachovanie hlavičky súboru base64"
+    "keepHeader": "Zachovanie hlavičky súboru base64",
+    "faqsTitle": "Base64 FAQ"
   },
   "passwordgenerator": {
     "title": "Generátor hesiel",
@@ -104,7 +106,8 @@
       "a3": "Áno, generátor hesiel vytvára náhodné heslá pomocou kryptograficky zabezpečeného generátora náhodných čísel. Heslá sa generujú priamo v prehliadači a nikam sa neodosielajú. Generátor umožňuje nastaviť dĺžku hesla a použitie písmen, číslic a špeciálnych znakov.",
       "q4": "Aká je dĺžka bezpečného hesla?",
       "a4": "Bezpečné heslo by malo mať aspoň 12 znakov a malo by byť dostatočne zložité. Odporúča sa používať kombináciu veľkých a malých písmen, číslic a špeciálnych znakov."
-    }
+    },
+    "faqsTitle": "Často kladené otázky o generátore hesiel"
   },
   "birthnumbervalidator": {
     "title": "Overovač rodného čísla",
@@ -129,7 +132,8 @@
       "a4": "Používanie tohto nástroja je legálne na testovacie a vzdelávacie účely. Vygenerované rodné čísla by sa nemali používať v reálnych administratívnych systémoch.",
       "q5": "Ako sa líši rodné číslo u mužov a žien?",
       "a5": "Rozdiel je v mesiaci narodenia. U žien sa k mesiacu pridáva číslo 50. Napríklad muž narodený v januári bude mať mesiac označený ako \"01\", zatiaľ čo žena narodená v tom istom mesiaci bude mať mesiac \"51\"."
-    }
+    },
+    "faqsTitle": "Často kladené otázky o overovaní rodného čísla"
   },
   "jwt-decode": {
     "title": "Dekodér JWT",
