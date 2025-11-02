@@ -67,7 +67,7 @@
     "keywords": "odstranit mezery",
     "description": "Odstraňovač mezer a html cleaner, který odstraní zalomení řádků a html značky.",
     "content": "<p>Tento nástroj pomůže jednoduše odstranit zalomení řádku nebo odstranit html značky a získat tak čistý text.</p>",
-    "faqsTitle": "Často kladené otázky ohleně odstranění HTML a odřádkování",
+    "faqsTitle": "Často kladené otázky ohledně odstranění HTML a odřádkování",
     "faqs": {
       "q1": "Jak funguje odstranění HTML?",
       "a1": "Odstranění HTML je proces, který odstraní všechny HTML značky z textu a zanechá pouze čistý text. Tento proces je užitečný, pokud potřebujete získat pouze obsah textu a odstranit všechny formátovací značky.",
