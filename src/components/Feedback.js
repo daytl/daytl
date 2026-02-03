@@ -77,10 +77,10 @@ const Feedback = () => {
 
         <Alert color="info" classes={classes}>
             <Grid container spacing={3}>
-                <Grid item xs={6}>
+                <Grid size={{ xs: 6 }}>
                     <FormattedMessage id="feedback.text"/>
                 </Grid>
-                <Grid item xs={6} className={classes.alertButton}>
+                <Grid size={{ xs: 6 }} className={classes.alertButton}>
                     <Button
                         size="small"
                         color="primary"

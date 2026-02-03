@@ -20,14 +20,14 @@ const Faq = ({ faqs, name }) => {
 
   return (
     <Grid container spacing={1}>
-      <Grid item>
+      <Grid>
         <Typography variant="h3">
           <FormattedMessage id={`${name}.faqsTitle`} namespace="tools" />
         </Typography>
       </Grid>
       {faqs.map((faq, index) => {
         return (
-          <Grid item>
+          <Grid>
             <Typography variant="h4"><FormattedMessage id={`${name}.faqs.q${faq}`} namespace="tools" /></Typography>
 
             <Typography variant="body1"><FormattedMessage id={`${name}.faqs.a${faq}`}

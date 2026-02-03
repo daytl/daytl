@@ -87,10 +87,10 @@ const CookieBanner = () => {
         </DialogContent>
         {showSettings && <DialogContent>
           <Grid container>
-            <Grid item xs={4}>
+            <Grid size={{ xs: 4 }}>
               <Switch disabled checked />
             </Grid>
-            <Grid item xs={8}>
+            <Grid size={{ xs: 8 }}>
               <Typography variant="body1" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>Nezbytné soubory
                 cookie</Typography>
               <Typography variant="body1" sx={{ fontSize: "0.9rem" }}>
@@ -99,7 +99,7 @@ const CookieBanner = () => {
                 nelze je zakázat.
               </Typography>
             </Grid>
-            <Grid item xs={4}>
+            <Grid size={{ xs: 4 }}>
               <Switch checked={cookieGa} onChange={(event, value) => {
                 if (value) {
                   handleAccept(false)
@@ -108,7 +108,7 @@ const CookieBanner = () => {
                 }
               }} />
             </Grid>
-            <Grid item xs={8}>
+            <Grid size={{ xs: 8 }}>
 
               <Typography variant="body1" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>Analytické soubory
                 cookie

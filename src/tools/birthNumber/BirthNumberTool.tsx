@@ -126,11 +126,11 @@ export const BirthNumberTool = () => {
       }}
       helperText={
         <Grid container>
-          <Grid item xs={6}>
+          <Grid size={{ xs: 6 }}>
             <FormattedMessage namespace="tools" id="birthnumber.birthDate" />:{" "}
             <strong><FormattedDate value={birthDate} /></strong>
           </Grid>
-          <Grid item xs={6} sx={{
+          <Grid size={{ xs: 6 }} sx={{
             textAlign: "right",
           }}>
             <FormControlLabel control={<Checkbox checked={automaticCopy} onChange={handleAutomaticCopyChange} />}
@@ -145,7 +145,7 @@ export const BirthNumberTool = () => {
     <br />
     <br />
     <Grid container spacing={3}>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <Button color="primary" variant="contained"
                 sx={buttonSx}
                 onClick={handleGenerateBirthNumber}
@@ -180,7 +180,7 @@ export const BirthNumberTool = () => {
           <FormattedMessage namespace="tools" id="birthnumber.buttonWomenAdult" />
         </Button>
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <DatePicker
           label={<FormattedMessage namespace="tools" id="birthnumber.setupBirthDate" />}
           value={birthDate}
@@ -209,7 +209,7 @@ export const BirthNumberTool = () => {
 
         </FormControl>
       </Grid>
-      <Grid item xs={12} paddingBottom={2}>
+      <Grid size={{ xs: 12 }} paddingBottom={2}>
         <TextField
           variant="outlined"
           label={<FormattedMessage namespace="tools" id="birthnumber.count" />}

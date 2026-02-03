@@ -139,7 +139,7 @@ export const PasswordGenerator = () => {
 
             </Head>
             <Grid container spacing={1}>
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                     <Controller
                         name="passwords"
                         control={control}
@@ -181,9 +181,9 @@ export const PasswordGenerator = () => {
                         )}
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                     <Grid container>
-                        <Grid item xs={1}>
+                        <Grid size={{ xs: 1 }}>
                             <Controller
                                 name="length"
                                 control={control}
@@ -201,7 +201,7 @@ export const PasswordGenerator = () => {
                                 )}
                             />
                         </Grid>
-                        <Grid item xs={11}>
+                        <Grid size={{ xs: 11 }}>
                             <Slider
                                 defaultValue={10}
                                 aria-labelledby="discrete-slider-small-steps"
@@ -218,7 +218,7 @@ export const PasswordGenerator = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                     <Controller
                         name="letters"
                         control={control}
@@ -284,7 +284,7 @@ export const PasswordGenerator = () => {
                         )}
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                     <br/>
                     <Button variant="contained"
                             className={classes.button}

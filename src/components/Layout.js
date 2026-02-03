@@ -40,7 +40,7 @@ const Layout = ({children, index = false}) => {
                 siteTitle={t("title")}
             />
             <Grid container justifyContent="center">
-                <Grid item xs={12} md={10} component="main" padding={1}>
+                <Grid size={{ xs: 12, md: 10 }} component="main" padding={1}>
                     {children}
                 </Grid>
             </Grid>

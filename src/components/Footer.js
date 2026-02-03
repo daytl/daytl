@@ -26,7 +26,7 @@ const Footer = () => {
         <br />
         <Divider className={classes.divider} />
         <Grid container justifyContent="center">
-          <Grid item xs={12} md={10} className={classes.links}>
+          <Grid size={{ xs: 12, md: 10 }} className={classes.links}>
             <Feedback />
           </Grid>
           <Grid container justifyContent="center">

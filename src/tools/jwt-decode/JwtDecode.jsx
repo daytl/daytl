@@ -52,7 +52,7 @@ export const JwtDecode = () => {
 
   return <>
     <Grid container spacing={1}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <TextField
           placeholder={t("jwt-decode.source")}
           multiline
@@ -64,11 +64,11 @@ export const JwtDecode = () => {
           onChange={handleSource}
         />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Button variant="contained" color="secondary" onClick={handleClear} className={classes.button}>
           <FormattedMessage  namespace="tools" id="jwt-decode.clear" /></Button>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         {header && !error && <Card>
           <CardHeader title={t("jwt-decode.header")} />
           <CardContent><JsonView value={header} /></CardContent></Card>}

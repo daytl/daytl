@@ -108,7 +108,7 @@ export const Base64EncodeDecode = () => {
 
   return <>
     <Grid container spacing={1}>
-      <Grid item xs={7}>
+      <Grid size={{ xs: 7 }}>
         <TextField
           placeholder={t("base64-encode-decode.source")}
           multiline
@@ -120,14 +120,14 @@ export const Base64EncodeDecode = () => {
           onChange={handleSource}
         />
       </Grid>
-      <Grid item xs={5} sx={{ height: "100%", display: "flex", alignItems: "stretch" }}>
+      <Grid size={{ xs: 5 }} sx={{ height: "100%", display: "flex", alignItems: "stretch" }}>
         <div {...getRootProps({ className: classes.dropzone })}>
           <input {...getInputProps()} />
           <p><FormattedMessage namespace="tools" id="base64-encode-decode.drag" /></p>
         </div>
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Button color="primary" variant="contained" onClick={handleEncode} className={classes.button}>
           <FormattedMessage namespace="tools" id="base64-encode-decode.encode" />
         </Button>{" "}
@@ -144,7 +144,7 @@ export const Base64EncodeDecode = () => {
                           label={<FormattedMessage namespace="tools" id="base64-encode-decode.keepHeader" />}
         />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <TextField
           placeholder={t("base64-encode-decode.result")}
           multiline
@@ -163,7 +163,7 @@ export const Base64EncodeDecode = () => {
         />
         <span>{result.length} / {resultSize}kB</span>{" "}
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Button
           variant="contained"
           color="secondary"

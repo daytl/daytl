@@ -24,7 +24,7 @@ const Home = () => {
                       paddingLeft: 1,
                       paddingRight: 1,
                   }}>
-                <Grid item xs={12} sx={{
+                <Grid size={{ xs: 12 }} sx={{
                     textAlign: "center",
                     color: "#555",
                 }}>
@@ -43,7 +43,7 @@ const Home = () => {
                 {tools.map((config, index) => {
 
                     return (
-                        <Grid item xs={12} sm={4} lg={3} xl={3} key={index}>
+                        <Grid size={{ xs: 12, sm: 4, lg: 3, xl: 3 }} key={config.name}>
                             <Tool config={config}/>
                         </Grid>
                     );

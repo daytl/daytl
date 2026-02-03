@@ -49,7 +49,7 @@ export const RemoverTool = () => {
 
     return <>
         <Grid container>
-            <Grid item xs={6}>
+            <Grid size={{ xs: 6 }}>
                 <TextField
                     placeholder={t("remover.source")}
                     multiline
@@ -61,7 +61,7 @@ export const RemoverTool = () => {
                     onChange={handleSource}
                 />
             </Grid>
-            <Grid item xs={6}>
+            <Grid size={{ xs: 6 }}>
                 <TextField
                     placeholder={t("remover.result")}
                     multiline
@@ -79,7 +79,7 @@ export const RemoverTool = () => {
                     value={result}
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
                 <br />
                 <Button variant="contained" color="primary" onClick={handleRemoveBreaks} className={classes.button}>
                     <FormattedMessage

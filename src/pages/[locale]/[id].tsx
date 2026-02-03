@@ -33,7 +33,7 @@ const DynamicPage = () => {
         description={t(`${tool.name}.description`)}
       />
       <Grid container>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <Typography variant="h2" component="h1">
             <FormattedMessage id={`${tool.name}.title`} namespace="tools" />
           </Typography>
@@ -42,19 +42,19 @@ const DynamicPage = () => {
           </Typography>
           <ToolComponent />
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <br />
           <Divider />
           <FormattedHTMLMessage id={`${tool.name}.content`} namespace="tools" TagName="div" />
         </Grid>
 
-        {tool.faqs && <Grid item xs={12}>
+        {tool.faqs && <Grid size={{ xs: 12 }}>
           <Divider />
           <br />
           <Faq faqs={tool.faqs} name={tool.name} />
         </Grid>}
 
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <br />
           <Divider />
           <br />
@@ -64,7 +64,7 @@ const DynamicPage = () => {
           <br />
           <Grid container spacing={2}>
             {tools.filter((config) => config.name !== tool.name).map((config, index) => (
-              <Grid item xs={12} sm={4} lg={3} xl={3} key={index}>
+              <Grid size={{ xs: 12, sm: 4, lg: 3, xl: 3 }} key={index}>
                 <Tool config={config} />
               </Grid>
             ))}

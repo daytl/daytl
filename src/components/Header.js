@@ -37,7 +37,7 @@ const Header = () => {
     return (
         <AppBar position="static" elevation={0} className={classes.root}>
             <Grid container justifyContent="center">
-                <Grid item xs={12} md={10}>
+                <Grid size={{ xs: 12, md: 10 }}>
                     <Toolbar disableGutters className={classes.toolbar}>
                         <Button
                             to={`/`}
@@ -50,7 +50,7 @@ const Header = () => {
                         >
                             <FormattedMessage id="title" />
                         </Button>
-                        <Grid item className={classes.title}>
+                        <Grid className={classes.title}>
                             {" "}
                         </Grid>
                         <LanguageSwitcher />{' '}

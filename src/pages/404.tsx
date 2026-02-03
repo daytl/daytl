@@ -117,7 +117,7 @@ const Custom404 = () => {
                 title={t(`page404.title`)}
             />
             <Grid container>
-                <Grid item xs={12} sx={{
+                <Grid size={{ xs: 12 }} sx={{
                     textAlign: "center",
                     padding: "2rem 0 2rem 0",
                 }}>
