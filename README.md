@@ -17,6 +17,13 @@ Your useful online tools simply at one place.
 ### Upcoming tools
 * Encode/decode - utf, url encode, html
 * Formatter
+* JSON dif
+* JSON, CSV, YAML and etc converter
+* hex color editor
+* requerst comparator
+* reuest creator
+* cron builder
+* cron scheduler and visualisation
 * Minification
 * Case convertor
 

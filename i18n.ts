@@ -1,4 +1,4 @@
-import { I18nConfig } from "next-translate"
+import { I18nConfig } from "next-translate";
 
 /**
  * Defines the configuration for internationalization (i18n) in a Next.js application.
@@ -11,4 +11,4 @@ export const i18nConfig = {
     "*": ["common"],
   },
   defaultNS: "common",
-} as const satisfies I18nConfig
+} as const satisfies I18nConfig;

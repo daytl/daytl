@@ -1,4 +1,4 @@
-import { i18nConfig } from "../../i18n";
+import type { i18nConfig } from "../../i18n";
 
 /**
  * Defines a TypeScript type called "Locale".

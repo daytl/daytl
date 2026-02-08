@@ -15,17 +15,17 @@ export const useRedirect = (to?: string) => {
   // language detection
   useEffect(() => {
     const detectedLng = languageDetector.detect();
-    if (redirectPath.startsWith("/" + detectedLng) && router.route === "/404") {
+    if (redirectPath.startsWith(`/${detectedLng}`) && router.route === "/404") {
       // prevent endless loop
-      router.replace("/" + detectedLng + router.route);
+      router.replace(`/${detectedLng}${router.route}`);
       return;
     }
 
     if (detectedLng && languageDetector.cache) {
       languageDetector.cache(detectedLng);
     }
-    router.replace("/" + detectedLng + redirectPath);
+    router.replace(`/${detectedLng}${redirectPath}`);
   });
 
-  return <></>;
+  return null;
 };

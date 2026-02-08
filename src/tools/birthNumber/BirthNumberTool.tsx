@@ -1,20 +1,26 @@
-import Button from "@mui/material/Button"
-import TextField from "@mui/material/TextField"
-import * as React from "react"
-import { ChangeEventHandler, useCallback, useEffect, useState } from "react"
-import { BirthNumbersData, generateBirthNumbers } from "./generateBirthNumber"
-import { ButtonGroup, Checkbox, Chip, FormControl, FormControlLabel, InputAdornment } from "@mui/material"
-import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers"
-import filesaver from "file-saver"
-import Grid from "@mui/material/Grid"
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFnsV3"
-import { CopyButton } from "@/components/tool/CopyButton"
-import { useI18n } from "@/utils/useI18n"
-import FormattedMessage from "@/components/FormattedMessage"
-import { MdSave as Save } from "react-icons/md"
-import Cookies from "js-cookie"
-import copy from "copy-to-clipboard"
-import FormattedDate from "@/components/FormattedDate"
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import { type ChangeEventHandler, useCallback, useEffect, useState } from "react";
+import { type BirthNumbersData, generateBirthNumbers } from "./generateBirthNumber";
+import {
+  ButtonGroup,
+  Checkbox,
+  Chip,
+  FormControl,
+  FormControlLabel,
+  InputAdornment,
+} from "@mui/material";
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import filesaver from "file-saver";
+import Grid from "@mui/material/Grid";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFnsV3";
+import { CopyButton } from "@/components/tool/CopyButton";
+import { useI18n } from "@/utils/useI18n";
+import FormattedMessage from "@/components/FormattedMessage";
+import { MdSave as Save } from "react-icons/md";
+import Cookies from "js-cookie";
+import copy from "copy-to-clipboard";
+import FormattedDate from "@/components/FormattedDate";
 
 const buttonSx = {
   marginRight: {
@@ -29,213 +35,264 @@ const buttonSx = {
     xs: "100%",
     sm: "auto",
   },
+};
+
+interface Settings {
+  birthDate?: Date;
+  isFemale?: boolean;
+  minAge?: number;
+  maxAge?: number;
 }
 
 export const BirthNumberTool = () => {
-  const [count, setCount] = useState(1)
-  const [birthNumber, setBirthNumber] = useState<string>()
-  const [settings, setSettings] = useState<any>()
-  const [birthDate, setBirthDate] = useState<Date>()
-  const [isFemale, setIsFemale] = useState(false)
-  const { t } = useI18n({ namespace: "tools" })
-  const [automaticCopy, setAutomaticCopy] = useState(Cookies.get("automaticCopy") === "true")
-  const [justCopied, setJustCopied] = useState(false)
-  const [lastCopiedValue, setLastCopiedValue] = useState("")
+  const [count, setCount] = useState<number | string>(1);
+  const [birthNumber, setBirthNumber] = useState<string>("");
+  const [settings, setSettings] = useState<Settings>({});
+  const [birthDate, setBirthDate] = useState<Date | null>(null);
+  const [isFemale, setIsFemale] = useState(false);
+  const { t } = useI18n({ namespace: "tools" });
+  const [automaticCopy, setAutomaticCopy] = useState(Cookies.get("automaticCopy") === "true");
+  const [justCopied, setJustCopied] = useState(false);
+  const [lastCopiedValue, setLastCopiedValue] = useState("");
 
   useEffect(() => {
-      if (count) {
-        const result: BirthNumbersData = generateBirthNumbers(count, settings)
-        setBirthNumber(result.birthNumbers.join("\n"))
-        setBirthDate(result.settings.birthDate)
-        setIsFemale(result.settings.isFemale)
+    if (count) {
+      const result: BirthNumbersData = generateBirthNumbers(count, settings);
+      setBirthNumber(result.birthNumbers.join("\n"));
+      setBirthDate(result.settings.birthDate);
+      setIsFemale(result.settings.isFemale);
+    }
+  }, [count, settings]);
+
+  const handleBirthDateChange = useCallback(
+    (date: Date | null) => {
+      if (date instanceof Date && !Number.isNaN(date.getTime())) {
+        setSettings({ birthDate: date, isFemale });
       }
-    }, [count, settings],
-  )
+    },
+    [isFemale]
+  );
 
-  const handleBirthDateChange = useCallback((date: Date) => {
-    if (date instanceof Date && !isNaN(date)) {
-      setSettings({ birthDate: date, isFemale })
-    }
-  }, [isFemale])
+  const handleCountChange = useCallback<ChangeEventHandler<HTMLInputElement>>(
+    (e: React.FormEvent<HTMLInputElement>) => {
+      const parsedValue = parseInt(e.currentTarget.value, 10);
+      if (!Number.isNaN(parsedValue)) {
+        setCount(parsedValue);
+      } else {
+        setCount("");
+      }
+    },
+    []
+  );
 
-  const handleCountChange = useCallback<ChangeEventHandler<HTMLInputElement>>((e: React.FormEvent<HTMLInputElement>) => {
-    const parsedValue = parseInt(e.currentTarget.value)
-    if (!isNaN(parsedValue)) {
-      setCount(parsedValue)
-    } else {
-      setCount("")
-    }
-  }, [])
+  const handleGenderChange = useCallback(
+    (value: string) => {
+      setSettings({ birthDate: birthDate ?? undefined, isFemale: value === "female" });
+    },
+    [birthDate]
+  );
 
-  const handleGenderChange = useCallback((value: string) => {
-    setSettings({ birthDate, isFemale: value === "female" })
-  }, [birthDate])
-
-  const handleGenerateBirthNumber = useCallback((event) => {
-    const { isfemale, minage, maxage } = event.currentTarget.dataset
-    setSettings({ isFemale: isfemale, minAge: parseInt(minage), maxAge: parseInt(maxage) })
-  }, [])
+  const handleGenerateBirthNumber = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
+    const { isfemale, minage, maxage } = event.currentTarget.dataset;
+    setSettings({
+      isFemale: isfemale === "true",
+      minAge: parseInt(minage || "0", 10),
+      maxAge: parseInt(maxage || "0", 10),
+    });
+  }, []);
 
   const handleDownload = useCallback(() => {
-    filesaver.saveAs(new Blob([birthNumber], { type: "text/plain;charset=utf-8" }), "birthnumbers.txt")
-  }, [birthNumber])
+    filesaver.saveAs(
+      new Blob([birthNumber], { type: "text/plain;charset=utf-8" }),
+      "birthnumbers.txt"
+    );
+  }, [birthNumber]);
 
-  const handleAutomaticCopyChange = useCallback((event) => {
-    setAutomaticCopy(!automaticCopy)
-    Cookies.set("automaticCopy", (!automaticCopy).toString())
-  }, [automaticCopy])
+  const handleAutomaticCopyChange = useCallback(() => {
+    setAutomaticCopy(!automaticCopy);
+    Cookies.set("automaticCopy", (!automaticCopy).toString());
+  }, [automaticCopy]);
 
-  return (<LocalizationProvider dateAdapter={AdapterDateFns}>
-    <TextField
-      value={birthNumber}
-      InputProps={{
-        endAdornment:
-          <InputAdornment position="end">
-            {justCopied ?
-              <Chip color="success" variant="filled" label={<FormattedMessage id="copied" namespace="common" />} /> :
-              <CopyButton text={birthNumber} />}
-          </InputAdornment>,
-        "aria-label": t("birthnumber.birthNumber"),
-      }}
-      sx={
-        {
-          "textarea": {
+  return (
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <TextField
+        value={birthNumber}
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              {justCopied ? (
+                <Chip
+                  color="success"
+                  variant="filled"
+                  label={<FormattedMessage id="copied" namespace="common" />}
+                />
+              ) : (
+                <CopyButton text={birthNumber} />
+              )}
+            </InputAdornment>
+          ),
+          "aria-label": t("birthnumber.birthNumber"),
+        }}
+        sx={{
+          textarea: {
             fontSize: "2rem",
             paddingTop: "10px",
             lineHeight: "2rem",
           },
-        }
-      }
-      variant="outlined"
-      multiline
-      maxRows={3}
-      onFocus={(event) => {
-        if (automaticCopy && event.target.value !== lastCopiedValue) {
-          copy(event.target.value)
-          setLastCopiedValue(event.target.value)
-          setJustCopied(true)
-          setTimeout(() => setJustCopied(false), 1000)
-        }
-        return event.target.select()
-      }}
-      fullWidth
-      FormHelperTextProps={{
-        sx: {
-          marginLeft: 0,
-        },
-      }}
-      helperText={
-        <Grid container>
-          <Grid size={{ xs: 6 }}>
-            <FormattedMessage namespace="tools" id="birthnumber.birthDate" />:{" "}
-            <strong><FormattedDate value={birthDate} /></strong>
-          </Grid>
-          <Grid size={{ xs: 6 }} sx={{
-            textAlign: "right",
-          }}>
-            <FormControlLabel control={<Checkbox checked={automaticCopy} onChange={handleAutomaticCopyChange} />}
-                              labelPlacement="start"
-                              label={<FormattedMessage namespace="common" id="automaticCopy" />}
-            />
-
-          </Grid>
-        </Grid>
-      }
-    />
-    <br />
-    <br />
-    <Grid container spacing={3}>
-      <Grid size={{ xs: 12, sm: 6 }}>
-        <Button color="primary" variant="contained"
-                sx={buttonSx}
-                onClick={handleGenerateBirthNumber}
-                data-minage="0"
-                data-maxage="17"
-        >
-          <FormattedMessage namespace="tools" id="birthnumber.buttonMenChild" />
-        </Button>
-        <Button color="primary" variant="contained"
-                sx={buttonSx}
-                onClick={handleGenerateBirthNumber}
-                data-minage="18"
-                data-maxage="60"
-        >
-          <FormattedMessage namespace="tools" id="birthnumber.buttonMenAdult" />
-        </Button>
-        <Button color="primary" variant="contained"
-                sx={buttonSx}
-                data-isfemale="true"
-                onClick={handleGenerateBirthNumber}
-                data-minage="0"
-                data-maxage="17"
-        >
-          <FormattedMessage namespace="tools" id="birthnumber.buttonWomenChild" />
-        </Button>
-        <Button color="primary" variant="contained"
-                sx={buttonSx}
-                data-isfemale="true"
-                data-minage="18"
-                data-maxage="60"
-                onClick={handleGenerateBirthNumber}>
-          <FormattedMessage namespace="tools" id="birthnumber.buttonWomenAdult" />
-        </Button>
-      </Grid>
-      <Grid size={{ xs: 12, sm: 6 }}>
-        <DatePicker
-          label={<FormattedMessage namespace="tools" id="birthnumber.setupBirthDate" />}
-          value={birthDate}
-          inputFormat="yyyy/MM/dd"
-          onChange={handleBirthDateChange}
-          renderInput={(params) => <TextField {...params}
-                                              size="small"
-                                              sx={{ width: "160px" }}
-
-          />}
-        />
-        {" "}
-        <FormControl sx={{
-          marginLeft: 1,
-        }}>
-
-          <ButtonGroup variant="contained" aria-label="Basic button group">
-            <Button variant={settings?.isFemale ? "contained" : "outlined"}
-                    onClick={() => handleGenderChange("female")}><FormattedMessage namespace="tools"
-                                                                                   id="birthnumber.female" /></Button>
-            <Button variant={!settings?.isFemale ? "contained" : "outlined"} onClick={() => handleGenderChange("male")}><FormattedMessage
-              namespace="tools"
-              id="birthnumber.male" /></Button>
-          </ButtonGroup>
-
-
-        </FormControl>
-      </Grid>
-      <Grid size={{ xs: 12 }} paddingBottom={2}>
-        <TextField
-          variant="outlined"
-          label={<FormattedMessage namespace="tools" id="birthnumber.count" />}
-          onChange={handleCountChange}
-          inputProps={{
-            type: "number",
-            max: 500,
+        }}
+        variant="outlined"
+        multiline
+        maxRows={3}
+        onFocus={(event) => {
+          if (automaticCopy && event.target.value !== lastCopiedValue) {
+            copy(event.target.value);
+            setLastCopiedValue(event.target.value);
+            setJustCopied(true);
+            setTimeout(() => setJustCopied(false), 1000);
+          }
+          return event.target.select();
+        }}
+        fullWidth
+        slotProps={{
+          formHelperText: {
+            component: "div",
             sx: {
-              width: "50px",
+              marginLeft: 0,
             },
-          }}
-          value={count}
-          size="small"
-        />{" "}
-        <Button
-          variant="contained"
-          color="secondary"
-          sx={{
-            marginLeft: 1,
-          }}
-          onClick={handleDownload}
-          startIcon={<Save />}
-        >
-          <FormattedMessage namespace="tools" id="birthnumber.download" />
-        </Button>
+          },
+        }}
+        helperText={
+          <Grid container>
+            <Grid size={{ xs: 6 }}>
+              <FormattedMessage namespace="tools" id="birthnumber.birthDate" />:{" "}
+              <strong>
+                <FormattedDate value={birthDate} />
+              </strong>
+            </Grid>
+            <Grid
+              size={{ xs: 6 }}
+              sx={{
+                textAlign: "right",
+              }}
+            >
+              <FormControlLabel
+                control={<Checkbox checked={automaticCopy} onChange={handleAutomaticCopyChange} />}
+                labelPlacement="start"
+                label={<FormattedMessage namespace="common" id="automaticCopy" />}
+              />
+            </Grid>
+          </Grid>
+        }
+      />
+      <br />
+      <br />
+      <Grid container spacing={3}>
+        <Grid size={{ xs: 12, sm: 6 }}>
+          <Button
+            color="primary"
+            variant="contained"
+            sx={buttonSx}
+            onClick={handleGenerateBirthNumber}
+            data-minage="0"
+            data-maxage="17"
+          >
+            <FormattedMessage namespace="tools" id="birthnumber.buttonMenChild" />
+          </Button>
+          <Button
+            color="primary"
+            variant="contained"
+            sx={buttonSx}
+            onClick={handleGenerateBirthNumber}
+            data-minage="18"
+            data-maxage="60"
+          >
+            <FormattedMessage namespace="tools" id="birthnumber.buttonMenAdult" />
+          </Button>
+          <Button
+            color="primary"
+            variant="contained"
+            sx={buttonSx}
+            data-isfemale="true"
+            onClick={handleGenerateBirthNumber}
+            data-minage="0"
+            data-maxage="17"
+          >
+            <FormattedMessage namespace="tools" id="birthnumber.buttonWomenChild" />
+          </Button>
+          <Button
+            color="primary"
+            variant="contained"
+            sx={buttonSx}
+            data-isfemale="true"
+            data-minage="18"
+            data-maxage="60"
+            onClick={handleGenerateBirthNumber}
+          >
+            <FormattedMessage namespace="tools" id="birthnumber.buttonWomenAdult" />
+          </Button>
+        </Grid>
+        <Grid size={{ xs: 12, sm: 6 }}>
+          <DatePicker
+            label={<FormattedMessage namespace="tools" id="birthnumber.setupBirthDate" />}
+            value={birthDate}
+            format="yyyy/MM/dd"
+            onChange={handleBirthDateChange}
+            slotProps={{
+              textField: {
+                size: "small",
+                sx: { width: "160px" },
+              },
+            }}
+          />{" "}
+          <FormControl
+            sx={{
+              marginLeft: 1,
+            }}
+          >
+            <ButtonGroup variant="contained" aria-label="Basic button group">
+              <Button
+                variant={settings?.isFemale ? "contained" : "outlined"}
+                onClick={() => handleGenderChange("female")}
+              >
+                <FormattedMessage namespace="tools" id="birthnumber.female" />
+              </Button>
+              <Button
+                variant={!settings?.isFemale ? "contained" : "outlined"}
+                onClick={() => handleGenderChange("male")}
+              >
+                <FormattedMessage namespace="tools" id="birthnumber.male" />
+              </Button>
+            </ButtonGroup>
+          </FormControl>
+        </Grid>
+        <Grid size={{ xs: 12 }} paddingBottom={2}>
+          <TextField
+            variant="outlined"
+            label={<FormattedMessage namespace="tools" id="birthnumber.count" />}
+            onChange={handleCountChange}
+            inputProps={{
+              type: "number",
+              max: 500,
+              sx: {
+                width: "50px",
+              },
+            }}
+            value={count}
+            size="small"
+          />{" "}
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{
+              marginLeft: 1,
+            }}
+            onClick={handleDownload}
+            startIcon={<Save />}
+          >
+            <FormattedMessage namespace="tools" id="birthnumber.download" />
+          </Button>
+        </Grid>
       </Grid>
-    </Grid>
-  </LocalizationProvider>)
-}
+    </LocalizationProvider>
+  );
+};

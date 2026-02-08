@@ -1,16 +1,15 @@
-import {useEffect, useState} from "react";
-import {NextRouter, useRouter} from "next/router";
-import {getRouteRegex} from "next/dist/shared/lib/router/utils/route-regex";
-import {getClientBuildManifest} from "next/dist/client/route-loader";
-import {parseRelativeUrl} from "next/dist/shared/lib/router/utils/parse-relative-url";
-import {isDynamicRoute} from "next/dist/shared/lib/router/utils/is-dynamic";
-import {removeTrailingSlash} from "next/dist/shared/lib/router/utils/remove-trailing-slash";
-import {Link} from "@/components/_shared/Link";
-import {Grid, Typography} from "@mui/material";
+import { useEffect, useState } from "react";
+import { type NextRouter, useRouter } from "next/router";
+import { getRouteRegex } from "next/dist/shared/lib/router/utils/route-regex";
+import { getClientBuildManifest } from "next/dist/client/route-loader";
+import { parseRelativeUrl } from "next/dist/shared/lib/router/utils/parse-relative-url";
+import { isDynamicRoute } from "next/dist/shared/lib/router/utils/is-dynamic";
+import { removeTrailingSlash } from "next/dist/shared/lib/router/utils/remove-trailing-slash";
+import { Grid, Typography } from "@mui/material";
 import Layout from "@/components/Layout";
 import FormattedMessage from "@/components/FormattedMessage";
 import Seo from "@/components/Seo";
-import {useI18n} from "@/utils/useI18n";
+import { useI18n } from "@/utils/useI18n";
 
 /**
  * Retrieves the list of pages.
@@ -21,15 +20,15 @@ import {useI18n} from "@/utils/useI18n";
  * @returns The list of sorted pages.
  */
 async function getPageList() {
-    if (process.env.NODE_ENV === "production") {
-        const {sortedPages} = await getClientBuildManifest();
-        return sortedPages;
-    } else {
-        if (typeof window !== "undefined" && window.__BUILD_MANIFEST?.sortedPages) {
-            return window.__BUILD_MANIFEST.sortedPages;
-        }
+  if (process.env.NODE_ENV === "production") {
+    const { sortedPages } = await getClientBuildManifest();
+    return sortedPages;
+  } else {
+    if (typeof window !== "undefined" && window.__BUILD_MANIFEST?.sortedPages) {
+      return window.__BUILD_MANIFEST.sortedPages;
     }
-    return [];
+  }
+  return [];
 }
 
 /**
@@ -39,11 +38,11 @@ async function getPageList() {
  * @returns A promise that resolves to true if the location matches a page, false otherwise.
  */
 async function getDoesLocationMatchPage(location: string) {
-    const pages = await getPageList();
+  const pages = await getPageList();
 
-    let parsed = parseRelativeUrl(location);
-    let {pathname} = parsed;
-    return pathMatchesPage(pathname, pages);
+  const parsed = parseRelativeUrl(location);
+  const { pathname } = parsed;
+  return pathMatchesPage(pathname, pages);
 }
 
 /**
@@ -54,20 +53,20 @@ async function getDoesLocationMatchPage(location: string) {
  * @returns True if the pathname matches a page, false otherwise.
  */
 function pathMatchesPage(pathname: string, pages: string[]) {
-    const cleanPathname = removeTrailingSlash(pathname);
+  const cleanPathname = removeTrailingSlash(pathname);
 
-    if (pages.includes(cleanPathname)) {
-        return true;
-    }
+  if (pages.includes(cleanPathname)) {
+    return true;
+  }
 
-    const page = pages.find(
-        (page) => isDynamicRoute(page) && getRouteRegex(page).re.test(cleanPathname)
-    );
+  const page = pages.find(
+    (page) => isDynamicRoute(page) && getRouteRegex(page).re.test(cleanPathname)
+  );
 
-    if (page) {
-        return true;
-    }
-    return false;
+  if (page) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -77,8 +76,8 @@ function pathMatchesPage(pathname: string, pages: string[]) {
  * @returns A boolean indicating if the route needs processing.
  */
 function doesNeedsProcessing(router: NextRouter) {
-    const status = router.pathname !== router.asPath;
-    return status;
+  const status = router.pathname !== router.asPath;
+  return status;
 }
 
 /**
@@ -87,50 +86,51 @@ function doesNeedsProcessing(router: NextRouter) {
  * @returns The custom 404 page component.
  */
 const Custom404 = () => {
-    const router = useRouter();
-    const {t,lang} = useI18n();
-    const [isNotFound, setIsNotFound] = useState(false);
+  const router = useRouter();
+  const { t } = useI18n();
+  const [isNotFound, setIsNotFound] = useState(false);
 
+  useEffect(() => {
     const processLocationAndRedirect = async (router: NextRouter) => {
-        if (doesNeedsProcessing(router)) {
-            const targetIsValidPage = await getDoesLocationMatchPage(router.asPath);
-            if (targetIsValidPage) {
-                await router.replace(router.asPath);
-                return;
-            }
+      if (doesNeedsProcessing(router)) {
+        const targetIsValidPage = await getDoesLocationMatchPage(router.asPath);
+        if (targetIsValidPage) {
+          await router.replace(router.asPath);
+          return;
         }
-        setIsNotFound(true);
+      }
+      setIsNotFound(true);
     };
 
-    useEffect(() => {
-        if (router.isReady) {
-            processLocationAndRedirect(router);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [router.isReady]);
+    if (router.isReady) {
+      processLocationAndRedirect(router);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.isReady, router]);
 
-    if (!isNotFound) return null;
+  if (!isNotFound) return null;
 
-    return (
-        <Layout>
-            <Seo
-                title={t(`page404.title`)}
-            />
-            <Grid container>
-                <Grid size={{ xs: 12 }} sx={{
-                    textAlign: "center",
-                    padding: "2rem 0 2rem 0",
-                }}>
-                    <Typography variant="h1" component="h1">
-                        404
-                    </Typography>
-                    <Typography variant="h3">
-                        <FormattedMessage id="404.info"/>
-                    </Typography>
-                </Grid>
-            </Grid>
-        </Layout>
-    );
+  return (
+    <Layout>
+      <Seo title={t(`page404.title`)} />
+      <Grid container>
+        <Grid
+          size={{ xs: 12 }}
+          sx={{
+            textAlign: "center",
+            padding: "2rem 0 2rem 0",
+          }}
+        >
+          <Typography variant="h1" component="h1">
+            404
+          </Typography>
+          <Typography variant="h3">
+            <FormattedMessage id="404.info" />
+          </Typography>
+        </Grid>
+      </Grid>
+    </Layout>
+  );
 };
 
 export default Custom404;

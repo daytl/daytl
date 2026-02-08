@@ -1,76 +1,70 @@
-import PropTypes from "prop-types"
-import React from "react"
-import { AppBar, Grid } from "@mui/material"
-import Toolbar from "@mui/material/Toolbar"
-import Button from "@mui/material/Button"
-import makeStyles from '@mui/styles/makeStyles';
-import packageJson from "../../package.json"
-import IconButton from '@mui/material/IconButton';
-import { FaGithub as GitHubIcon } from "react-icons/fa"
+import PropTypes from "prop-types";
+import { AppBar, Grid, Toolbar, Button, IconButton } from "@mui/material";
+import packageJson from "../../package.json";
+import { FaGithub as GitHubIcon } from "react-icons/fa";
 import FormattedMessage from "./FormattedMessage";
 import LanguageSwitcher from "./LanguageSwitcher";
-import {Link} from "@/components/_shared/Link";
-
-const useStyles = makeStyles(() => ({
-    root: {
-        borderBottom: "1px solid #ccc",
-    },
-    menuButton: {
-        fontSize: "2rem",
-        fontWeight: "bold",
-        textTransform: "none",
-        color: "#555",
-        padding: 0,
-    },
-    title: {
-        flexGrow: 1,
-    },
-    toolbar: {
-        paddingLeft: 10,
-        paddingRight: 10,
-    },
-}))
+import { Link } from "@/components/_shared/Link";
 
 const Header = () => {
-    const classes = useStyles()
-
-    return (
-        <AppBar position="static" elevation={0} className={classes.root}>
-            <Grid container justifyContent="center">
-                <Grid size={{ xs: 12, md: 10 }}>
-                    <Toolbar disableGutters className={classes.toolbar}>
-                        <Button
-                            to={`/`}
-                            component={Link}
-                            variant="text"
-                            edge="start"
-                            className={classes.menuButton}
-                            color="inherit"
-                            aria-label="menu"
-                        >
-                            <FormattedMessage id="title" />
-                        </Button>
-                        <Grid className={classes.title}>
-                            {" "}
-                        </Grid>
-                        <LanguageSwitcher />{' '}
-                        <IconButton href={packageJson.repository.url} size="small" title="Github source">
-                            <GitHubIcon />
-                        </IconButton>
-                    </Toolbar>
-                </Grid>
-            </Grid>
-        </AppBar>
-    )
-}
+  return (
+    <AppBar
+      position="static"
+      elevation={0}
+      sx={{
+        borderBottom: "1px solid #ccc",
+      }}
+    >
+      <Grid container justifyContent="center">
+        <Grid size={{ xs: 12, md: 10 }}>
+          <Toolbar
+            disableGutters
+            sx={{
+              paddingLeft: 1.25,
+              paddingRight: 1.25,
+            }}
+          >
+            <Button
+              to={`/`}
+              component={Link}
+              variant="text"
+              edge="start"
+              sx={{
+                fontSize: "2rem",
+                fontWeight: "bold",
+                textTransform: "none",
+                color: "#555",
+                padding: 0,
+              }}
+              color="inherit"
+              aria-label="menu"
+            >
+              <FormattedMessage id="title" />
+            </Button>
+            <Grid sx={{ flexGrow: 1 }} />
+            <LanguageSwitcher />
+            <IconButton
+              href={packageJson.repository.url}
+              size="small"
+              title="Github source"
+              aria-label="View source on Github"
+            >
+              <GitHubIcon />
+            </IconButton>
+          </Toolbar>
+        </Grid>
+      </Grid>
+    </AppBar>
+  );
+};
 
 Header.propTypes = {
-    siteTitle: PropTypes.string,
-    showLogo: PropTypes.bool,
-}
+  siteTitle: PropTypes.string,
+  showLogo: PropTypes.bool,
+};
 
 Header.defaultProps = {
-    siteTitle: ``,
-}
+  siteTitle: ``,
+};
 
-export default Header
+export default Header;

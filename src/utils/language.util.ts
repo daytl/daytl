@@ -9,7 +9,7 @@ import toolsCs from "../../locales/cs/tools.json";
 import toolsPl from "../../locales/pl/tools.json";
 import toolsDe from "../../locales/de/tools.json";
 
-import { Locale } from "@/types/i18n.type";
+import type { Locale } from "@/types/i18n.type";
 
 /**
  * Retrieves the language file based on the specified language.
@@ -33,22 +33,22 @@ export const getLanguageFile = (lang: Locale) => {
     case "sk":
       return {
         common: commonSk,
-        tools: toolsSk
+        tools: toolsSk,
       };
-      case "pl":
+    case "pl":
       return {
         common: commonPl,
-        tools: toolsPl
+        tools: toolsPl,
       };
-      case "de":
+    case "de":
       return {
         common: commonDe,
-        tools: toolsDe
+        tools: toolsDe,
       };
     default:
       return {
         common: commonCs,
-        tools: toolsCs
+        tools: toolsCs,
       };
   }
 };

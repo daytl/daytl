@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
@@ -19,21 +19,14 @@ interface LinkProps {
  * @param rest - Additional props to be passed to the link component.
  * @returns The rendered link component.
  */
-export const Link = ({
-  children,
-  skipLocaleHandling,
-  target,
-  ...rest
-}: LinkProps) => {
+export const Link = ({ children, skipLocaleHandling, target, ...rest }: LinkProps) => {
   const router = useRouter();
   const locale = rest.locale || (router.query.locale as string) || "";
 
   let href = rest.to || router.asPath;
   if (href.indexOf("http") === 0) skipLocaleHandling = true;
   if (locale && !skipLocaleHandling) {
-    href = href
-      ? `/${locale}${href}`
-      : router.pathname.replace("[locale]", locale);
+    href = href ? `/${locale}${href}` : router.pathname.replace("[locale]", locale);
   }
 
   return (

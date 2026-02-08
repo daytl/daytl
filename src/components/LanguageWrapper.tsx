@@ -1,8 +1,8 @@
-import { ReactNode, useEffect, useMemo, useState } from "react";
+import { type ReactNode, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router";
 import { languageDetector } from "@/utils/languageDetector";
 import { i18nConfig } from "../../i18n";
-import { Locale } from "@/types/i18n.type";
+import type { Locale } from "@/types/i18n.type";
 
 interface LanguageWrapperProps {
   children: ReactNode;
@@ -30,8 +30,7 @@ export const LanguageWrapper = ({ children }: LanguageWrapperProps) => {
   // Check if current path includes locale
   const isLocaleInThePath = useMemo(
     () =>
-      (router.query.locale &&
-        i18nConfig.locales.includes(router.query.locale as Locale)) ||
+      (router.query.locale && i18nConfig.locales.includes(router.query.locale as Locale)) ||
       router.asPath.includes(detectedLng ?? i18nConfig.defaultLocale),
     [detectedLng, router.asPath, router.query.locale]
   );
@@ -54,7 +53,7 @@ export const LanguageWrapper = ({ children }: LanguageWrapperProps) => {
 
     // Check if the current route has accurate locale
     if (isReady && !i18nConfig.locales.includes(locale as Locale)) {
-      if (asPath.startsWith("/" + detectedLng) && router.route === "/404") {
+      if (asPath.startsWith(`/${detectedLng}`) && router.route === "/404") {
         // router.push({
         //   pathname: "/404",
         //   query: { locale },
@@ -65,9 +64,9 @@ export const LanguageWrapper = ({ children }: LanguageWrapperProps) => {
       if (detectedLng && languageDetector.cache) {
         languageDetector.cache(detectedLng);
       }
-      router.replace("/" + detectedLng + asPath);
+      router.replace(`/${detectedLng}${asPath}`);
     }
   }, [router, detectedLng]);
 
-  return isLocaleInThePath ? <>{children}</> : <p>Loading...</p>;
+  return isLocaleInThePath ? children : <p>Loading...</p>;
 };
