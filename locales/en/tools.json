@@ -156,5 +156,31 @@
       "q3": "Can I change the JWT?",
       "a3": "Yes, you can change the contents of the JWT, but if the token is signed, the subsequent change will cause a signature verification error."
     }
+  },
+  "color-picker": {
+    "title": "Color Converter",
+    "info": "Online tool for converting colors between HEX, RGB and HSL formats with contrast adjustment.",
+    "keywords": "color picker, colors, hex, rgb, hsl, color converter, color conversion",
+    "description": "Online tool for converting colors between HEX, RGB and HSL formats. Convert colors between different formats and adjust contrast using a simple interface.",
+    "content": "<p>Color Converter is a useful tool for developers and designers that allows you to convert colors between different formats.</p><p><strong>HEX</strong> (hexadecimal) is a hexadecimal format used in CSS and HTML, for example #1976d2.</p><p><strong>RGB</strong> (Red, Green, Blue) is a color model based on three components of red, green and blue with values 0-255.</p><p><strong>HSL</strong> (Hue, Saturation, Lightness) is a color model based on hue (0-360°), saturation (0-100%) and lightness (0-100%).</p>",
+    "hexLabel": "HEX",
+    "rgbLabel": "RGB",
+    "hslLabel": "HSL",
+    "lighten": "Increase contrast (+10%)",
+    "darken": "Decrease contrast (-10%)",
+    "colorPreview": "Color preview",
+    "faqsTitle": "Frequently asked questions about Color Converter",
+    "faqs": {
+      "q1": "How do I convert colors between HEX, RGB and HSL formats?",
+      "a1": "Simply enter a color in one of the supported formats (HEX, RGB or HSL) and the tool will automatically convert it to all other formats.",
+      "q2": "How can I adjust the contrast/lightness of a color?",
+      "a2": "Use the buttons to increase or decrease contrast (+10%, -10%) to adjust the lightness of the color in the HSL model.",
+      "q3": "Is the color conversion in this tool accurate?",
+      "a3": "Yes, the conversion is based on precise mathematical formulas valid for HEX, RGB and HSL color models.",
+      "q4": "Are color conversions performed locally in my browser?",
+      "a4": "Yes, all operations are performed exclusively in your browser and no data is sent anywhere.",
+      "q5": "Can I use this tool for web design?",
+      "a5": "Yes, this tool is ideal for web designers and developers who need to quickly convert colors between formats used in CSS."
+    }
   }
 }

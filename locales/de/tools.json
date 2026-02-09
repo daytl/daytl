@@ -154,5 +154,31 @@
       "q3": "Kann ich den JWT ändern?",
       "a3": "Ja, Sie können den Inhalt des JWT ändern, aber wenn das Token signiert ist, führt die nachfolgende Änderung zu einem Fehler bei der Signaturprüfung."
     }
+  },
+  "color-picker": {
+    "title": "Farbkonverter",
+    "info": "Online-Tool zum Konvertieren von Farben zwischen HEX-, RGB- und HSL-Formaten mit Kontrastanpassung.",
+    "keywords": "color picker, Farben, hex, rgb, hsl, Farbkonverter, Farbkonvertierung",
+    "description": "Online-Tool zum Konvertieren von Farben zwischen HEX-, RGB- und HSL-Formaten. Konvertieren Sie Farben zwischen verschiedenen Formaten und passen Sie den Kontrast über eine einfache Benutzeroberfläche an.",
+    "content": "<p>Der Farbkonverter ist ein nützliches Tool für Entwickler und Designer, mit dem Sie Farben zwischen verschiedenen Formaten konvertieren können.</p><p><strong>HEX</strong> (hexadezimal) ist ein hexadezimales Format, das in CSS und HTML verwendet wird, zum Beispiel #1976d2.</p><p><strong>RGB</strong> (Rot, Grün, Blau) ist ein Farbmodell, das auf drei Komponenten Rot, Grün und Blau mit Werten von 0-255 basiert.</p><p><strong>HSL</strong> (Farbton, Sättigung, Helligkeit) ist ein Farbmodell, das auf Farbton (0-360°), Sättigung (0-100%) und Helligkeit (0-100%) basiert.</p>",
+    "hexLabel": "HEX",
+    "rgbLabel": "RGB",
+    "hslLabel": "HSL",
+    "lighten": "Kontrast erhöhen (+10%)",
+    "darken": "Kontrast verringern (-10%)",
+    "colorPreview": "Farbvorschau",
+    "faqsTitle": "Häufig gestellte Fragen zum Farbkonverter",
+    "faqs": {
+      "q1": "Wie konvertiere ich Farben zwischen HEX-, RGB- und HSL-Formaten?",
+      "a1": "Geben Sie einfach eine Farbe in einem der unterstützten Formate (HEX, RGB oder HSL) ein und das Tool konvertiert sie automatisch in alle anderen Formate.",
+      "q2": "Wie kann ich den Kontrast/Helligkeit einer Farbe anpassen?",
+      "a2": "Verwenden Sie die Schaltflächen zum Erhöhen oder Verringern des Kontrasts (+10%, -10%), um die Helligkeit der Farbe im HSL-Modell anzupassen.",
+      "q3": "Ist die Farbkonvertierung in diesem Tool genau?",
+      "a3": "Ja, die Konvertierung basiert auf präzisen mathematischen Formeln, die für die Farbmodelle HEX, RGB und HSL gültig sind.",
+      "q4": "Werden Farbkonvertierungen lokal in meinem Browser durchgeführt?",
+      "a4": "Ja, alle Operationen werden ausschließlich in Ihrem Browser durchgeführt und es werden keine Daten irgendwohin gesendet.",
+      "q5": "Kann ich dieses Tool für Webdesign verwenden?",
+      "a5": "Ja, dieses Tool ist ideal für Webdesigner und Entwickler, die Farben schnell zwischen den in CSS verwendeten Formaten konvertieren müssen."
+    }
   }
 }

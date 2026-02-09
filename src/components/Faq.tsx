@@ -17,20 +17,20 @@ const Faq: React.FC<FaqProps> = ({ faqs, name }) => {
   }
 
   return (
-    <Grid container spacing={1}>
-      <Grid>
-        <Typography variant="h3">
+    <Grid container spacing={2}>
+      <Grid size={12}>
+        <Typography variant="h3" sx={{ mb: 2 }}>
           <FormattedMessage id={`${name}.faqsTitle`} namespace="tools" />
         </Typography>
       </Grid>
       {faqs.map((faq) => {
         return (
-          <Grid key={faq}>
-            <Typography variant="h4">
+          <Grid size={12} key={faq}>
+            <Typography variant="h4" sx={{ mb: 1 }}>
               <FormattedMessage id={`${name}.faqs.q${faq}`} namespace="tools" />
             </Typography>
 
-            <Typography variant="body1">
+            <Typography variant="body1" sx={{ mb: 1 }}>
               <FormattedMessage id={`${name}.faqs.a${faq}`} namespace="tools" />
             </Typography>
           </Grid>

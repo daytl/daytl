@@ -154,5 +154,31 @@
       "q3": "Czy mogę zmienić JWT?",
       "a3": "Tak, można zmienić zawartość JWT, ale jeśli token jest podpisany, kolejna zmiana spowoduje błąd weryfikacji podpisu."
     }
+  },
+  "color-picker": {
+    "title": "Konwerter kolorów",
+    "info": "Narzędzie online do konwersji kolorów między formatami HEX, RGB i HSL z dostosowaniem kontrastu.",
+    "keywords": "color picker, kolory, hex, rgb, hsl, konwerter kolorów, konwersja kolorów",
+    "description": "Narzędzie online do konwersji kolorów między formatami HEX, RGB i HSL. Konwertuj kolory między różnymi formatami i dostosowuj kontrast za pomocą prostego interfejsu.",
+    "content": "<p>Konwerter kolorów to przydatne narzędzie dla programistów i projektantów, które pozwala konwertować kolory między różnymi formatami.</p><p><strong>HEX</strong> (szesnastkowy) to format szesnastkowy używany w CSS i HTML, na przykład #1976d2.</p><p><strong>RGB</strong> (Red, Green, Blue) to model kolorów oparty na trzech składowych czerwieni, zieleni i niebieskiego z wartościami 0-255.</p><p><strong>HSL</strong> (Hue, Saturation, Lightness) to model kolorów oparty na odcieniu (0-360°), nasyceniu (0-100%) i jasności (0-100%).</p>",
+    "hexLabel": "HEX",
+    "rgbLabel": "RGB",
+    "hslLabel": "HSL",
+    "lighten": "Zwiększ kontrast (+10%)",
+    "darken": "Zmniejsz kontrast (-10%)",
+    "colorPreview": "Podgląd koloru",
+    "faqsTitle": "Często zadawane pytania dotyczące konwertera kolorów",
+    "faqs": {
+      "q1": "Jak konwertować kolory między formatami HEX, RGB i HSL?",
+      "a1": "Po prostu wprowadź kolor w jednym z obsługiwanych formatów (HEX, RGB lub HSL), a narzędzie automatycznie przekonwertuje go na wszystkie inne formaty.",
+      "q2": "Jak mogę dostosować kontrast/jasność koloru?",
+      "a2": "Użyj przycisków do zwiększenia lub zmniejszenia kontrastu (+10%, -10%), aby dostosować jasność koloru w modelu HSL.",
+      "q3": "Czy konwersja kolorów w tym narzędziu jest dokładna?",
+      "a3": "Tak, konwersja opiera się na precyzyjnych wzorach matematycznych obowiązujących dla modeli kolorów HEX, RGB i HSL.",
+      "q4": "Czy konwersje kolorów są wykonywane lokalnie w mojej przeglądarce?",
+      "a4": "Tak, wszystkie operacje są wykonywane wyłącznie w przeglądarce i żadne dane nie są nigdzie wysyłane.",
+      "q5": "Czy mogę używać tego narzędzia do projektowania stron internetowych?",
+      "a5": "Tak, to narzędzie jest idealne dla projektantów stron internetowych i programistów, którzy muszą szybko konwertować kolory między formatami używanymi w CSS."
+    }
   }
 }

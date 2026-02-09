@@ -154,5 +154,31 @@
       "q3": "Můžu JWT změnit?",
       "a3": "Ano, můžete změnit obsah JWT, ale pokud je token podepsán, bude následná změna způsobovat chybu při ověření podpisu."
     }
+  },
+  "color-picker": {
+    "title": "Konvertor barev",
+    "info": "Online nástroj pro konverzi barev mezi HEX, RGB a HSL formáty s úpravou kontrastu.",
+    "keywords": "color picker, barvy, hex, rgb, hsl, konvertor barev, konverze barev",
+    "description": "Online nástroj pro konverzi barev mezi HEX, RGB a HSL formáty. Převádějte barvy mezi různými formáty a upravujte kontrast pomocí jednoduchého rozhraní.",
+    "content": "<p>Konvertor barev je užitečný nástroj pro vývojáře a designéry, který umožňuje převádět barvy mezi různými formáty.</p><p><strong>HEX</strong> (hexadecimální) je šestnáctkový formát používaný v CSS a HTML, například #1976d2.</p><p><strong>RGB</strong> (Red, Green, Blue) je barevný model založený na třech složkách červené, zelené a modré barvy s hodnotami 0-255.</p><p><strong>HSL</strong> (Hue, Saturation, Lightness) je barevný model založený na odstínu (0-360°), saturaci (0-100%) a světlosti (0-100%).</p>",
+    "hexLabel": "HEX",
+    "rgbLabel": "RGB",
+    "hslLabel": "HSL",
+    "lighten": "Zvýšit kontrast (+10%)",
+    "darken": "Snížit kontrast (-10%)",
+    "colorPreview": "Náhled barvy",
+    "faqsTitle": "Často kladené otázky o konvertoru barev",
+    "faqs": {
+      "q1": "Jak převádět barvy mezi formáty HEX, RGB a HSL?",
+      "a1": "Stačí zadat barvu v jednom z podporovaných formátů (HEX, RGB nebo HSL) a nástroj ji automaticky převede do všech ostatních formátů.",
+      "q2": "Jak mohu upravit kontrast/světlost barvy?",
+      "a2": "Pomocí tlačítek pro zvýšení nebo snížení kontrastu (+10%, -10%) můžete upravit světlost barvy v modelu HSL.",
+      "q3": "Je převod barev v tomto nástroji přesný?",
+      "a3": "Ano, převod je založen na přesných matematických vzorcích platných pro barevné modely HEX, RGB a HSL.",
+      "q4": "Probíhají převody barev lokálně v mém prohlížeči?",
+      "a4": "Ano, všechny operace probíhají výhradně ve vašem prohlížeči a žádná data se nikam neodesílají.",
+      "q5": "Mohu tento nástroj používat pro webový design?",
+      "a5": "Ano, tento nástroj je ideální pro webové designéry a vývojáře, kteří potřebují rychle převádět barvy mezi formáty používanými v CSS."
+    }
   }
 }

@@ -7,6 +7,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import { Link } from "@/components/_shared/Link";
 
 const Header = () => {
+
   return (
     <AppBar
       position="static"
