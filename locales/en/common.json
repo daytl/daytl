@@ -1,9 +1,9 @@
 {
-  "title": "Daytl.",
-  "info": "Simple and useful online tools in one place.",
-  "info2": "Missing your favorite online tool? Let us know or help us <a href='https://github.com/daytl/daytl' target='_blank'>create it</a>.<br /><strong>Daytl.com</strong> is an open source built on <a href='https://www.nextjs.org/' target='_blank'>Next.js</a>",
+  "title": "Daytl",
+  "info": "Free online tools for developers and everyday tasks.",
+  "info2": "Format JSON, decode JWT, convert colors, encode Base64, and use other practical web tools in one place. Most tools run directly in your browser, so your data stays on your device. Missing a feature? Help us <a href='https://github.com/daytl/daytl' target='_blank' rel='noopener noreferrer'>build it</a>.",
   "toolPage": "Tool static page",
-  "titleSuffix": "Online tools",
+  "titleSuffix": "Free online tools",
   "contribute": "Contribute",
   "feedback": {
     "button": "Let us know",
@@ -20,8 +20,8 @@
   "copied": "Copied!",
   "copy": "Copy to clipboard",
   "automaticCopy": "Automatically copy to clipboard",
-  "keywords": "online tools",
-  "description": "Simple and useful online tools in one place.",
+  "keywords": "online tools, free web tools, developer tools, json formatter, jwt decoder, color converter, password generator, base64 encoder",
+  "description": "Use free online tools for JSON formatting, JWT decoding, color conversion, Base64 encoding, password generation, and more. Fast, simple, and browser-based.",
   "otherTools": "Other online tools",
   "languages": {
     "cs": "Česky",

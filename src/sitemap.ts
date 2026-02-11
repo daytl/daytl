@@ -8,6 +8,8 @@ const tools = [
   "base64-encode-decode",
   "passwordgenerator",
   "jwt-decode",
+  "color-picker",
+  "json-viewer",
 ];
 
 interface Sitemap {
@@ -27,30 +29,33 @@ const printItem = (item: Sitemap) => {
   return data;
 };
 
+const createUrl = (path = "") => `https://www.daytl.com${path}`;
+
 export default function sitemap() {
+  const now = new Date().toISOString();
   let sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
   sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
   sitemap += printItem({
-    url: "https://www.daytl.com",
-    lastModified: new Date().toISOString(),
+    url: createUrl(),
+    lastModified: now,
     changeFrequency: "monthly",
     priority: 1,
   });
 
   locales.forEach((locale) => {
     sitemap += printItem({
-      url: `https://www.daytl.com/${locale}`,
-      lastModified: new Date().toISOString(),
+      url: createUrl(`/${locale}`),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 1,
     });
 
     tools.forEach((tool) => {
       sitemap += printItem({
-        url: `https://www.daytl.com/${locale}/${tool}`,
-        lastModified: new Date().toISOString(),
+        url: createUrl(`/${locale}/${tool}`),
+        lastModified: now,
         changeFrequency: "monthly",
-        priority: 1,
+        priority: 0.8,
       });
     });
   });

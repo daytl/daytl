@@ -136,9 +136,9 @@ export const ColorPicker = () => {
       setRgbInput(value);
       const match = value.match(/(\d+),\s*(\d+),\s*(\d+)/);
       if (match) {
-        const r = parseInt(match[1]);
-        const g = parseInt(match[2]);
-        const b = parseInt(match[3]);
+        const r = parseInt(match[1], 10);
+        const g = parseInt(match[2], 10);
+        const b = parseInt(match[3], 10);
         if (r <= 255 && g <= 255 && b <= 255) {
           const hex = rgbToHex(r, g, b);
           setColor(hex);
@@ -157,9 +157,9 @@ export const ColorPicker = () => {
       setHslInput(value);
       const match = value.match(/(\d+),\s*(\d+)%,\s*(\d+)%/);
       if (match) {
-        const h = parseInt(match[1]);
-        const s = parseInt(match[2]);
-        const l = parseInt(match[3]);
+        const h = parseInt(match[1], 10);
+        const s = parseInt(match[2], 10);
+        const l = parseInt(match[3], 10);
         if (h <= 360 && s <= 100 && l <= 100) {
           const rgb = hslToRgb(h, s, l);
           const hex = rgbToHex(rgb.r, rgb.g, rgb.b);
@@ -175,13 +175,13 @@ export const ColorPicker = () => {
   const adjustLightness = useCallback((delta: number) => {
     const match = hslInput.match(/(\d+),\s*(\d+)%,\s*(\d+)%/);
     if (match) {
-      const h = parseInt(match[1]);
-      const s = parseInt(match[2]);
-      let l = parseInt(match[3]);
-      
+      const h = parseInt(match[1], 10);
+      const s = parseInt(match[2], 10);
+      let l = parseInt(match[3], 10);
+
       // Adjust lightness by delta percent
       l = Math.max(0, Math.min(100, l + delta));
-      
+
       const rgb = hslToRgb(h, s, l);
       const hex = rgbToHex(rgb.r, rgb.g, rgb.b);
       setColor(hex);

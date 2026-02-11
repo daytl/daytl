@@ -112,7 +112,7 @@ const Custom404 = () => {
 
   return (
     <Layout>
-      <Seo title={t(`page404.title`)} />
+      <Seo title="404" description={t("page404.info")} noIndex />
       <Grid container>
         <Grid
           size={{ xs: 12 }}
@@ -125,7 +125,7 @@ const Custom404 = () => {
             404
           </Typography>
           <Typography variant="h3">
-            <FormattedMessage id="404.info" />
+            <FormattedMessage id="page404.info" />
           </Typography>
         </Grid>
       </Grid>

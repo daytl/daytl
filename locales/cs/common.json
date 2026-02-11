@@ -1,10 +1,10 @@
 {
-  "title": "Daytl.",
+  "title": "Daytl",
   "author": "Daytl",
-  "info": "Vaše užitečné online nástroje jednoduše a na jednom místě.",
-  "info2": "Chybí vám zde oblíbený online nástroj? Dejte nám vědět nebo nám ho pomůžte <a href='https://github.com/daytl/daytl' target='_blank'>vytvořit</a>.<br /><strong>Daytl.com</strong> je open source postaven na <a href='https://www.nextjs.org/' target='_blank'>Next.js</a>",
+  "info": "Online nástroje zdarma pro vývojáře i běžné použití.",
+  "info2": "Formátujte JSON, dekódujte JWT, převádějte barvy, kódujte Base64 a používejte další praktické nástroje na jednom místě. Většina nástrojů běží přímo v prohlížeči, takže data zůstávají u vás. Chybí vám funkce? Pomozte nám ji <a href='https://github.com/daytl/daytl' target='_blank' rel='noopener noreferrer'>vytvořit</a>.",
   "toolPage": "Vlastní stránka nástroje",
-  "titleSuffix": "Online nástroje",
+  "titleSuffix": "Online nástroje zdarma",
   "contribute": "Contribute",
   "feedback": {
     "button": "Napište nám",
@@ -21,8 +21,8 @@
   "copied": "Zkopírováno!",
   "automaticCopy": "Automaticky zkopírovat do schránky",
   "copy": "Zkopírovat do schránky",
-  "keywords": "online nástroje",
-  "description": "Vaše užitečné online nástroje jednoduše a na jednom místě.",
+  "keywords": "online nástroje, nástroje zdarma, vývojářské nástroje, json formatter, jwt decode, převod barev, generátor hesel, base64",
+  "description": "Používejte online nástroje zdarma pro formátování JSON, dekódování JWT, převod barev, Base64 a další. Rychle, jednoduše a přímo v prohlížeči.",
   "otherTools": "Další online nástroje",
   "languages": {
     "cs": "Česky",
