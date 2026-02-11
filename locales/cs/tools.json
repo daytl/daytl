@@ -180,5 +180,32 @@
       "q5": "Mohu tento nástroj používat pro webový design?",
       "a5": "Ano, tento nástroj je ideální pro webové designéry a vývojáře, kteří potřebují rychle převádět barvy mezi formáty používanými v CSS."
     }
+  },
+  "json-viewer": {
+    "title": "JSON Viewer a Formatter",
+    "info": "Nástroj pro zobrazení, formátování a validaci JSON dat s interaktivním procházením struktury",
+    "description": "Online JSON viewer s validací, formátováním a možností procházení struktury. Zobrazí JSON data v přehledné podobě s možností sbalování uzlů.",
+    "keywords": "json viewer, json formatter, json validator, json beautifier, json parser",
+    "source": "Vložte JSON data",
+    "clear": "Vymazat",
+    "format": "Formátovat",
+    "minify": "Minifikovat",
+    "copy": "Kopírovat",
+    "result": "Výsledek",
+    "stats": "Statistiky",
+    "keys": "Počet klíčů",
+    "size": "Velikost",
+    "depth": "Hloubka",
+    "invalidJson": "Neplatný JSON",
+    "content": "<p>JSON (JavaScript Object Notation) je lehký formát pro výměnu dat, který je snadno čitelný pro lidi i stroje. Je založen na podmnožině JavaScriptu a používá se pro přenos strukturovaných dat mezi serverem a webovou aplikací.</p><p>JSON se skládá z párů klíč-hodnota a podporuje různé datové typy včetně řetězců, čísel, objektů, polí, booleovských hodnot a null. Díky své jednoduchosti a univerzálnosti se stal standardem pro výměnu dat v moderních webových aplikacích a API.</p><p>Tento nástroj vám umožní snadno validovat, formátovat a procházet JSON data. Můžete zobrazit strukturu JSON v přehledné podobě, zkontrolovat syntaxi a získat statistiky o vašich datech.</p>",
+    "faqsTitle": "Často kladené otázky o JSON",
+    "faqs": {
+      "q1": "Co je JSON?",
+      "a1": "JSON (JavaScript Object Notation) je textový formát pro strukturovaná data. Je snadno čitelný pro lidi i stroje a používá se pro výměnu dat mezi serverem a webovou aplikací. JSON podporuje objekty, pole, řetězce, čísla, booleovské hodnoty a null.",
+      "q2": "Jak validovat JSON?",
+      "a2": "Tento nástroj automaticky validuje JSON při vložení do textového pole. Pokud je JSON neplatný, zobrazí se chybová hláška s popisem problému. Validní JSON musí dodržovat správnou syntaxi včetně uvozovek kolem klíčů a správného použití čárek.",
+      "q3": "Jaký je rozdíl mezi formátováním a minifikací?",
+      "a3": "Formátování přidá do JSON odsazení a zalomení řádků pro lepší čitelnost. Minifikace naopak odstraní všechny zbytečné mezery a zalomení řádků, čímž zmenší velikost dat - to je užitečné pro přenos dat po síti."
+    }
   }
 }

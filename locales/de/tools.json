@@ -180,5 +180,32 @@
       "q5": "Kann ich dieses Tool für Webdesign verwenden?",
       "a5": "Ja, dieses Tool ist ideal für Webdesigner und Entwickler, die Farben schnell zwischen den in CSS verwendeten Formaten konvertieren müssen."
     }
+  },
+  "json-viewer": {
+    "title": "JSON Viewer und Formatter",
+    "info": "Tool zum Anzeigen, Formatieren und Validieren von JSON-Daten mit interaktivem Strukturbrowser",
+    "description": "Online JSON Viewer mit Validierung, Formatierung und Strukturbrowser. Zeigen Sie JSON-Daten in einem übersichtlichen Format mit zusammenklappbaren Knoten an.",
+    "keywords": "json viewer, json formatter, json validator, json beautifier, json parser",
+    "source": "JSON-Daten eingeben",
+    "clear": "Löschen",
+    "format": "Formatieren",
+    "minify": "Minifizieren",
+    "copy": "Kopieren",
+    "result": "Ergebnis",
+    "stats": "Statistiken",
+    "keys": "Anzahl der Schlüssel",
+    "size": "Größe",
+    "depth": "Tiefe",
+    "invalidJson": "Ungültiges JSON",
+    "content": "<p>JSON (JavaScript Object Notation) ist ein leichtgewichtiges Datenaustauschformat, das sowohl für Menschen als auch für Maschinen leicht lesbar ist. Es basiert auf einer Teilmenge von JavaScript und wird verwendet, um strukturierte Daten zwischen einem Server und einer Webanwendung zu übertragen.</p><p>JSON besteht aus Schlüssel-Wert-Paaren und unterstützt verschiedene Datentypen, einschließlich Zeichenketten, Zahlen, Objekte, Arrays, boolesche Werte und null. Aufgrund seiner Einfachheit und Universalität ist es zum Standard für den Datenaustausch in modernen Webanwendungen und APIs geworden.</p><p>Dieses Tool ermöglicht es Ihnen, JSON-Daten einfach zu validieren, zu formatieren und zu durchsuchen. Sie können die JSON-Struktur in einem übersichtlichen Format anzeigen, die Syntax überprüfen und Statistiken über Ihre Daten erhalten.</p>",
+    "faqsTitle": "Häufig gestellte Fragen zu JSON",
+    "faqs": {
+      "q1": "Was ist JSON?",
+      "a1": "JSON (JavaScript Object Notation) ist ein Textformat für strukturierte Daten. Es ist sowohl für Menschen als auch für Maschinen leicht lesbar und wird verwendet, um Daten zwischen einem Server und einer Webanwendung auszutauschen. JSON unterstützt Objekte, Arrays, Zeichenketten, Zahlen, boolesche Werte und null.",
+      "q2": "Wie validiere ich JSON?",
+      "a2": "Dieses Tool validiert JSON automatisch, wenn Sie es in das Textfeld einfügen. Wenn das JSON ungültig ist, wird eine Fehlermeldung mit einer Beschreibung des Problems angezeigt. Gültiges JSON muss die korrekte Syntax einhalten, einschließlich Anführungszeichen um Schlüssel und korrekter Verwendung von Kommas.",
+      "q3": "Was ist der Unterschied zwischen Formatierung und Minifizierung?",
+      "a3": "Die Formatierung fügt JSON Einrückungen und Zeilenumbrüche hinzu, um die Lesbarkeit zu verbessern. Die Minifizierung entfernt dagegen alle unnötigen Leerzeichen und Zeilenumbrüche, wodurch die Datengröße reduziert wird - dies ist nützlich für die Übertragung von Daten über ein Netzwerk."
+    }
   }
 }

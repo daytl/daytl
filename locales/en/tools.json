@@ -182,5 +182,32 @@
       "q5": "Can I use this tool for web design?",
       "a5": "Yes, this tool is ideal for web designers and developers who need to quickly convert colors between formats used in CSS."
     }
+  },
+  "json-viewer": {
+    "title": "JSON Viewer and Formatter",
+    "info": "Tool for viewing, formatting and validating JSON data with interactive structure browsing",
+    "description": "Online JSON viewer with validation, formatting and structure browsing. Display JSON data in a clear format with collapsible nodes.",
+    "keywords": "json viewer, json formatter, json validator, json beautifier, json parser",
+    "source": "Enter JSON data",
+    "clear": "Clear",
+    "format": "Format",
+    "minify": "Minify",
+    "copy": "Copy",
+    "result": "Result",
+    "stats": "Statistics",
+    "keys": "Number of keys",
+    "size": "Size",
+    "depth": "Depth",
+    "invalidJson": "Invalid JSON",
+    "content": "<p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy to read for both humans and machines. It is based on a subset of JavaScript and is used to transfer structured data between a server and a web application.</p><p>JSON consists of key-value pairs and supports various data types including strings, numbers, objects, arrays, boolean values, and null. Due to its simplicity and universality, it has become the standard for data exchange in modern web applications and APIs.</p><p>This tool allows you to easily validate, format and browse JSON data. You can view the JSON structure in a clear format, check syntax and get statistics about your data.</p>",
+    "faqsTitle": "Frequently asked questions about JSON",
+    "faqs": {
+      "q1": "What is JSON?",
+      "a1": "JSON (JavaScript Object Notation) is a text format for structured data. It is easy to read for both humans and machines and is used to exchange data between a server and a web application. JSON supports objects, arrays, strings, numbers, boolean values, and null.",
+      "q2": "How to validate JSON?",
+      "a2": "This tool automatically validates JSON when you paste it into the text field. If the JSON is invalid, an error message with a description of the problem will be displayed. Valid JSON must follow correct syntax including quotes around keys and proper use of commas.",
+      "q3": "What is the difference between formatting and minification?",
+      "a3": "Formatting adds indentation and line breaks to JSON for better readability. Minification, on the other hand, removes all unnecessary spaces and line breaks, reducing the data size - this is useful for transmitting data over a network."
+    }
   }
 }

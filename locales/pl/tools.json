@@ -180,5 +180,32 @@
       "q5": "Czy mogę używać tego narzędzia do projektowania stron internetowych?",
       "a5": "Tak, to narzędzie jest idealne dla projektantów stron internetowych i programistów, którzy muszą szybko konwertować kolory między formatami używanymi w CSS."
     }
+  },
+  "json-viewer": {
+    "title": "JSON Viewer i Formatter",
+    "info": "Narzędzie do wyświetlania, formatowania i walidacji danych JSON z interaktywnym przeglądaniem struktury",
+    "description": "Internetowy JSON viewer z walidacją, formatowaniem i możliwością przeglądania struktury. Wyświetla dane JSON w przejrzystym formacie z możliwością zwijania węzłów.",
+    "keywords": "json viewer, json formatter, json validator, json beautifier, json parser",
+    "source": "Wprowadź dane JSON",
+    "clear": "Wyczyść",
+    "format": "Formatuj",
+    "minify": "Minifikuj",
+    "copy": "Kopiuj",
+    "result": "Wynik",
+    "stats": "Statystyki",
+    "keys": "Liczba kluczy",
+    "size": "Rozmiar",
+    "depth": "Głębokość",
+    "invalidJson": "Nieprawidłowy JSON",
+    "content": "<p>JSON (JavaScript Object Notation) to lekki format wymiany danych, który jest łatwy do odczytu zarówno dla ludzi, jak i maszyn. Jest oparty na podzbiorze JavaScriptu i służy do przesyłania strukturalnych danych między serwerem a aplikacją internetową.</p><p>JSON składa się z par klucz-wartość i obsługuje różne typy danych, w tym ciągi znaków, liczby, obiekty, tablice, wartości logiczne i null. Dzięki swojej prostocie i uniwersalności stał się standardem wymiany danych w nowoczesnych aplikacjach internetowych i interfejsach API.</p><p>To narzędzie pozwala łatwo walidować, formatować i przeglądać dane JSON. Możesz wyświetlić strukturę JSON w przejrzystym formacie, sprawdzić składnię i uzyskać statystyki dotyczące swoich danych.</p>",
+    "faqsTitle": "Często zadawane pytania dotyczące JSON",
+    "faqs": {
+      "q1": "Czym jest JSON?",
+      "a1": "JSON (JavaScript Object Notation) to tekstowy format dla danych strukturalnych. Jest łatwy do odczytu zarówno dla ludzi, jak i maszyn i służy do wymiany danych między serwerem a aplikacją internetową. JSON obsługuje obiekty, tablice, ciągi znaków, liczby, wartości logiczne i null.",
+      "q2": "Jak walidować JSON?",
+      "a2": "To narzędzie automatycznie waliduje JSON po wklejeniu do pola tekstowego. Jeśli JSON jest nieprawidłowy, wyświetli się komunikat o błędzie z opisem problemu. Prawidłowy JSON musi przestrzegać poprawnej składni, w tym cudzysłowów wokół kluczy i prawidłowego użycia przecinków.",
+      "q3": "Jaka jest różnica między formatowaniem a minifikacją?",
+      "a3": "Formatowanie dodaje do JSON wcięcia i łamanie wierszy dla lepszej czytelności. Minifikacja natomiast usuwa wszystkie niepotrzebne spacje i łamanie wierszy, zmniejszając rozmiar danych - jest to przydatne do przesyłania danych przez sieć."
+    }
   }
 }
