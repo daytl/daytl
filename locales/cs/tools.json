@@ -67,7 +67,7 @@
     "keywords": "odstranit mezery",
     "description": "Odstraňovač mezer a html cleaner, který odstraní zalomení řádků a html značky.",
     "content": "<p>Tento nástroj pomůže jednoduše odstranit zalomení řádku nebo odstranit html značky a získat tak čistý text.</p>",
-    "faqsTitle": "Často kladené otázky ohleně odstranění HTML a odřádkování",
+    "faqsTitle": "Často kladené otázky ohledně odstranění HTML a odřádkování",
     "faqs": {
       "q1": "Jak funguje odstranění HTML?",
       "a1": "Odstranění HTML je proces, který odstraní všechny HTML značky z textu a zanechá pouze čistý text. Tento proces je užitečný, pokud potřebujete získat pouze obsah textu a odstranit všechny formátovací značky.",
@@ -123,7 +123,7 @@
     "keywords": "generátor bezpečných hesel",
     "description": "Generátor bezpečných hesel s možností vygenerovat více hesel najednou a stáhnout jako soubor. Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků.",
     "content": "<p>Náhodné heslo se generuje přímo ve vašem prohlížeči a není nikam odesláno. Použitím náhodného dostatečně silného hesla zvýšíte bezpečnost vašich online přístupů.</p><p>Bezpečné heslo by mělo být dostatečně dlouhé a složeno z malých a velkých písmen, číslic a speciálních znaků. Ideální je také použít pro každou online službu jiné heslo.</p><p>K správě vygenerovaných hesel je dobré použít takzvaný manažer hesel, jako je třeba <a href='https://keepass.info/' target='_blank'>KeePass</a>, který ukládá hesla v zašifrovaném souboru ve vašem počítači. Vám pak stačí si pamatovat jedno hlavní heslo, kterým tento soubor odemknete.</p>",
-    "faqsTitle": "Často kladené otázky ohleně generátoru hesel",
+    "faqsTitle": "Často kladené otázky ohledně generátoru hesel",
     "faqs": {
       "q1": "Jak funguje generátor hesel?",
       "a1": "Generátor hesel vytváří náhodná hesla pomocí kryptograficky bezpečného generátoru náhodných čísel. Hesla jsou generována přímo ve vašem prohlížeči a nejsou nikam odesílána. Generátor umožňuje nastavit délku hesla a použití písmen, číslic a speciálních znaků.",
